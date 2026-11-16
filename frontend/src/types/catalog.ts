@@ -16,7 +16,8 @@ export type CategoryId =
   | 'mice'
   | 'audio'
   | 'storage'
-  | 'networking';
+  | 'networking'
+  | 'cameras';
 
 export interface ProductSpec {
   key: string;

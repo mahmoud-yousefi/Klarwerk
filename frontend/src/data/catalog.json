@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-11-16T03:00:35.949Z",
+    "generatedAt": "2026-11-16T19:38:32.288Z",
     "note": "Fictional demo inventory. Prices, availability and specifications are illustrative.",
     "currency": "EUR",
-    "count": 122
+    "count": 130
   },
   "products": [
     {
@@ -13956,6 +13956,817 @@
       ],
       "color": "Weiß",
       "releaseYear": 2024,
+      "warrantyYears": 2
+    },
+    {
+      "id": "KW-1122",
+      "sku": "KW-CA-1122",
+      "slug": "auris-vision-24",
+      "name": "Auris Vision 24",
+      "brand": "Auris",
+      "category": "cameras",
+      "tagline": {
+        "de": "Momente, die bleiben.",
+        "en": "Moments that stay."
+      },
+      "description": {},
+      "price": 899,
+      "originalPrice": null,
+      "currency": "EUR",
+      "availability": "in_stock",
+      "stock": 22,
+      "images": [
+        "/assets/images/editorial/camera.webp",
+        "/assets/images/products/phone-white.webp",
+        "/assets/images/products/laptop-screen.webp"
+      ],
+      "specs": [
+        {
+          "key": "type",
+          "value": "Spiegellose Systemkamera",
+          "label": {
+            "de": "Typ",
+            "en": "Type"
+          }
+        },
+        {
+          "key": "sensor",
+          "value": "APS-C · 26 MP",
+          "label": {
+            "de": "Sensor",
+            "en": "Sensor"
+          }
+        },
+        {
+          "key": "lens",
+          "value": "Wechselobjektiv · Auris-Mount",
+          "label": {
+            "de": "Objektiv",
+            "en": "Lens"
+          }
+        },
+        {
+          "key": "video",
+          "value": "4K bei 60 fps",
+          "label": {
+            "de": "Video",
+            "en": "Video"
+          }
+        },
+        {
+          "key": "stabilizer",
+          "value": "5-Achsen IBIS",
+          "label": {
+            "de": "Stabilisierung",
+            "en": "Stabilisation"
+          }
+        },
+        {
+          "key": "af",
+          "value": "Phasen-AF · Augenerkennung",
+          "label": {
+            "de": "Autofokus",
+            "en": "Autofocus"
+          }
+        },
+        {
+          "key": "battery",
+          "value": "bis 680 Aufnahmen",
+          "label": {
+            "de": "Akku",
+            "en": "Battery"
+          }
+        },
+        {
+          "key": "weight",
+          "value": "480 g",
+          "label": {
+            "de": "Gewicht",
+            "en": "Weight"
+          }
+        },
+        {
+          "key": "connectivity",
+          "value": "Wi-Fi 6 · Bluetooth 5.2 · USB-C",
+          "label": {
+            "de": "Konnektivität",
+            "en": "Connectivity"
+          }
+        }
+      ],
+      "highlights": [],
+      "rating": 4.1,
+      "reviewCount": 115,
+      "featured": true,
+      "isNew": false,
+      "tags": [
+        "cameras",
+        "auris",
+        "empfehlung"
+      ],
+      "color": "Schwarz",
+      "releaseYear": 2024,
+      "warrantyYears": 2
+    },
+    {
+      "id": "KW-1123",
+      "sku": "KW-CA-1123",
+      "slug": "auris-vision-24-pro",
+      "name": "Auris Vision 24 Pro",
+      "brand": "Auris",
+      "category": "cameras",
+      "tagline": {
+        "de": "Momente, die bleiben.",
+        "en": "Moments that stay."
+      },
+      "description": {},
+      "price": 1299,
+      "originalPrice": null,
+      "currency": "EUR",
+      "availability": "in_stock",
+      "stock": 29,
+      "images": [
+        "/assets/images/products/phone-white.webp",
+        "/assets/images/products/laptop-screen.webp",
+        "/assets/images/editorial/camera.webp"
+      ],
+      "specs": [
+        {
+          "key": "type",
+          "value": "Spiegellose Systemkamera",
+          "label": {
+            "de": "Typ",
+            "en": "Type"
+          }
+        },
+        {
+          "key": "sensor",
+          "value": "APS-C · 26 MP",
+          "label": {
+            "de": "Sensor",
+            "en": "Sensor"
+          }
+        },
+        {
+          "key": "lens",
+          "value": "Wechselobjektiv · Auris-Mount",
+          "label": {
+            "de": "Objektiv",
+            "en": "Lens"
+          }
+        },
+        {
+          "key": "video",
+          "value": "8K bei 30 fps",
+          "label": {
+            "de": "Video",
+            "en": "Video"
+          }
+        },
+        {
+          "key": "stabilizer",
+          "value": "5-Achsen IBIS",
+          "label": {
+            "de": "Stabilisierung",
+            "en": "Stabilisation"
+          }
+        },
+        {
+          "key": "af",
+          "value": "Phasen-AF · Augenerkennung",
+          "label": {
+            "de": "Autofokus",
+            "en": "Autofocus"
+          }
+        },
+        {
+          "key": "battery",
+          "value": "bis 680 Aufnahmen",
+          "label": {
+            "de": "Akku",
+            "en": "Battery"
+          }
+        },
+        {
+          "key": "weight",
+          "value": "720 g",
+          "label": {
+            "de": "Gewicht",
+            "en": "Weight"
+          }
+        },
+        {
+          "key": "connectivity",
+          "value": "Wi-Fi 6 · Bluetooth 5.2 · USB-C",
+          "label": {
+            "de": "Konnektivität",
+            "en": "Connectivity"
+          }
+        }
+      ],
+      "highlights": [],
+      "rating": 4.4,
+      "reviewCount": 168,
+      "featured": true,
+      "isNew": false,
+      "tags": [
+        "cameras",
+        "auris",
+        "empfehlung"
+      ],
+      "color": "Silber",
+      "releaseYear": 2025,
+      "warrantyYears": 3
+    },
+    {
+      "id": "KW-1124",
+      "sku": "KW-CA-1124",
+      "slug": "auris-vision-36",
+      "name": "Auris Vision 36",
+      "brand": "Auris",
+      "category": "cameras",
+      "tagline": {
+        "de": "Momente, die bleiben.",
+        "en": "Moments that stay."
+      },
+      "description": {
+        "de": "undefined Eine Entscheidung für die nächsten Jahre.",
+        "en": "undefined A decision built to last for years."
+      },
+      "price": 1899,
+      "originalPrice": null,
+      "currency": "EUR",
+      "availability": "in_stock",
+      "stock": 36,
+      "images": [
+        "/assets/images/products/laptop-screen.webp",
+        "/assets/images/editorial/camera.webp",
+        "/assets/images/products/phone-white.webp"
+      ],
+      "specs": [
+        {
+          "key": "type",
+          "value": "Spiegellose Systemkamera",
+          "label": {
+            "de": "Typ",
+            "en": "Type"
+          }
+        },
+        {
+          "key": "sensor",
+          "value": "Vollformat · 45 MP",
+          "label": {
+            "de": "Sensor",
+            "en": "Sensor"
+          }
+        },
+        {
+          "key": "lens",
+          "value": "Wechselobjektiv · Auris-Mount",
+          "label": {
+            "de": "Objektiv",
+            "en": "Lens"
+          }
+        },
+        {
+          "key": "video",
+          "value": "8K bei 30 fps",
+          "label": {
+            "de": "Video",
+            "en": "Video"
+          }
+        },
+        {
+          "key": "stabilizer",
+          "value": "5-Achsen IBIS",
+          "label": {
+            "de": "Stabilisierung",
+            "en": "Stabilisation"
+          }
+        },
+        {
+          "key": "af",
+          "value": "Phasen-AF · Augenerkennung",
+          "label": {
+            "de": "Autofokus",
+            "en": "Autofocus"
+          }
+        },
+        {
+          "key": "battery",
+          "value": "bis 680 Aufnahmen",
+          "label": {
+            "de": "Akku",
+            "en": "Battery"
+          }
+        },
+        {
+          "key": "weight",
+          "value": "720 g",
+          "label": {
+            "de": "Gewicht",
+            "en": "Weight"
+          }
+        },
+        {
+          "key": "connectivity",
+          "value": "Wi-Fi 6 · Bluetooth 5.2 · USB-C",
+          "label": {
+            "de": "Konnektivität",
+            "en": "Connectivity"
+          }
+        }
+      ],
+      "highlights": [],
+      "rating": 4.7,
+      "reviewCount": 221,
+      "featured": false,
+      "isNew": false,
+      "tags": [
+        "cameras",
+        "auris",
+        "premium"
+      ],
+      "color": "Graphit",
+      "releaseYear": 2026,
+      "warrantyYears": 3
+    },
+    {
+      "id": "KW-1125",
+      "sku": "KW-CA-1125",
+      "slug": "auris-pocket-1",
+      "name": "Auris Pocket 1",
+      "brand": "Auris",
+      "category": "cameras",
+      "tagline": {
+        "de": "Momente, die bleiben.",
+        "en": "Moments that stay."
+      },
+      "description": {},
+      "price": 449,
+      "originalPrice": null,
+      "currency": "EUR",
+      "availability": "in_stock",
+      "stock": 43,
+      "images": [
+        "/assets/images/editorial/camera.webp",
+        "/assets/images/products/phone-white.webp",
+        "/assets/images/products/laptop-screen.webp"
+      ],
+      "specs": [
+        {
+          "key": "type",
+          "value": "Kompaktkamera",
+          "label": {
+            "de": "Typ",
+            "en": "Type"
+          }
+        },
+        {
+          "key": "sensor",
+          "value": "1\" CMOS · 20 MP",
+          "label": {
+            "de": "Sensor",
+            "en": "Sensor"
+          }
+        },
+        {
+          "key": "lens",
+          "value": "24–70 mm · f/1,8–2,8",
+          "label": {
+            "de": "Objektiv",
+            "en": "Lens"
+          }
+        },
+        {
+          "key": "video",
+          "value": "4K bei 60 fps",
+          "label": {
+            "de": "Video",
+            "en": "Video"
+          }
+        },
+        {
+          "key": "stabilizer",
+          "value": "Optisch",
+          "label": {
+            "de": "Stabilisierung",
+            "en": "Stabilisation"
+          }
+        },
+        {
+          "key": "weight",
+          "value": "320 g",
+          "label": {
+            "de": "Gewicht",
+            "en": "Weight"
+          }
+        },
+        {
+          "key": "connectivity",
+          "value": "Wi-Fi · Bluetooth · USB-C",
+          "label": {
+            "de": "Konnektivität",
+            "en": "Connectivity"
+          }
+        }
+      ],
+      "highlights": [],
+      "rating": 4.2,
+      "reviewCount": 274,
+      "featured": false,
+      "isNew": false,
+      "tags": [
+        "cameras",
+        "auris",
+        "empfehlung"
+      ],
+      "color": "Schwarz",
+      "releaseYear": 2024,
+      "warrantyYears": 2
+    },
+    {
+      "id": "KW-1126",
+      "sku": "KW-CA-1126",
+      "slug": "auris-pocket-mini",
+      "name": "Auris Pocket Mini",
+      "brand": "Auris",
+      "category": "cameras",
+      "tagline": {
+        "de": "Momente, die bleiben.",
+        "en": "Moments that stay."
+      },
+      "description": {},
+      "price": 299,
+      "originalPrice": 339,
+      "currency": "EUR",
+      "availability": "low_stock",
+      "stock": 4,
+      "images": [
+        "/assets/images/products/phone-white.webp",
+        "/assets/images/products/laptop-screen.webp",
+        "/assets/images/editorial/camera.webp"
+      ],
+      "specs": [
+        {
+          "key": "type",
+          "value": "Kompaktkamera",
+          "label": {
+            "de": "Typ",
+            "en": "Type"
+          }
+        },
+        {
+          "key": "sensor",
+          "value": "1/1,7\" CMOS · 12 MP",
+          "label": {
+            "de": "Sensor",
+            "en": "Sensor"
+          }
+        },
+        {
+          "key": "lens",
+          "value": "28–84 mm · f/2,0–4,9",
+          "label": {
+            "de": "Objektiv",
+            "en": "Lens"
+          }
+        },
+        {
+          "key": "video",
+          "value": "4K bei 30 fps",
+          "label": {
+            "de": "Video",
+            "en": "Video"
+          }
+        },
+        {
+          "key": "stabilizer",
+          "value": "Optisch",
+          "label": {
+            "de": "Stabilisierung",
+            "en": "Stabilisation"
+          }
+        },
+        {
+          "key": "weight",
+          "value": "240 g",
+          "label": {
+            "de": "Gewicht",
+            "en": "Weight"
+          }
+        },
+        {
+          "key": "connectivity",
+          "value": "Wi-Fi · Bluetooth · USB-C",
+          "label": {
+            "de": "Konnektivität",
+            "en": "Connectivity"
+          }
+        }
+      ],
+      "highlights": [],
+      "rating": 4.5,
+      "reviewCount": 327,
+      "featured": false,
+      "isNew": false,
+      "tags": [
+        "cameras",
+        "auris",
+        "einsteiger"
+      ],
+      "color": "Silber",
+      "releaseYear": 2025,
+      "warrantyYears": 2
+    },
+    {
+      "id": "KW-1127",
+      "sku": "KW-CA-1127",
+      "slug": "auris-action-cam-4k",
+      "name": "Auris Action Cam 4K",
+      "brand": "Auris",
+      "category": "cameras",
+      "tagline": {
+        "de": "Momente, die bleiben.",
+        "en": "Moments that stay."
+      },
+      "description": {},
+      "price": 349,
+      "originalPrice": null,
+      "currency": "EUR",
+      "availability": "in_stock",
+      "stock": 15,
+      "images": [
+        "/assets/images/products/laptop-screen.webp",
+        "/assets/images/editorial/camera.webp",
+        "/assets/images/products/phone-white.webp"
+      ],
+      "specs": [
+        {
+          "key": "type",
+          "value": "Action-Cam",
+          "label": {
+            "de": "Typ",
+            "en": "Type"
+          }
+        },
+        {
+          "key": "sensor",
+          "value": "1/1,9\" CMOS · 12 MP",
+          "label": {
+            "de": "Sensor",
+            "en": "Sensor"
+          }
+        },
+        {
+          "key": "lens",
+          "value": "155° Ultraweit",
+          "label": {
+            "de": "Objektiv",
+            "en": "Lens"
+          }
+        },
+        {
+          "key": "video",
+          "value": "4K bei 60 fps",
+          "label": {
+            "de": "Video",
+            "en": "Video"
+          }
+        },
+        {
+          "key": "stabilizer",
+          "value": "HyperSmooth",
+          "label": {
+            "de": "Stabilisierung",
+            "en": "Stabilisation"
+          }
+        },
+        {
+          "key": "water",
+          "value": "Wasserdicht bis 10 m",
+          "label": {
+            "de": "Wasserdichtigkeit",
+            "en": "Water resistance"
+          }
+        },
+        {
+          "key": "weight",
+          "value": "124 g",
+          "label": {
+            "de": "Gewicht",
+            "en": "Weight"
+          }
+        },
+        {
+          "key": "battery",
+          "value": "bis 1,5 h",
+          "label": {
+            "de": "Akku",
+            "en": "Battery"
+          }
+        }
+      ],
+      "highlights": [],
+      "rating": 4.8,
+      "reviewCount": 380,
+      "featured": false,
+      "isNew": false,
+      "tags": [
+        "cameras",
+        "auris",
+        "empfehlung"
+      ],
+      "color": "Graphit",
+      "releaseYear": 2026,
+      "warrantyYears": 2
+    },
+    {
+      "id": "KW-1128",
+      "sku": "KW-CA-1128",
+      "slug": "auris-action-cam-5k",
+      "name": "Auris Action Cam 5K",
+      "brand": "Auris",
+      "category": "cameras",
+      "tagline": {
+        "de": "Momente, die bleiben.",
+        "en": "Moments that stay."
+      },
+      "description": {},
+      "price": 499,
+      "originalPrice": null,
+      "currency": "EUR",
+      "availability": "in_stock",
+      "stock": 22,
+      "images": [
+        "/assets/images/editorial/camera.webp",
+        "/assets/images/products/phone-white.webp",
+        "/assets/images/products/laptop-screen.webp"
+      ],
+      "specs": [
+        {
+          "key": "type",
+          "value": "Action-Cam",
+          "label": {
+            "de": "Typ",
+            "en": "Type"
+          }
+        },
+        {
+          "key": "sensor",
+          "value": "1/1,3\" CMOS · 27 MP",
+          "label": {
+            "de": "Sensor",
+            "en": "Sensor"
+          }
+        },
+        {
+          "key": "lens",
+          "value": "155° Ultraweit",
+          "label": {
+            "de": "Objektiv",
+            "en": "Lens"
+          }
+        },
+        {
+          "key": "video",
+          "value": "5,3K bei 60 fps",
+          "label": {
+            "de": "Video",
+            "en": "Video"
+          }
+        },
+        {
+          "key": "stabilizer",
+          "value": "HyperSmooth",
+          "label": {
+            "de": "Stabilisierung",
+            "en": "Stabilisation"
+          }
+        },
+        {
+          "key": "water",
+          "value": "Wasserdicht bis 10 m",
+          "label": {
+            "de": "Wasserdichtigkeit",
+            "en": "Water resistance"
+          }
+        },
+        {
+          "key": "weight",
+          "value": "158 g",
+          "label": {
+            "de": "Gewicht",
+            "en": "Weight"
+          }
+        },
+        {
+          "key": "battery",
+          "value": "bis 2,5 h",
+          "label": {
+            "de": "Akku",
+            "en": "Battery"
+          }
+        }
+      ],
+      "highlights": [],
+      "rating": 4.3,
+      "reviewCount": 433,
+      "featured": false,
+      "isNew": false,
+      "tags": [
+        "cameras",
+        "auris",
+        "empfehlung"
+      ],
+      "color": "Schwarz",
+      "releaseYear": 2024,
+      "warrantyYears": 2
+    },
+    {
+      "id": "KW-1129",
+      "sku": "KW-CA-1129",
+      "slug": "meridian-lens-50",
+      "name": "Meridian Lens 50",
+      "brand": "Meridian",
+      "category": "cameras",
+      "tagline": {
+        "de": "Momente, die bleiben.",
+        "en": "Moments that stay."
+      },
+      "description": {},
+      "price": 399,
+      "originalPrice": null,
+      "currency": "EUR",
+      "availability": "in_stock",
+      "stock": 29,
+      "images": [
+        "/assets/images/products/phone-white.webp",
+        "/assets/images/products/laptop-screen.webp",
+        "/assets/images/editorial/camera.webp"
+      ],
+      "specs": [
+        {
+          "key": "type",
+          "value": "Festbrennweite",
+          "label": {
+            "de": "Typ",
+            "en": "Type"
+          }
+        },
+        {
+          "key": "focal",
+          "value": "50 mm · f/1,4",
+          "label": {
+            "de": "Brennweite",
+            "en": "Focal length"
+          }
+        },
+        {
+          "key": "mount",
+          "value": "Auris-Mount",
+          "label": {
+            "de": "Bajonett",
+            "en": "Mount"
+          }
+        },
+        {
+          "key": "weight",
+          "value": "380 g",
+          "label": {
+            "de": "Gewicht",
+            "en": "Weight"
+          }
+        },
+        {
+          "key": "filter",
+          "value": "58 mm",
+          "label": {
+            "de": "Filtergewinde",
+            "en": "Filter thread"
+          }
+        },
+        {
+          "key": "stabilizer",
+          "value": "—",
+          "label": {
+            "de": "Stabilisierung",
+            "en": "Stabilisation"
+          }
+        }
+      ],
+      "highlights": [],
+      "rating": 4.6,
+      "reviewCount": 486,
+      "featured": false,
+      "isNew": false,
+      "tags": [
+        "cameras",
+        "meridian",
+        "empfehlung"
+      ],
+      "color": "Silber",
+      "releaseYear": 2025,
       "warrantyYears": 2
     }
   ]

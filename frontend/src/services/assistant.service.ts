@@ -48,6 +48,7 @@ const categoryKeywords: Record<CategoryId, string[]> = {
   audio: ['lautsprecher', 'speaker', 'soundbar', 'hifi', 'hi-fi', 'boxen', 'audio'],
   storage: ['ssd', 'speicher', 'storage', 'festplatte', 'drive', 'daten'],
   networking: ['wlan', 'wifi', 'router', 'mesh', 'netzwerk', 'network', 'internet'],
+  cameras: ['kamera', 'camera', 'foto', 'photo', 'objektiv', 'lens'],
 };
 
 const useCaseKeywords = {

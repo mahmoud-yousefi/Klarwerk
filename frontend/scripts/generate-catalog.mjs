@@ -25,6 +25,7 @@ const imagePools = {
   audio: ['speaker-white', 'speaker-teal', 'speaker-yellow'],
   storage: ['circuit', 'backgrounds/gradient'],
   networking: ['network', 'circuit'],
+  cameras: ['editorial/camera', 'products/phone-white', 'products/laptop-screen'],
 };
 
 const colors = {
@@ -40,6 +41,7 @@ const colors = {
   audio: ['Anthrazit', 'Sand', 'Schwarz'],
   storage: ['Graphit'],
   networking: ['Weiß', 'Schwarz'],
+  cameras: ['Schwarz', 'Silber', 'Graphit'],
 };
 
 /* ------------------------------------------------------------------ */
@@ -192,6 +194,16 @@ const seeds = {
     ['Flux Router X8', 279, 3, 'router'],
     ['Flux Switch 8', 89, 0, 'switch'],
     ['Flux Extender 6', 79, 0, 'extender'],
+  ],
+  cameras: [
+    ['Auris Vision 24', 899, 2, 'mirrorless'],
+    ['Auris Vision 24 Pro', 1299, 3, 'mirrorless'],
+    ['Auris Vision 36', 1899, 4, 'mirrorless'],
+    ['Auris Pocket 1', 449, 1, 'compact'],
+    ['Auris Pocket Mini', 299, 0, 'compact'],
+    ['Auris Action Cam 4K', 349, 1, 'action'],
+    ['Auris Action Cam 5K', 499, 2, 'action'],
+    ['Meridian Lens 50', 399, 2, 'lens'],
   ],
 };
 
@@ -409,6 +421,50 @@ const networkSpecs = (t, kind) => {
   };
 };
 
+const cameraSpecs = (t, kind) => {
+  if (kind === 'lens')
+    return {
+      type: 'Festbrennweite',
+      focal: '50 mm · f/1,4',
+      mount: 'Auris-Mount',
+      weight: '380 g',
+      filter: '58 mm',
+      stabilizer: '—',
+    };
+  if (kind === 'compact')
+    return {
+      type: 'Kompaktkamera',
+      sensor: t >= 1 ? '1" CMOS · 20 MP' : '1/1,7" CMOS · 12 MP',
+      lens: t >= 1 ? '24–70 mm · f/1,8–2,8' : '28–84 mm · f/2,0–4,9',
+      video: t >= 1 ? '4K bei 60 fps' : '4K bei 30 fps',
+      stabilizer: 'Optisch',
+      weight: t >= 1 ? '320 g' : '240 g',
+      connectivity: 'Wi-Fi · Bluetooth · USB-C',
+    };
+  if (kind === 'action')
+    return {
+      type: 'Action-Cam',
+      sensor: t >= 2 ? '1/1,3" CMOS · 27 MP' : '1/1,9" CMOS · 12 MP',
+      lens: '155° Ultraweit',
+      video: t >= 2 ? '5,3K bei 60 fps' : '4K bei 60 fps',
+      stabilizer: 'HyperSmooth',
+      water: 'Wasserdicht bis 10 m',
+      weight: t >= 2 ? '158 g' : '124 g',
+      battery: t >= 2 ? 'bis 2,5 h' : 'bis 1,5 h',
+    };
+  return {
+    type: 'Spiegellose Systemkamera',
+    sensor: t >= 4 ? 'Vollformat · 45 MP' : t >= 2 ? 'APS-C · 26 MP' : 'Micro Four Thirds · 20 MP',
+    lens: 'Wechselobjektiv · Auris-Mount',
+    video: t >= 3 ? '8K bei 30 fps' : '4K bei 60 fps',
+    stabilizer: t >= 2 ? '5-Achsen IBIS' : 'Elektronisch',
+    af: t >= 2 ? 'Phasen-AF · Augenerkennung' : 'Kontrast-AF',
+    battery: t >= 2 ? 'bis 680 Aufnahmen' : 'bis 420 Aufnahmen',
+    weight: t >= 3 ? '720 g' : '480 g',
+    connectivity: 'Wi-Fi 6 · Bluetooth 5.2 · USB-C',
+  };
+};
+
 /* ------------------------------------------------------------------ */
 /* Localised copy                                                      */
 /* ------------------------------------------------------------------ */
@@ -462,6 +518,10 @@ const categoryCopy = {
     tagline: ['Verbunden, ohne Umwege.', 'Connected, without the detours.'],
     lead: ['Mesh, das in jeden Raum mitdenkt.', 'Mesh that thinks along, room by room.'],
   },
+  cameras: {
+    tagline: ['Momente, die bleiben.', 'Moments that stay.'],
+    lead: ['Sensoren, die mehr sehen. Objektive, die mitdenken.', 'Sensors that see more. Lenses that keep up.'],
+  },
 };
 
 const availabilityPlan = (i) => {
@@ -485,6 +545,7 @@ const specsFor = (category, tier, kind) => {
     case 'audio': return audioSpecs(tier, kind);
     case 'storage': return storageSpecs(tier, kind);
     case 'networking': return networkSpecs(tier, kind);
+    case 'cameras': return cameraSpecs(tier, kind);
     default: return {};
   }
 };
@@ -542,6 +603,13 @@ const specLabels = {
   speed: ['Geschwindigkeit', 'Speed'],
   dimensions: ['Abmessungen', 'Dimensions'],
   capacity: ['Kapazität', 'Capacity'],
+  lens: ['Objektiv', 'Lens'],
+  video: ['Video', 'Video'],
+  stabilizer: ['Stabilisierung', 'Stabilisation'],
+  af: ['Autofokus', 'Autofocus'],
+  focal: ['Brennweite', 'Focal length'],
+  mount: ['Bajonett', 'Mount'],
+  filter: ['Filtergewinde', 'Filter thread'],
 };
 
 const highlightsFor = (category, specs) => {
@@ -675,9 +743,9 @@ for (const [category, entries] of Object.entries(seeds)) {
   const copy = categoryCopy[category];
   entries.forEach((entry, i) => {
     const [name, price, tier, extra] = entry;
-    const isGamingKind = category === 'gaming' || category === 'audio' || category === 'storage' || category === 'networking';
+    const isGamingKind = category === 'gaming' || category === 'audio' || category === 'storage' || category === 'networking' || category === 'cameras';
     const kind = isGamingKind ? extra : category === 'keyboards' ? extra : undefined;
-    const releaseYear = category === 'gaming' || category === 'mice' || category === 'audio' || category === 'storage' || category === 'networking' ? 2024 + (i % 3) : extra;
+    const releaseYear = category === 'gaming' || category === 'mice' || category === 'audio' || category === 'storage' || category === 'networking' || category === 'cameras' ? 2024 + (i % 3) : extra;
     const specs = specsFor(category, tier, kind); 
     const { availability, stock } = availabilityPlan(index);
     const discount = index % 9 === 0 ? 0.12 : index % 14 === 0 ? 0.18 : 0;

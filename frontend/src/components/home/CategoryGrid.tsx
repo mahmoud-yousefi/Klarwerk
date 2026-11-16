@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   ArrowUpRight,
+  Camera,
   Gamepad2,
   HardDrive,
   Headphones,
@@ -32,6 +33,7 @@ const icons = {
   speaker: Speaker,
   'hard-drive': HardDrive,
   wifi: Wifi,
+  camera: Camera,
 } as const;
 
 export function CategoryGrid() {
