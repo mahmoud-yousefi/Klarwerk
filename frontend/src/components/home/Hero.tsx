@@ -8,7 +8,7 @@ import {
   Monitor,
   Sparkles,
 } from 'lucide-react';
-import { getProduct } from '@/lib/catalog';
+import { getProduct, asset } from '@/lib/catalog';
 import { formatPrice, cn } from '@/lib/utils';
 import { useScrollParallax } from '@/hooks/useUi';
 
@@ -29,7 +29,7 @@ export function Hero() {
     <section className="noise relative isolate overflow-hidden bg-ink-900 text-white">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-[0.16]"
-        style={{ backgroundImage: "url('/assets/images/hero/hero-circuit.webp')" }}
+        style={{ backgroundImage: `url('${asset('/assets/images/hero/hero-circuit.webp')}')` }}
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-[linear-gradient(100deg,#080D18_28%,rgba(8,13,24,0.92)_52%,rgba(8,13,24,0.55)_100%)]" />
@@ -116,7 +116,7 @@ export function Hero() {
             <div className="animate-float overflow-hidden rounded-[2rem] border border-white/12 bg-ink-800 shadow-[0_50px_100px_-40px_rgba(0,0,0,0.9)]">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
-                  src="/assets/images/hero/hero-laptop.webp"
+                  src={asset('/assets/images/hero/hero-laptop.webp')}
                   alt={t('home.hero.imageAlt')}
                   width={2000}
                   height={1500}

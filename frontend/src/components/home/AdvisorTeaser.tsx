@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Check, Sparkles } from 'lucide-react';
 import { Reveal } from '@/components/ui/Reveal';
+import { asset } from '@/lib/catalog';
 
 const starterKeys = [
   'starters.studyLaptop',
@@ -101,7 +102,7 @@ export function AdvisorTeaser() {
 
                     <div className="mt-3 flex items-center gap-3 rounded-2xl border border-white/8 bg-ink-950/50 p-2.5">
                       <img
-                        src="/assets/images/products/laptop-screen.webp"
+                        src={asset('/assets/images/products/laptop-screen.webp')}
                         alt=""
                         loading="lazy"
                         className="h-12 w-14 rounded-lg object-cover"

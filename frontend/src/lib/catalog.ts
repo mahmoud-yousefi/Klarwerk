@@ -12,10 +12,25 @@ import type {
   SortKey,
 } from '@/types/catalog';
 
-export const products = catalogJson.products as Product[];
-export const categories = categoriesJson as Category[];
+const withBase = (path: string) =>
+  path && path.startsWith('/') && !path.startsWith('http')
+    ? `${import.meta.env.BASE_URL}${path.slice(1)}`
+    : path;
+
+const catalog = catalogJson as { products: Product[]; meta?: unknown };
+export const products = catalog.products.map((product) => ({
+  ...product,
+  images: product.images.map(withBase),
+})) as Product[];
+export const categories = (categoriesJson as Category[]).map((category) => ({
+  ...category,
+  image: withBase(category.image),
+}));
 export const brands = brandsJson as Brand[];
-export const articles = articlesJson as Article[];
+export const articles = (articlesJson as Article[]).map((article) => ({
+  ...article,
+  image: withBase(article.image),
+}));
 
 export const productById = new Map(products.map((product) => [product.id, product]));
 export const productBySlug = new Map(products.map((product) => [product.slug, product]));
@@ -32,6 +47,7 @@ export const getProductById = (id: string) => productById.get(id);
 export const getCategory = (id: string) => categoryById.get(id as CategoryId);
 export const getBrand = (id: string) => brandById.get(id);
 export const getArticle = (slug: string) => articles.find((article) => article.slug === slug);
+export const asset = withBase;
 
 export const getCategoryCount = (categoryId: CategoryId) =>
   products.filter((product) => product.category === categoryId).length;

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowUpRight } from 'lucide-react';
 import { Reveal } from '@/components/ui/Reveal';
 import { cn } from '@/lib/utils';
+import { asset } from '@/lib/catalog';
 
 interface Collection {
   title: string;
@@ -19,21 +20,21 @@ export function Collections() {
     {
       title: t('home.collections.audioTitle'),
       text: t('home.collections.audioText'),
-      image: '/assets/images/products/headphones-black.webp',
+      image: asset('/assets/images/products/headphones-black.webp'),
       href: '/shop?category=headphones',
       imagePosition: 'center 45%',
     },
     {
       title: t('home.collections.laptopTitle'),
       text: t('home.collections.laptopText'),
-      image: '/assets/images/products/laptop-neon.webp',
+      image: asset('/assets/images/products/laptop-neon.webp'),
       href: '/shop?category=laptops',
       imagePosition: 'center 55%',
     },
     {
       title: t('home.collections.gamingTitle'),
       text: t('home.collections.gamingText'),
-      image: '/assets/images/products/controller-purple.webp',
+      image: asset('/assets/images/products/controller-purple.webp'),
       href: '/shop?category=gaming',
       imagePosition: 'center 50%',
     },

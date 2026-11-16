@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, ArrowUpRight, BatteryCharging, Cpu, HardDrive, Feather } from 'lucide-react';
-import { getProduct } from '@/lib/catalog';
+import { getProduct, asset } from '@/lib/catalog';
 import { formatPrice } from '@/lib/utils';
 import { Price } from '@/components/ui/Price';
 import { Reveal } from '@/components/ui/Reveal';
@@ -33,7 +33,7 @@ export function Spotlight() {
           <div className="relative">
             <div className="overflow-hidden rounded-[2rem] border border-white/10">
               <img
-                src="/assets/images/products/laptop-screen.webp"
+                src={asset('/assets/images/products/laptop-screen.webp')}
                 alt={product.name}
                 loading="lazy"
                 className="aspect-[4/3] w-full object-cover"

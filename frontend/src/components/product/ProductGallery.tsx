@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, Expand } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Modal } from '@/components/ui/Modal';
 import { Badge } from '@/components/ui/Badge';
+import { asset } from '@/lib/catalog';
 
 interface ProductGalleryProps {
   images: string[];
@@ -17,7 +18,7 @@ export function ProductGallery({ images, name, isNew, discount, className }: Pro
   const { t } = useTranslation();
   const [active, setActive] = useState(0);
   const [lightbox, setLightbox] = useState(false);
-  const gallery = images.length ? images : ['/assets/images/products/phone-green.webp'];
+  const gallery = images.length ? images : [asset('/assets/images/products/phone-green.webp')];
 
   useEffect(() => {
     setActive(0);
