@@ -7,7 +7,6 @@ export function EntranceSplash({ onDone }: { onDone: () => void }) {
   const [fadeOut, setFadeOut] = useState(false);
   const [showBrand, setShowBrand] = useState(false);
   const [showTagline, setShowTagline] = useState(false);
-  const [draw, setDraw] = useState(false);
 
   useEffect(() => {
     const reduceMotion =
@@ -21,15 +20,12 @@ export function EntranceSplash({ onDone }: { onDone: () => void }) {
     };
 
     if (reduceMotion) {
-      setDraw(true);
       setShowBrand(true);
       setShowTagline(true);
       timers.push(window.setTimeout(finish, 900));
       return () => timers.forEach((t) => window.clearTimeout(t));
     }
 
-    // Phase 1: ambient glow already visible; begin drawing the ribbon.
-    timers.push(window.setTimeout(() => setDraw(true), 200));
     // Phase 3: brand reveal.
     timers.push(window.setTimeout(() => setShowBrand(true), 1100));
     timers.push(window.setTimeout(() => setShowTagline(true), 1650));
@@ -54,7 +50,7 @@ export function EntranceSplash({ onDone }: { onDone: () => void }) {
         style={{ background: 'radial-gradient(circle at 50% 50%, rgba(88,101,242,0.14) 0%, rgba(155,114,242,0.08) 28%, transparent 62%)' }}
       />
 
-      {/* SVG ribbon layer */}
+      {/* Ellipse ribbon */}
       <svg
         className="pointer-events-none absolute inset-0 h-full w-full"
         viewBox="0 0 1200 700"
@@ -62,49 +58,76 @@ export function EntranceSplash({ onDone }: { onDone: () => void }) {
         aria-hidden="true"
       >
         <defs>
-          <linearGradient id="kw-ribbon" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="kw-ellipse" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#5865F2" />
             <stop offset="50%" stopColor="#7E8AFB" />
             <stop offset="100%" stopColor="#9B72F2" />
           </linearGradient>
+          <linearGradient id="kw-travel-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#A5AEFF" />
+            <stop offset="50%" stopColor="#FFFFFF" />
+            <stop offset="100%" stopColor="#C4AAF8" />
+          </linearGradient>
           <filter id="kw-glow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feGaussianBlur stdDeviation="5" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
-          <linearGradient id="kw-ribbon-soft" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="rgba(88,101,242,0.18)" />
-            <stop offset="100%" stopColor="rgba(155,114,242,0.12)" />
-          </linearGradient>
         </defs>
 
-        {/* Secondary faint background curve */}
-        <path
-          d="M 120 380 C 120 160, 420 110, 600 150 C 780 110, 1080 160, 1080 380 C 1080 580, 780 630, 600 590 C 420 630, 120 580, 120 380"
+        <style>{`
+          @keyframes kw-travel {
+            0% { stroke-dashoffset: 1000; }
+            100% { stroke-dashoffset: 0; }
+          }
+          .kw-travel-light {
+            animation: kw-travel 3.6s linear infinite;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .kw-travel-light { animation: none; opacity: 0.7; }
+          }
+        `}</style>
+
+        {/* Faint secondary tilted ellipse for depth */}
+        <ellipse
+          cx="600"
+          cy="350"
+          rx="520"
+          ry="210"
           fill="none"
-          stroke="url(#kw-ribbon-soft)"
-          strokeWidth="1.2"
-          strokeLinecap="round"
-          opacity="0.5"
+          stroke="rgba(155,114,242,0.12)"
+          strokeWidth="1"
+          transform="rotate(-8 600 350)"
         />
 
-        {/* Primary ribbon */}
-        <path
-          d="M 180 360 C 180 140, 420 90, 600 130 C 780 90, 1020 140, 1020 360 C 1020 560, 780 610, 600 570 C 420 610, 180 560, 180 360"
+        {/* Faint base ellipse */}
+        <ellipse
+          cx="600"
+          cy="350"
+          rx="470"
+          ry="195"
           fill="none"
-          stroke="url(#kw-ribbon)"
-          strokeWidth="2.2"
+          stroke="url(#kw-ellipse)"
+          strokeWidth="1.4"
+          opacity="0.3"
+        />
+
+        {/* Traveling light along the ellipse */}
+        <ellipse
+          className="kw-travel-light"
+          cx="600"
+          cy="350"
+          rx="470"
+          ry="195"
+          fill="none"
+          stroke="url(#kw-travel-grad)"
+          strokeWidth="2.6"
           strokeLinecap="round"
-          strokeLinejoin="round"
           filter="url(#kw-glow)"
           pathLength={1000}
-          style={{
-            strokeDasharray: 1000,
-            strokeDashoffset: draw ? 0 : 1000,
-            transition: draw ? 'stroke-dashoffset 1.7s cubic-bezier(0.16, 1, 0.3, 1)' : 'none',
-          }}
+          style={{ strokeDasharray: '200 1000', strokeDashoffset: 1000 }}
         />
       </svg>
 
