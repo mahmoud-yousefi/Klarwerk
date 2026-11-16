@@ -78,6 +78,14 @@ export default {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        'letter-in': {
+          '0%': { opacity: '0', transform: 'translateY(48px) scale(0.85)', filter: 'blur(12px)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)', filter: 'blur(0)' },
+        },
+        'float-y': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-14px)' },
+        },
         'spin-slow': {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
@@ -134,6 +142,8 @@ export default {
         press: 'press 1.4s ease-in-out infinite',
         blink: 'blink 1.6s steps(2, end) infinite',
         'flip-y': 'flip-y 3.2s ease-in-out infinite',
+        'letter-in': 'letter-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both',
+        'float-y': 'float-y 4s ease-in-out infinite',
       },
       typography: {},
     },
