@@ -1,8 +1,9 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { HomePage } from '@/pages/HomePage';
 import { Spinner } from '@/components/ui/Spinner';
+import { EntranceSplash } from '@/components/layout/EntranceSplash';
 
 const CatalogPage = lazy(() => import('@/pages/CatalogPage'));
 const ProductPage = lazy(() => import('@/pages/ProductPage'));
@@ -33,9 +34,31 @@ function RouteFallback() {
   );
 }
 
+let splashShown = false;
+
 export function App() {
+  const [showSplash, setShowSplash] = useState(() => !splashShown);
+  const [splashDone, setSplashDone] = useState(splashShown);
+
+  useEffect(() => {
+    if (splashShown) {
+      setShowSplash(false);
+      setSplashDone(true);
+      return;
+    }
+    splashShown = true;
+  }, []);
+
   return (
     <>
+      {showSplash && !splashDone && (
+        <EntranceSplash
+          onDone={() => {
+            setSplashDone(true);
+            setShowSplash(false);
+          }}
+        />
+      )}
       <ScrollToTop />
       <Suspense fallback={<RouteFallback />}>
         <Routes>
