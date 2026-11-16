@@ -53,4 +53,13 @@ docs/              Architecture, design system, assets, plan
 
 Frontend-first build. The backend contract is documented and mocked client-side, so connecting the real Express API later is a configuration change plus a thin service swap, not a rewrite.
 
-See `docs/` for architecture, design system, API contract and implementation plan.
+Delivered now: full DE/EN storefront, catalog and product pages, cart/wishlist/compare, demo
+checkout with orders, magazine and info pages, and the catalog-grounded AI advisor in mock mode.
+
+## Documentation
+
+- [Implementation plan](docs/IMPLEMENTATION_PLAN.md) — phases, next steps, definition of done.
+- [Architecture](docs/ARCHITECTURE.md) — data flow, state, routing, i18n, assistant and QA.
+- [Design system](docs/DESIGN_SYSTEM.md) — tokens, typography, components, motion, a11y.
+- [API contract](docs/API_CONTRACT.md) — endpoints for catalog, checkout and SSE assistant.
+- [Asset catalog](docs/ASSET_CATALOG.md) — imagery sources, license and file manifest.
