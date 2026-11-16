@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { ProductGrid } from '@/components/product/ProductGrid';
 import { EmptyState } from '@/components/ui/EmptyState';
 import { Drawer } from '@/components/ui/Drawer';
-import { ProductCardSkeleton } from '@/components/ui/Skeleton';
+import { CategoryLoader } from '@/components/ui/CategoryLoader';
 import {
   FilterPanel,
   type FilterState,
@@ -342,10 +342,12 @@ export default function CatalogPage() {
 
           <div>
             {isLoading && !data ? (
-              <div className="grid grid-cols-2 gap-x-4 gap-y-9 sm:gap-x-5 lg:grid-cols-3">
-                {Array.from({ length: 6 }).map((_, index) => (
-                  <ProductCardSkeleton key={index} />
-                ))}
+              <div className="flex flex-col items-center justify-center gap-6 py-24">
+                <CategoryLoader
+                  category={category || 'laptops'}
+                  size="lg"
+                  label={t('store:catalog.loading', { defaultValue: 'Lädt Produkte …' })}
+                />
               </div>
             ) : items.length === 0 ? (
               <EmptyState

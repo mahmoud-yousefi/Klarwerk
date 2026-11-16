@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import {
   ChevronDown,
   Heart,
-  Menu,
   Search,
   ShoppingBag,
   Sparkles,
@@ -25,7 +24,7 @@ export function Header() {
   const scrolled = useScrolled(20);
   const cartCount = useCartCount();
   const wishlistCount = useWishlistCount();
-  const { openCart, openSearch, openMobileMenu } = useUiStore();
+  const { openCart, openSearch } = useUiStore();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -53,8 +52,8 @@ export function Header() {
       className={cn(
         'sticky top-0 z-50 border-b transition-all duration-300',
         scrolled
-          ? 'border-white/8 bg-ink-900/92 shadow-[0_12px_30px_-20px_rgba(0,0,0,0.7)] backdrop-blur-xl'
-          : 'border-transparent bg-ink-900/55 backdrop-blur-md',
+          ? 'border-white/8 bg-ink-900/95 shadow-[0_12px_30px_-20px_rgba(0,0,0,0.7)] backdrop-blur-xl'
+          : 'border-white/10 bg-ink-900/75 shadow-[0_8px_30px_-24px_rgba(0,0,0,0.5)] backdrop-blur-lg',
       )}
     >
       <div className="container-x flex h-[72px] items-center justify-between gap-4">
@@ -189,15 +188,6 @@ export function Header() {
                 {cartCount}
               </span>
             )}
-          </button>
-
-          <button
-            type="button"
-            onClick={openMobileMenu}
-            className="flex h-9 w-9 items-center justify-center rounded-full text-white/70 transition hover:bg-white/8 hover:text-white lg:hidden"
-            aria-label={t('misc.menuOpen')}
-          >
-            <Menu size={19} />
           </button>
         </div>
       </div>

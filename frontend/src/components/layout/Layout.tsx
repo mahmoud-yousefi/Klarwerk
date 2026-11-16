@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { AnnouncementBar } from './AnnouncementBar';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { MobileMenu } from './MobileMenu';
+import { MobileBottomNav } from './MobileBottomNav';
 import { SearchOverlay } from './SearchOverlay';
 import { CartDrawer } from './CartDrawer';
 import { CompareBar } from './CompareBar';
@@ -38,11 +38,11 @@ export function Layout() {
       </a>
       <AnnouncementBar />
       <Header />
-      <main id="main" className="flex-1">
+      <main id="main" className="flex-1 pb-24 lg:pb-0">
         <Outlet />
       </main>
       <Footer />
-      <MobileMenu />
+      <MobileBottomNav />
       <SearchOverlay />
       <CartDrawer />
       <CompareBar />

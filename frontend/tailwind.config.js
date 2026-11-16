@@ -78,6 +78,44 @@ export default {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        'spin-slow': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        wobble: {
+          '0%, 100%': { transform: 'rotate(-6deg)' },
+          '50%': { transform: 'rotate(6deg)' },
+        },
+        rumble: {
+          '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
+          '25%': { transform: 'translate(-1px, 1px) rotate(-2deg)' },
+          '50%': { transform: 'translate(1px, -1px) rotate(2deg)' },
+          '75%': { transform: 'translate(-1px, -1px) rotate(-1deg)' },
+        },
+        'pulse-glow': {
+          '0%, 100%': { opacity: '0.55', transform: 'scale(1)' },
+          '50%': { opacity: '1', transform: 'scale(1.08)' },
+        },
+        tick: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(180deg)' },
+        },
+        swipe: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(6px)' },
+        },
+        press: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(2px)' },
+        },
+        blink: {
+          '0%, 49%': { opacity: '0.3' },
+          '50%, 100%': { opacity: '1' },
+        },
+        'flip-y': {
+          '0%': { transform: 'rotateY(0deg)' },
+          '100%': { transform: 'rotateY(360deg)' },
+        },
       },
       animation: {
         'fade-up': 'fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both',
@@ -87,6 +125,15 @@ export default {
         'pulse-ring': 'pulse-ring 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite',
         'slide-in': 'slide-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) both',
         'scale-in': 'scale-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) both',
+        'spin-slow': 'spin-slow 4s linear infinite',
+        wobble: 'wobble 2.4s ease-in-out infinite',
+        rumble: 'rumble 1.6s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+        tick: 'tick 2s ease-in-out infinite',
+        swipe: 'swipe 1.8s ease-in-out infinite',
+        press: 'press 1.4s ease-in-out infinite',
+        blink: 'blink 1.6s steps(2, end) infinite',
+        'flip-y': 'flip-y 3.2s ease-in-out infinite',
       },
       typography: {},
     },
