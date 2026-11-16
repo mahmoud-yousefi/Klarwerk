@@ -1,0 +1,146 @@
+[
+  {
+    "id": "smartphones",
+    "name": { "de": "Smartphones", "en": "Smartphones" },
+    "short": { "de": "Smartphones", "en": "Smartphones" },
+    "description": {
+      "de": "Kameras, Displays und Akkus, die den Alltag leichter machen.",
+      "en": "Cameras, displays and batteries that make everyday life easier."
+    },
+    "image": "/assets/images/categories/smartphones.webp",
+    "icon": "smartphone",
+    "accent": "#5865F2"
+  },
+  {
+    "id": "laptops",
+    "name": { "de": "Laptops", "en": "Laptops" },
+    "short": { "de": "Laptops", "en": "Laptops" },
+    "description": {
+      "de": "Tragbare Leistung für Studium, Büro und Kreativarbeit.",
+      "en": "Portable performance for study, office and creative work."
+    },
+    "image": "/assets/images/categories/laptops.webp",
+    "icon": "laptop",
+    "accent": "#9B72F2"
+  },
+  {
+    "id": "tablets",
+    "name": { "de": "Tablets", "en": "Tablets" },
+    "short": { "de": "Tablets", "en": "Tablets" },
+    "description": {
+      "de": "Flexible Flächen für Notizen, Filme und mobile Projekte.",
+      "en": "Flexible canvases for notes, films and projects on the move."
+    },
+    "image": "/assets/images/categories/tablets.webp",
+    "icon": "tablet",
+    "accent": "#4FA3A5"
+  },
+  {
+    "id": "monitors",
+    "name": { "de": "Monitore", "en": "Monitors" },
+    "short": { "de": "Monitore", "en": "Monitors" },
+    "description": {
+      "de": "Mehr Klarheit, mehr Platz, mehr Farbe auf dem Schreibtisch.",
+      "en": "More clarity, more space, more colour on your desk."
+    },
+    "image": "/assets/images/categories/monitors.webp",
+    "icon": "monitor",
+    "accent": "#3E8BD8"
+  },
+  {
+    "id": "headphones",
+    "name": { "de": "Kopfhörer", "en": "Headphones" },
+    "short": { "de": "Kopfhörer", "en": "Headphones" },
+    "description": {
+      "de": "Klang, der den Raum um dich herum leiser macht.",
+      "en": "Sound that makes the room around you quieter."
+    },
+    "image": "/assets/images/categories/audio.webp",
+    "icon": "headphones",
+    "accent": "#C08A5A"
+  },
+  {
+    "id": "smartwatches",
+    "name": { "de": "Smartwatches", "en": "Smartwatches" },
+    "short": { "de": "Wearables", "en": "Wearables" },
+    "description": {
+      "de": "Gesundheit, Training und Benachrichtigungen am Handgelenk.",
+      "en": "Health, training and notifications on your wrist."
+    },
+    "image": "/assets/images/categories/wearables.webp",
+    "icon": "watch",
+    "accent": "#6E7F9E"
+  },
+  {
+    "id": "gaming",
+    "name": { "de": "Gaming", "en": "Gaming" },
+    "short": { "de": "Gaming", "en": "Gaming" },
+    "description": {
+      "de": "Controller, Handhelds und Headsets für lange Sessions.",
+      "en": "Controllers, handhelds and headsets for long sessions."
+    },
+    "image": "/assets/images/categories/gaming.webp",
+    "icon": "gamepad",
+    "accent": "#7A5AF8"
+  },
+  {
+    "id": "keyboards",
+    "name": { "de": "Tastaturen", "en": "Keyboards" },
+    "short": { "de": "Tastaturen", "en": "Keyboards" },
+    "description": {
+      "de": "Mechanik mit Charakter – leise, schnell oder beides.",
+      "en": "Mechanical character – quiet, fast or both."
+    },
+    "image": "/assets/images/categories/desk.webp",
+    "icon": "keyboard",
+    "accent": "#8C7B6B"
+  },
+  {
+    "id": "mice",
+    "name": { "de": "Mäuse", "en": "Mice" },
+    "short": { "de": "Mäuse", "en": "Mice" },
+    "description": {
+      "de": "Präzise Eingaben, angenehme Form, wenig Gewicht.",
+      "en": "Precise input, comfortable shape, little weight."
+    },
+    "image": "/assets/images/products/mouse-dark.webp",
+    "icon": "mouse",
+    "accent": "#5B6577"
+  },
+  {
+    "id": "audio",
+    "name": { "de": "Audio & Hi-Fi", "en": "Audio & Hi-Fi" },
+    "short": { "de": "Audio", "en": "Audio" },
+    "description": {
+      "de": "Lautsprecher und Soundbars für Räume mit Anspruch.",
+      "en": "Speakers and soundbars for rooms with standards."
+    },
+    "image": "/assets/images/products/speaker-teal.webp",
+    "icon": "speaker",
+    "accent": "#B07C4F"
+  },
+  {
+    "id": "storage",
+    "name": { "de": "Speicher", "en": "Storage" },
+    "short": { "de": "Speicher", "en": "Storage" },
+    "description": {
+      "de": "Schnelle SSDs für Projekte, die sicher bleiben sollen.",
+      "en": "Fast SSDs for projects that should stay safe."
+    },
+    "image": "/assets/images/products/circuit.webp",
+    "icon": "hard-drive",
+    "accent": "#4F8C7B"
+  },
+  {
+    "id": "networking",
+    "name": { "de": "Netzwerk", "en": "Networking" },
+    "short": { "de": "Netzwerk", "en": "Networking" },
+    "description": {
+      "de": "WLAN bis in den letzten Raum – ohne Funklöcher.",
+      "en": "Wi-Fi into the last room – without dead spots."
+    },
+    "image": "/assets/images/products/network.webp",
+    "icon": "wifi",
+    "accent": "#3F7E9B"
+  }
+]

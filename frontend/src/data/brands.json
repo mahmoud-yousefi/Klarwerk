@@ -1,0 +1,90 @@
+[
+  {
+    "id": "vantis",
+    "name": "Vantis",
+    "origin": "Rotterdam, NL",
+    "founded": 2014,
+    "description": {
+      "de": "Smartphones und Tablets mit ruhigem Design und langer Update-Garantie.",
+      "en": "Smartphones and tablets with calm design and long update commitments."
+    },
+    "accent": "#5865F2"
+  },
+  {
+    "id": "nordvolt",
+    "name": "Nordvolt",
+    "origin": "München, DE",
+    "founded": 2011,
+    "description": {
+      "de": "Notebooks für konzentriertes Arbeiten – leise, reparierbar, langlebig.",
+      "en": "Notebooks for focused work – quiet, repairable, long-lasting."
+    },
+    "accent": "#9B72F2"
+  },
+  {
+    "id": "auris",
+    "name": "Auris",
+    "origin": "Kopenhagen, DK",
+    "founded": 2016,
+    "description": {
+      "de": "Audio-Produkte mit natürlicher Abstimmung und zeitloser Form.",
+      "en": "Audio products with natural tuning and timeless form."
+    },
+    "accent": "#C08A5A"
+  },
+  {
+    "id": "halcyon",
+    "name": "Halcyon",
+    "origin": "Lyon, FR",
+    "founded": 2009,
+    "description": {
+      "de": "Displays mit werkseitiger Kalibrierung für Kreative und Entwickler.",
+      "en": "Factory-calibrated displays for creatives and developers."
+    },
+    "accent": "#3E8BD8"
+  },
+  {
+    "id": "meridian",
+    "name": "Meridian",
+    "origin": "Zürich, CH",
+    "founded": 2015,
+    "description": {
+      "de": "Wearables und Tablets, die Gesundheit und Alltag verbinden.",
+      "en": "Wearables and tablets connecting health and everyday life."
+    },
+    "accent": "#4FA3A5"
+  },
+  {
+    "id": "kestrel",
+    "name": "Kestrel",
+    "origin": "Stockholm, SE",
+    "founded": 2018,
+    "description": {
+      "de": "Gaming-Hardware mit direktem Feedback und robusten Materialien.",
+      "en": "Gaming hardware with immediate feedback and robust materials."
+    },
+    "accent": "#7A5AF8"
+  },
+  {
+    "id": "formwerk",
+    "name": "Formwerk",
+    "origin": "Berlin, DE",
+    "founded": 2017,
+    "description": {
+      "de": "Tastaturen, Mäuse und Desk-Tools mit Werkstattcharakter.",
+      "en": "Keyboards, mice and desk tools with a workshop character."
+    },
+    "accent": "#8C7B6B"
+  },
+  {
+    "id": "flux",
+    "name": "Flux",
+    "origin": "Tallinn, EE",
+    "founded": 2013,
+    "description": {
+      "de": "Speicher und Netzwerk für ein Zuhause, das verbunden bleibt.",
+      "en": "Storage and networking for a home that stays connected."
+    },
+    "accent": "#4F8C7B"
+  }
+]
