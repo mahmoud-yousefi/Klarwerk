@@ -44,9 +44,9 @@ export function EntranceSplash({ onDone }: { onDone: () => void }) {
       const container = containerRef.current;
       if (!container || disposed) return;
       try {
-        const { createCinematicScene } = await import('./splash/CinematicScene');
+        const { createAbstractScene } = await import('./splash/AbstractScene');
         if (disposed) return;
-        scene = createCinematicScene(container);
+        scene = createAbstractScene(container);
       } catch {
         // WebGL unavailable — the wordmark still carries the entrance.
       }
