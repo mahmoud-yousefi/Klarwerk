@@ -1,0 +1,258 @@
+[
+  {
+    "id": "art-01",
+    "slug": "laptop-fuer-das-studium",
+    "category": "guides",
+    "title": {
+      "de": "Der richtige Laptop fürs Studium",
+      "en": "The right laptop for your studies"
+    },
+    "excerpt": {
+      "de": "Zwischen Seminarraum, Bibliothek und Zug: Worauf es bei einem Studien-Notebook wirklich ankommt – und wo du getrost sparen kannst.",
+      "en": "Between seminar rooms, libraries and trains: what actually matters in a study laptop – and where you can safely spend less."
+    },
+    "body": {
+      "de": [
+        "Ein Studien-Laptop muss selten das Schnellste sein. Entscheidend sind drei Dinge: ein Display, auf dem du auch nach vier Stunden noch gern liest, ein Akku, der einen langen Tag ohne Steckdose übersteht, und ein Gewicht, das dich nicht davon abhält, das Gerät mitzunehmen. Alles andere ist Verhandlungssache.",
+        "Für geistes- und sozialwissenschaftliche Fächer reichen 16 GB Arbeitsspeicher und eine solide integrierte Grafik. Wer programmiert, Daten auswertet oder mit großen Bildern arbeitet, sollte eher in 32 GB investieren als in die schnellste Prozessorvariante. Der Speicher lässt sich später meist nicht aufrüsten – der Prozessor wird in der Praxis seltener zum Engpass.",
+        "Achte auf Anschlüsse, die zu deinem Alltag passen. Ein HDMI-Ausgang für den Beamer im Seminar, USB-C zum Laden und ein Kartenleser für Kamera oder Felddaten sparen Adapter und Frust. Wer viel tippt, sollte die Tastatur vor dem Kauf ausprobieren – nicht nur die Zahlen im Datenblatt lesen.",
+        "Und dann ist da noch die Frage nach der Größe. 13 bis 14 Zoll sind der beste Kompromiss aus Mobilität und Lesbarkeit. 16 Zoll bieten mehr Arbeitsfläche, liegen aber schnell schwerer im Rucksack. Wenn du unsicher bist, leihe dir vor dem Kauf ein Gerät in der Bibliothek oder im Freundeskreis aus. Ein Wochenende sagt mehr als jede Produktseite."
+      ],
+      "en": [
+        "A study laptop rarely needs to be the fastest machine around. Three things matter: a display you still enjoy reading on after four hours, a battery that lasts a long day away from a socket, and a weight that doesn't stop you from carrying it. Everything else is negotiable.",
+        "For humanities and social sciences, 16 GB of memory and solid integrated graphics are plenty. If you code, analyse data or work with large images, spend more on 32 GB rather than on the fastest processor. Memory usually cannot be upgraded later; in practice, the processor becomes the bottleneck less often.",
+        "Look at the ports that fit your day. An HDMI output for the seminar projector, USB-C charging and a card reader for a camera save adapters and frustration. If you type a lot, try the keyboard before buying – don't just read the numbers on the spec sheet.",
+        "Then there is size. 13 to 14 inches is the best balance of mobility and legibility. 16 inches gives you more workspace but quickly becomes heavy in a backpack. If you are unsure, borrow a device for a weekend before buying. That tells you more than any product page."
+      ]
+    },
+    "image": "/assets/images/editorial/workspace.webp",
+    "author": "Mara Feld",
+    "publishedAt": "2026-10-28",
+    "readingMinutes": 6,
+    "featured": true
+  },
+  {
+    "id": "art-02",
+    "slug": "smartphones-worauf-es-ankommt",
+    "category": "comparison",
+    "title": {
+      "de": "Smartphones 2026: Worauf es wirklich ankommt",
+      "en": "Smartphones in 2026: what really matters"
+    },
+    "excerpt": {
+      "de": "Megapixel, Laufzeit, Update-Garantie: Die drei Zahlen, die den Unterschied machen – und die, die nur gut aussehen.",
+      "en": "Megapixels, battery life, update commitments: the three numbers that make a difference – and the ones that just look good."
+    },
+    "body": {
+      "de": [
+        "Die Kamera ist für die meisten Menschen der wichtigste Grund für ein neues Smartphone. Doch die Megapixel-Zahl sagt wenig über das Ergebnis. Entscheidend sind Sensorgröße, Bildverarbeitung und eine Abstimmung, die zu deinem Geschmack passt. Ein 50-MP-Sensor mit guter Software schlägt einen 108-MP-Sensor mit aggressiver Nachschärfung fast immer.",
+        "Bei der Laufzeit zählt nicht nur die Kapazität in Milliamperestunden, sondern die Effizienz des Chips und die Qualität des Displays. Ein 5.000-mAh-Akku mit einem ineffizienten Panel hält kürzer als ein 4.500-mAh-Akku mit LTPO-Technik. Achte außerdem auf die Ladeleistung: 45 Watt sind im Alltag oft wertvoller als ein Laborrekord.",
+        "Die dritte Zahl ist die Update-Garantie. Ein Gerät, das sieben Jahre Sicherheitsupdates erhält, ist über die Laufzeit gerechnet häufig günstiger als ein billigeres Modell mit zwei Jahren Support. Das ist kein Marketingdetail, sondern ein Kaufargument mit echtem Geldwert.",
+        "Was du getrost ignorieren kannst: Benchmark-Punkte ohne Kontext, künstliche Zoomstufen und die jährliche Frage, ob das neue Modell „schneller“ ist. Frage dich stattdessen, ob Display, Kamera und Akku zu den Orten passen, an denen du dein Telefon tatsächlich benutzt."
+      ],
+      "en": [
+        "For most people, the camera is the main reason to buy a new phone. But megapixels say little about the result. Sensor size, processing and tuning that matches your taste matter far more. A good 50 MP sensor with sensible software will almost always beat a 108 MP sensor with aggressive sharpening.",
+        "Battery life is not just about milliamp-hours. Chip efficiency and display quality matter just as much. A 5,000 mAh battery behind an inefficient panel can drain faster than a 4,500 mAh battery with LTPO technology. Also consider charging speed: 45 W is often more valuable in daily life than a lab record.",
+        "The third number is the update commitment. A phone with seven years of security updates is often cheaper over its lifetime than a cheaper model with two years of support. That is not a marketing detail – it is a financial argument.",
+        "What you can safely ignore: benchmark scores without context, artificial zoom levels and the annual question of whether the new model is 'faster'. Ask instead whether display, camera and battery fit the places where you actually use your phone."
+      ]
+    },
+    "image": "/assets/images/products/phone-green.webp",
+    "author": "Jonas Reimers",
+    "publishedAt": "2026-10-14",
+    "readingMinutes": 7,
+    "featured": false
+  },
+  {
+    "id": "art-03",
+    "slug": "anc-verstehen",
+    "category": "knowledge",
+    "title": {
+      "de": "ANC verstehen: Ruhe ist eine Funktion",
+      "en": "Understanding ANC: quiet is a feature"
+    },
+    "excerpt": {
+      "de": "Aktive Geräuschunterdrückung ist mehr als ein Schalter. Eine kurze Erklärung, die dir die Auswahl erleichtert.",
+      "en": "Active noise cancelling is more than a switch. A short explanation that makes choosing easier."
+    },
+    "body": {
+      "de": [
+        "Aktive Geräuschunterdrückung funktioniert mit Mikrofonen, die Umgebungslärm erfassen, und Gegenschall, der ihn auslöscht. Das gelingt bei tiefen, gleichmäßigen Geräuschen am besten – Flugzeugturbinen, Zuggeräusche, Lüftungen. Stimmen und hohe Töne werden weniger stark reduziert, was im Alltag oft angenehmer ist als völlige Stille.",
+        "Gute ANC-Systeme passen sich an die Umgebung an. Ein Modus für den Nahverkehr, ein transparenter Modus für Gespräche an der Kasse und eine moderate Stufe für das Büro sind praktischer als ein einziger maximaler Wert. Achte deshalb auf die Bedienung: Lässt sich der Modus ohne App wechseln? Reagiert er schnell?",
+        "Der Klang leidet unter starker Geräuschunterdrückung nur dann, wenn die Implementierung schlecht ist. Hochwertige Kopfhörer kompensieren den Druck im Ohr mit einer angepassten Abstimmung. Wenn dir nach einer Stunde unwohl wird, liegt das selten an dir – sondern oft an zu aggressivem ANC.",
+        "Für viele Menschen ist ein offener Kopfhörer ohne ANC die bessere Wahl: bequemer über Stunden, natürlicher im Klang, sicherer im Straßenverkehr. ANC ist kein Qualitätsmerkmal für sich, sondern ein Werkzeug für bestimmte Situationen. Die Frage ist nicht, ob ein Kopfhörer ANC hat, sondern ob du ihn dort trägst, wo er hilft."
+      ],
+      "en": [
+        "Active noise cancelling uses microphones to capture ambient noise and anti-noise to cancel it out. It works best with low, steady sounds – aircraft engines, train rumble, ventilation. Voices and high frequencies are reduced less, which in daily life is often more pleasant than total silence.",
+        "Good ANC systems adapt to the environment. A commute mode, a transparency mode for talking at the checkout and a moderate setting for the office are more useful than one maximum value. Pay attention to controls: can you switch modes without the app? Does it react quickly?",
+        "Sound only suffers under strong noise cancelling when the implementation is poor. Well-made headphones compensate for ear pressure with adjusted tuning. If you feel uncomfortable after an hour, that is rarely your fault – it is often ANC that is too aggressive.",
+        "For many people, an open headphone without ANC is the better choice: comfortable for hours, more natural in sound, safer in traffic. ANC is not a quality badge in itself, but a tool for specific situations. The question is not whether a headphone has ANC, but whether you wear it where ANC helps."
+      ]
+    },
+    "image": "/assets/images/products/headphones-black.webp",
+    "author": "Lea Sander",
+    "publishedAt": "2026-09-30",
+    "readingMinutes": 5,
+    "featured": false
+  },
+  {
+    "id": "art-04",
+    "slug": "schreibtisch-der-mitdenkt",
+    "category": "productivity",
+    "title": {
+      "de": "Ein Schreibtisch, der mitdenkt",
+      "en": "A desk that thinks along"
+    },
+    "excerpt": {
+      "de": "Monitor, Tastatur, Licht: Wie aus einem Arbeitsplatz ein Setup wird, das dich weniger unterbricht.",
+      "en": "Monitor, keyboard, light: how a workspace becomes a setup that interrupts you less."
+    },
+    "body": {
+      "de": [
+        "Produktivität beginnt nicht mit einer App, sondern mit dem Blickwinkel. Ein Monitor auf Augenhöhe, eine Tastatur in bequemer Reichweite und Licht, das nicht von hinten auf den Bildschirm fällt – das sind unspektakuläre Veränderungen mit großer Wirkung. Wer täglich acht Stunden am Schreibtisch sitzt, sollte zuerst hier ansetzen.",
+        "Ein großer Monitor ersetzt nicht automatisch zwei Bildschirme. Wichtig ist die Auflösung: Auf 27 Zoll sind 1440p angenehm, auf 32 Zoll sollte es 4K sein. Wer Text liest, profitiert von einer Pixeldichte über 140 ppi. Wer gestaltet, braucht zusätzlich Farbtreue und eine Kalibrierung, die nicht nur im Datenblatt steht.",
+        "Bei Tastaturen ist die Switch-Wahl entscheidender als die Marke. Lineare Schalter sind leise und gleichmäßig, taktile geben Rückmeldung, klicky ist im Büro schnell zu laut. Ein hot-swap-fähiges Board erlaubt dir, die Charakteristik später zu ändern, ohne eine neue Tastatur zu kaufen.",
+        "Zum Schluss: Kabel. Ein USB-C-Dock mit Display-Ausgang, Ethernet und Ladefunktion reduziert das Chaos mehr als jeder neue Schreibtisch. Nimm dir eine Stunde Zeit, um Kabel zu bündeln und alles vom Boden wegzubekommen. Dein zukünftiges Ich wird es dir danken."
+      ],
+      "en": [
+        "Productivity does not start with an app; it starts with your viewing angle. A monitor at eye level, a keyboard within comfortable reach and light that doesn't fall onto the screen from behind – these are unspectacular changes with a large effect. If you sit at a desk eight hours a day, start here.",
+        "A large monitor doesn't automatically replace two screens. Resolution matters: 1440p is pleasant at 27 inches, while 32 inches should be 4K. If you read text, you benefit from a pixel density above 140 ppi. If you design, you also need colour accuracy and calibration that exists outside the spec sheet.",
+        "With keyboards, the switch choice matters more than the brand. Linear switches are quiet and even, tactile ones give feedback, clicky switches quickly become too loud in an office. A hot-swappable board lets you change the feel later without buying a new keyboard.",
+        "Finally: cables. A USB-C dock with display output, Ethernet and charging reduces clutter more than any new desk. Take an hour to bundle cables and get everything off the floor. Your future self will thank you."
+      ]
+    },
+    "image": "/assets/images/editorial/workspace.webp",
+    "author": "Nils Brandt",
+    "publishedAt": "2026-09-18",
+    "readingMinutes": 6,
+    "featured": false
+  },
+  {
+    "id": "art-05",
+    "slug": "gaming-setups-die-leise-bleiben",
+    "category": "gaming",
+    "title": {
+      "de": "Gaming-Setups, die leise bleiben",
+      "en": "Gaming setups that stay quiet"
+    },
+    "excerpt": {
+      "de": "Ein Setup muss nicht laut sein, um schnell zu wirken. Über Lüfter, Tastaturen und die Unterschätzte Rolle des Raums.",
+      "en": "A setup doesn't need to be loud to feel fast. On fans, keyboards and the underestimated role of the room."
+    },
+    "body": {
+      "de": [
+        "Viele Gaming-Setups werden nicht durch ihre Leistung laut, sondern durch ihre Kühlung. Ein Gehäuse mit drei langsamen 140-mm-Lüftern ist häufig leiser als eines mit zwei schnellen 120-mm-Lüftern – bei gleicher Luftmenge. Achte auf große Kühlflächen und darauf, dass die Lüfter nicht gegen einen Staubfilter direkt vor der Wand arbeiten.",
+        "Bei Tastaturen ist der Raum der zweite Faktor. Ein hohles Gehäuse verstärkt jeden Anschlag. Dämpfungsmatten, ein schwereres Gehäuse und geschmierte Stabilisatoren machen mehr Unterschied als ein teurerer Switch. Wer nachts spielt, sollte außerdem auf lineare Schalter setzen – nicht nur wegen des Geräuschs, sondern wegen der gleichmäßigen Auslösung.",
+        "Kopfhörer mit geschlossener Bauweise halten den Klang im Kopf, aber auch die Wärme. Für lange Sessions sind offene Modelle oft angenehmer, solange niemand im Raum gestört wird. Ein separates Mikrofon klingt in der Regel besser als das integrierte Headset-Mikrofon – und lässt sich später leichter ersetzen.",
+        "Der größte Hebel ist allerdings der Schreibtisch selbst. Ein höhenverstellbarer Tisch, ein Monitorarm und eine Maus mit niedriger Abtasthöhe verändern die Haltung stärker als jede RGB-Beleuchtung. Ein gutes Setup fühlt sich nicht nach Ausrüstung an, sondern nach einem Ort, an dem du gern bist."
+      ],
+      "en": [
+        "Many gaming setups become loud because of cooling, not performance. A case with three slow 140 mm fans is often quieter than one with two fast 120 mm fans at the same airflow. Look for large cooling surfaces and make sure the fans aren't fighting a dust filter right against a wall.",
+        "With keyboards, the room is the second factor. A hollow case amplifies every keystroke. Damping mats, a heavier case and lubed stabilisers make more difference than a more expensive switch. If you play at night, consider linear switches – not only for noise, but for even actuation.",
+        "Closed-back headphones keep sound in, but also heat. For long sessions, open models are often more comfortable as long as no one else in the room is disturbed. A separate microphone usually sounds better than an integrated headset mic – and is easier to replace later.",
+        "The biggest lever, though, is the desk itself. A height-adjustable desk, a monitor arm and a mouse with a low lift-off distance change your posture more than any RGB lighting. A good setup doesn't feel like equipment; it feels like a place you want to be."
+      ]
+    },
+    "image": "/assets/images/editorial/gaming-setup.webp",
+    "author": "Can Yildiz",
+    "publishedAt": "2026-09-04",
+    "readingMinutes": 5,
+    "featured": false
+  },
+  {
+    "id": "art-06",
+    "slug": "tablet-oder-laptop",
+    "category": "guides",
+    "title": {
+      "de": "Tablet oder Laptop? Eine ehrliche Entscheidungshilfe",
+      "en": "Tablet or laptop? An honest decision guide"
+    },
+    "excerpt": {
+      "de": "Beide können schreiben, lesen und streamen. Die Frage ist, was du wirklich tust – nicht, was auf der Verpackung steht.",
+      "en": "Both can write, read and stream. The question is what you actually do – not what the box says."
+    },
+    "body": {
+      "de": [
+        "Ein Tablet ist dann die bessere Wahl, wenn du Inhalte konsumierst, Notizen machst und häufig zwischen Orten wechselst. Es ist leichter, leiser und oft angenehmer im Sofa-Einsatz. Sobald du aber dauerhaft tippst, mehrere Fenster brauchst oder Software mit Tastaturkürzeln verwendest, wird der Laptop zur ehrlicheren Antwort.",
+        "Die Tastatur entscheidet oft mehr als das Betriebssystem. Ein Tablet mit gutem Keyboard-Case kann einen Laptop ersetzen – aber nur, wenn der Aufstellwinkel stimmt, die Tastatur beleuchtet ist und das Trackpad präzise arbeitet. Teste das vor dem Kauf. Viele Tastatur-Cases sind für kurze E-Mails gut und für einen Arbeitstag schlecht.",
+        "Für kreative Arbeit gilt: Ein Stift ist kein Ersatz für einen präzisen Cursor. Wer illustriert oder handschriftliche Notizen macht, wird ein Tablet lieben. Wer Layouts baut, Code schreibt oder Tabellen pflegt, braucht weiterhin eine Maus und ein größeres Display.",
+        "Die pragmatische Lösung ist oft eine Kombination: ein Laptop für die Arbeit und ein günstigeres Tablet für Lesen und Notizen. Wenn du nur ein Gerät willst, entscheide dich für das, was du an einem durchschnittlichen Dienstag tust – nicht für den Ausnahmefall am Wochenende."
+      ],
+      "en": [
+        "A tablet is the better choice when you consume content, take notes and move between places often. It is lighter, quieter and often more pleasant on the sofa. But as soon as you type for hours, need multiple windows or use software with keyboard shortcuts, a laptop becomes the more honest answer.",
+        "The keyboard often decides more than the operating system. A tablet with a good keyboard case can replace a laptop – but only if the viewing angle is right, the keyboard is backlit and the trackpad is precise. Test this before buying. Many keyboard cases are fine for quick emails and poor for a workday.",
+        "For creative work: a stylus is not a replacement for a precise cursor. If you illustrate or take handwritten notes, you will love a tablet. If you build layouts, write code or maintain spreadsheets, you still need a mouse and a larger display.",
+        "The pragmatic solution is often a combination: a laptop for work and a cheaper tablet for reading and notes. If you want only one device, choose for what you do on an average Tuesday – not for the exception at the weekend."
+      ]
+    },
+    "image": "/assets/images/products/tablet-gold.webp",
+    "author": "Mara Feld",
+    "publishedAt": "2026-08-21",
+    "readingMinutes": 5,
+    "featured": false
+  },
+  {
+    "id": "art-07",
+    "slug": "wifi-7-mehr-als-eine-zahl",
+    "category": "knowledge",
+    "title": {
+      "de": "Wi-Fi 7: Mehr als eine Zahl",
+      "en": "Wi-Fi 7: more than a number"
+    },
+    "excerpt": {
+      "de": "Der neue Standard verspricht viel. Was davon in einer Wohnung ankommt – und wann ein neuer Router wirklich sinnvoll ist.",
+      "en": "The new standard promises a lot. What actually arrives in an apartment – and when a new router is genuinely worthwhile."
+    },
+    "body": {
+      "de": [
+        "Wi-Fi 7 bringt höhere Geschwindigkeiten, vor allem aber stabilere Verbindungen bei vielen Geräten. Die Technik nutzt breitere Kanäle und mehrere Frequenzbänder gleichzeitig. In einem Haushalt mit Telefon, Laptop, Fernseher, Konsole und smarten Geräten kann das den Unterschied machen – nicht wegen der Spitzenwerte, sondern wegen der Planbarkeit.",
+        "Die größte Hürde bleibt die Physik. Wände, Beton und alte Leitungen lassen sich nicht wegoptimieren. Ein Mesh-System mit drei Knoten ist in einer 120-Quadratmeter-Wohnung oft sinnvoller als ein einzelner Router mit vielen Antennen. Die Positionierung entscheidet mehr als der Standard: zentral, frei stehend, nicht im Schrank.",
+        "Achte auf die Anschlüsse. Ein Router mit 2,5-GbE-Ports hilft nur, wenn dein Internetanschluss und deine Geräte davon profitieren. Für die meisten Haushalte ist ein stabiler 1-Gbit-Anschluss mit guter WLAN-Abdeckung wertvoller als ein 10-Gbit-Router mit einem Funkloch im Schlafzimmer.",
+        "Wenn dein aktuelles Netz stabil ist, gibt es keinen Grund zu wechseln. Ein neuer Router lohnt sich, wenn Geräte regelmäßig abbrechen, Videocalls stocken oder das WLAN im Arbeitszimmer schwach ist. Kaufe dann gezielt für das Problem – nicht für die Zahl auf der Verpackung."
+      ],
+      "en": [
+        "Wi-Fi 7 brings higher speeds, but more importantly more stable connections with many devices. It uses wider channels and multiple frequency bands at once. In a home with a phone, laptop, TV, console and smart devices, that can make a difference – not because of peak values, but because of predictability.",
+        "The biggest obstacle remains physics. Walls, concrete and old wiring can't be optimised away. In a 120-square-metre apartment, a three-node mesh system is often more sensible than a single router with many antennas. Placement matters more than the standard: central, free-standing, not in a cupboard.",
+        "Look at the ports. A router with 2.5 GbE ports only helps if your internet connection and devices benefit. For most homes, a stable 1 Gbit connection with good Wi-Fi coverage is more valuable than a 10 Gbit router with a dead spot in the bedroom.",
+        "If your current network is stable, there is no reason to switch. A new router is worthwhile when devices drop regularly, video calls stutter or Wi-Fi is weak in the study. Buy for the problem – not for the number on the box."
+      ]
+    },
+    "image": "/assets/images/products/network.webp",
+    "author": "Jonas Reimers",
+    "publishedAt": "2026-08-07",
+    "readingMinutes": 4,
+    "featured": false
+  },
+  {
+    "id": "art-08",
+    "slug": "mechanische-tastatur-waehlen",
+    "category": "productivity",
+    "title": {
+      "de": "Tasten, die man spürt: Mechanik richtig wählen",
+      "en": "Keys you can feel: choosing a mechanical keyboard"
+    },
+    "excerpt": {
+      "de": "Layout, Switches, Dämpfung: Ein Leitfaden für alle, die mehr wollen als ein flaches Brett – aber nicht mehr Lärm.",
+      "en": "Layout, switches, damping: a guide for anyone who wants more than a flat slab – but not more noise."
+    },
+    "body": {
+      "de": [
+        "Die erste Entscheidung ist das Layout. 60 Prozent spart Platz, kostet aber Pfeiltasten und Funktionstasten. 65 Prozent bringt die Pfeiltasten zurück, 75 Prozent ergänzt eine Funktionsreihe. TKL und Full-Size sind für alle sinnvoll, die regelmäßig Ziffernblock oder Makrotasten nutzen. Für die meisten Schreibtische ist 75 Prozent der beste Kompromiss.",
+        "Switches sind Geschmackssache, aber nicht beliebig. Lineare Schalter eignen sich für schnelles Tippen und leise Büros. Taktile Schalter geben eine fühlbare Rückmeldung in der Mitte des Wegs. Klicky-Schalter sind akustisch auffällig und im Büro selten eine gute Idee. Wenn du unsicher bist, bestelle ein Hot-Swap-Board und probiere mehrere Sets aus.",
+        "Die Dämpfung wird unterschätzt. Ein Gehäuse aus Aluminium klingt anders als Kunststoff, aber nicht automatisch besser. Eine Silikonmatte im Boden und geschmierte Stabilisatoren reduzieren das Klappern der Leertaste deutlich. Das ist oft die günstigste Verbesserung – und die, die man am häufigsten hört.",
+        "Zum Schluss die Verbindung. Kabelgebunden ist die zuverlässigste Wahl für den festen Arbeitsplatz. Bluetooth ist praktisch für den Wechsel zwischen Laptop und Tablet, kostet aber Latenz und Akku. Ein Board mit 2,4-GHz-Dongle und Bluetooth deckt beides ab – achte nur darauf, dass der Wechsel ohne App funktioniert."
+      ],
+      "en": [
+        "The first decision is layout. 60 percent saves space but costs arrow and function keys. 65 percent brings the arrows back, 75 percent adds a function row. TKL and full-size make sense if you regularly use a numpad or macro keys. For most desks, 75 percent is the best compromise.",
+        "Switches are personal, but not arbitrary. Linear switches suit fast typing and quiet offices. Tactile switches offer a felt bump mid-travel. Clicky switches are acoustically conspicuous and rarely a good idea in an office. If you're unsure, buy a hot-swap board and try several sets.",
+        "Damping is underestimated. An aluminium case sounds different from plastic, but not automatically better. A silicone mat in the base and lubed stabilisers significantly reduce spacebar rattle. It is often the cheapest improvement – and the one you hear most often.",
+        "Finally, connection. Wired is the most reliable choice for a fixed desk. Bluetooth is useful for switching between laptop and tablet, but costs latency and battery. A board with a 2.4 GHz dongle and Bluetooth covers both – just make sure switching works without an app."
+      ]
+    },
+    "image": "/assets/images/products/keyboard-color.webp",
+    "author": "Nils Brandt",
+    "publishedAt": "2026-07-24",
+    "readingMinutes": 5,
+    "featured": false
+  }
+]

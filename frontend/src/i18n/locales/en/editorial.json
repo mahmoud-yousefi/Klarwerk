@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Magazine",
+    "subtitle": "Technology, better understood.",
+    "intro": "Context instead of data sheets. Written for people who want to make a decision.",
+    "issue": "Issue 04 · 2026",
+    "featured": "Cover story",
+    "allArticles": "All articles",
+    "latest": "Latest stories",
+    "readMore": "Read more",
+    "readingTime": "{{count}} min read",
+    "readingTimeShort": "{{count}} min",
+    "publishedOn": "Published on {{date}}",
+    "by": "By {{author}}",
+    "share": "Share article",
+    "related": "More from the magazine",
+    "back": "Back to magazine",
+    "filterLabel": "Topics",
+    "empty": "No articles in this topic.",
+    "emptyCta": "View all articles",
+    "authorRole": "Editorial",
+    "newsletterTitle": "The Klarwerk briefing",
+    "newsletterText": "Monthly: new products, honest tests and one idea that thinks ahead.",
+    "articleEnd": "This story is part of the Klarwerk Magazine. Products and prices are demo content.",
+    "minRead": "min read",
+    "topics": "Topics",
+    "about": "About the magazine",
+    "aboutText": "Klarwerk Magazine translates technology into decisions – without hype, without spec-sheet prose.",
+    "editorsPick": "Editors' pick",
+    "tableOfContents": "In this article",
+    "moreArticles": "More stories"
+  },
+  "categories": {
+    "all": "All",
+    "guides": "Buying guides",
+    "comparison": "Comparisons",
+    "knowledge": "Knowledge",
+    "gaming": "Gaming",
+    "productivity": "Productivity"
+  }
+}

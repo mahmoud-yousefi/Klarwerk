@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "Klarwerk AI Advisor",
+    "subtitle": "Finde die Technik, die zu dir passt.",
+    "intro": "Beschreib deinen Alltag, dein Budget oder ein Gerät, das du vergleichen möchtest. Ich antworte auf Basis des Klarwerk-Katalogs – ohne erfundene Produkte.",
+    "badge": "Klarwerk AI",
+    "modeBadge": "Mock-Modus",
+    "grounded": "Katalogbasiert",
+    "backToShop": "Zum Shop",
+    "newChat": "Neue Unterhaltung",
+    "clearChat": "Unterhaltung löschen",
+    "history": "Verlauf",
+    "today": "Heute",
+    "demoNote": "Demo-Assistent im Mock-Modus. Es wird kein externer KI-Anbieter kontaktiert."
+  },
+  "welcome": {
+    "title": "Finde die Technik, die zu dir passt.",
+    "text": "Erzähl mir, wofür du ein Gerät brauchst – ich suche passende Produkte aus dem Katalog und erkläre, warum sie zusammenpassen.",
+    "promptTitle": "Womit möchtest du starten?",
+    "promptSubtitle": "Ein Klick genügt. Du kannst die Frage danach noch anpassen.",
+    "example": "Zum Beispiel: „Ich studiere Informatik und suche einen Laptop unter 1.200 €.“"
+  },
+  "starters": {
+    "studyLaptop": "Welcher Laptop passt am besten zu meinem Studium?",
+    "comparePhones": "Vergleiche die besten Smartphones in eurem Shop.",
+    "everydayHeadphones": "Ich suche gute Kopfhörer für den Alltag.",
+    "homeOffice": "Welche Geräte eignen sich fürs Homeoffice?",
+    "laptopDifference": "Was ist der Unterschied zwischen zwei Laptops?",
+    "gamingSetup": "Finde ein gutes Gaming-Setup.",
+    "value": "Welche Produkte bieten das beste Preis-Leistungs-Verhältnis?",
+    "tablet": "Hilf mir, ein passendes Tablet zu finden."
+  },
+  "modes": {
+    "discover": "Entdecken",
+    "recommend": "Empfehlen",
+    "compare": "Vergleichen",
+    "advice": "Beraten",
+    "explain": "Erklären",
+    "store": "Service"
+  },
+  "modePrompts": {
+    "discover": "Zeig mir neue Produkte für meinen Alltag.",
+    "recommend": "Empfiehl mir ein Gerät für mein Budget.",
+    "compare": "Vergleiche zwei Produkte aus dem Katalog.",
+    "advice": "Ich brauche eine ehrliche Kaufberatung.",
+    "explain": "Erkläre mir einen technischen Unterschied.",
+    "store": "Wie funktioniert Versand und Rückgabe?"
+  },
+  "composer": {
+    "placeholder": "Beschreib, was du suchst …",
+    "placeholderShort": "Frag Klarwerk AI …",
+    "send": "Nachricht senden",
+    "stop": "Antwort stoppen",
+    "hint": "Enter zum Senden · Shift + Enter für eine neue Zeile",
+    "disclaimer": "Antworten werden aus dem Demo-Katalog generiert und können Fehler enthalten.",
+    "charCount": "{{count}} / {{max}}"
+  },
+  "message": {
+    "user": "Du",
+    "assistant": "Klarwerk AI",
+    "typing": "Klarwerk AI denkt nach …",
+    "streaming": "Antwort wird geschrieben …",
+    "stopped": "Antwort gestoppt.",
+    "errorTitle": "Die Antwort konnte nicht abgeschlossen werden.",
+    "errorText": "Der Demo-Stream wurde unterbrochen. Du kannst es erneut versuchen.",
+    "retry": "Erneut versuchen",
+    "copy": "Antwort kopieren",
+    "copied": "Kopiert",
+    "sources": "Grundlage: Klarwerk-Katalog",
+    "suggestionTitle": "Vielleicht als Nächstes",
+    "stoppedNotice": "Du hast die Antwort gestoppt.",
+    "mockTag": "Mock",
+    "newMessages": "Neue Nachricht",
+    "scrollToBottom": "Nach unten scrollen"
+  },
+  "recommendations": {
+    "title": "Passende Produkte",
+    "match": "{{percent}} % Passung",
+    "add": "In den Warenkorb",
+    "view": "Ansehen",
+    "compare": "Vergleichen",
+    "priceFrom": "ab {{price}}",
+    "inStock": "Auf Lager",
+    "lowStock": "Nur noch wenige",
+    "unavailable": "Derzeit nicht verfügbar",
+    "showAll": "Alle {{count}} Vorschläge",
+    "why": "Warum es passt",
+    "demoNote": "Preise und Verfügbarkeit aus dem Demo-Katalog."
+  },
+  "comparison": {
+    "title": "Direkter Vergleich",
+    "feature": "Merkmal",
+    "addToCompare": "Zum Vergleich hinzufügen",
+    "removeFromCompare": "Aus Vergleich entfernen",
+    "onlyCatalog": "Nur Merkmale aus dem Katalog.",
+    "difference": "Unterschied",
+    "same": "Gleich"
+  },
+  "actions": {
+    "askAgain": "Anders fragen",
+    "startOver": "Neu starten",
+    "clearConfirm": "Möchtest du diese Unterhaltung wirklich löschen?",
+    "clearConfirmYes": "Unterhaltung löschen",
+    "clearConfirmNo": "Abbrechen",
+    "viewCatalog": "Katalog ansehen",
+    "viewComparison": "Vergleich öffnen"
+  },
+  "suggestions": {
+    "title": "Weiterfragen",
+    "budget": "Was wäre eine günstigere Alternative?",
+    "compare": "Vergleiche die ersten beiden Produkte.",
+    "specs": "Welche technischen Details sind entscheidend?",
+    "accessory": "Welches Zubehör passt dazu?",
+    "stock": "Welche davon sind sofort verfügbar?",
+    "study": "Welcher Laptop eignet sich fürs Studium?",
+    "headphones": "Zeig mir ruhige Kopfhörer für das Büro.",
+    "gaming": "Welches Gaming-Setup passt zu mir?"
+  },
+  "limits": {
+    "maxLength": "Deine Nachricht ist zu lang. Bitte kürze sie etwas.",
+    "rate": "Zu viele Anfragen. Bitte warte einen Moment.",
+    "empty": "Schreib zuerst eine Nachricht."
+  },
+  "empty": {
+    "title": "Noch keine Unterhaltung",
+    "text": "Starte mit einer der Fragen oder beschreib dein Vorhaben."
+  },
+  "side": {
+    "modesTitle": "Modus wählen",
+    "modesText": "Der Modus schärft die Antwort. Ohne Auswahl antworte ich frei aus dem Katalog.",
+    "howTitle": "So funktioniert's",
+    "how1": "Beschreib Alltag, Budget oder ein Gerät, das du vergleichen möchtest.",
+    "how2": "Ich suche ausschließlich im Klarwerk-Katalog – ohne erfundene Produkte.",
+    "how3": "Du bekommst Produkte, Begründung und auf Wunsch einen direkten Vergleich.",
+    "privacyTitle": "Demo & Daten",
+    "privacyText": "Kein externer KI-Anbieter. Antworten entstehen lokal aus dem Demo-Katalog und bleiben nur in dieser Sitzung gespeichert.",
+    "historyTitle": "Sitzungsverlauf",
+    "historyText": "Deine Unterhaltung bleibt in diesem Tab erhalten, bis du sie löschst. Es gibt kein Konto und keine Cloud-Speicherung."
+  }
+}

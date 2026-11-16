@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "Klarwerk AI Advisor",
+    "subtitle": "Find the technology that fits your needs.",
+    "intro": "Describe your everyday, your budget or a device you'd like to compare. I answer based on the Klarwerk catalog – without inventing products.",
+    "badge": "Klarwerk AI",
+    "modeBadge": "Mock mode",
+    "grounded": "Catalog grounded",
+    "backToShop": "Go to shop",
+    "newChat": "New conversation",
+    "clearChat": "Clear conversation",
+    "history": "History",
+    "today": "Today",
+    "demoNote": "Demo assistant in mock mode. No external AI provider is contacted."
+  },
+  "welcome": {
+    "title": "Find the technology that fits your needs.",
+    "text": "Tell me what you need a device for – I'll find matching products in the catalog and explain why they fit.",
+    "promptTitle": "Where would you like to start?",
+    "promptSubtitle": "One click is enough. You can refine the question afterwards.",
+    "example": "For example: “I study computer science and need a laptop under €1,200.”"
+  },
+  "starters": {
+    "studyLaptop": "Which laptop best suits my studies?",
+    "comparePhones": "Compare the best smartphones in your shop.",
+    "everydayHeadphones": "I'm looking for good everyday headphones.",
+    "homeOffice": "Which devices are good for a home office?",
+    "laptopDifference": "What is the difference between two laptops?",
+    "gamingSetup": "Find a good gaming setup.",
+    "value": "Which products offer the best value for money?",
+    "tablet": "Help me find a suitable tablet."
+  },
+  "modes": {
+    "discover": "Discover",
+    "recommend": "Recommend",
+    "compare": "Compare",
+    "advice": "Advise",
+    "explain": "Explain",
+    "store": "Service"
+  },
+  "modePrompts": {
+    "discover": "Show me new products for my everyday.",
+    "recommend": "Recommend a device for my budget.",
+    "compare": "Compare two products from the catalog.",
+    "advice": "I need honest buying advice.",
+    "explain": "Explain a technical difference to me.",
+    "store": "How do shipping and returns work?"
+  },
+  "composer": {
+    "placeholder": "Describe what you're looking for …",
+    "placeholderShort": "Ask Klarwerk AI …",
+    "send": "Send message",
+    "stop": "Stop response",
+    "hint": "Enter to send · Shift + Enter for a new line",
+    "disclaimer": "Answers are generated from the demo catalog and may contain errors.",
+    "charCount": "{{count}} / {{max}}"
+  },
+  "message": {
+    "user": "You",
+    "assistant": "Klarwerk AI",
+    "typing": "Klarwerk AI is thinking …",
+    "streaming": "Writing response …",
+    "stopped": "Response stopped.",
+    "errorTitle": "The response could not be completed.",
+    "errorText": "The demo stream was interrupted. You can try again.",
+    "retry": "Try again",
+    "copy": "Copy response",
+    "copied": "Copied",
+    "sources": "Based on: Klarwerk catalog",
+    "suggestionTitle": "Perhaps next",
+    "stoppedNotice": "You stopped the response.",
+    "mockTag": "Mock",
+    "newMessages": "New message",
+    "scrollToBottom": "Scroll to bottom"
+  },
+  "recommendations": {
+    "title": "Matching products",
+    "match": "{{percent}}% match",
+    "add": "Add to cart",
+    "view": "View",
+    "compare": "Compare",
+    "priceFrom": "from {{price}}",
+    "inStock": "In stock",
+    "lowStock": "Low stock",
+    "unavailable": "Currently unavailable",
+    "showAll": "See all {{count}} suggestions",
+    "why": "Why it fits",
+    "demoNote": "Prices and availability from the demo catalog."
+  },
+  "comparison": {
+    "title": "Direct comparison",
+    "feature": "Feature",
+    "addToCompare": "Add to comparison",
+    "removeFromCompare": "Remove from comparison",
+    "onlyCatalog": "Only specifications from the catalog.",
+    "difference": "Difference",
+    "same": "Same"
+  },
+  "actions": {
+    "askAgain": "Ask differently",
+    "startOver": "Start over",
+    "clearConfirm": "Do you really want to delete this conversation?",
+    "clearConfirmYes": "Delete conversation",
+    "clearConfirmNo": "Cancel",
+    "viewCatalog": "View catalog",
+    "viewComparison": "Open comparison"
+  },
+  "suggestions": {
+    "title": "Follow-up questions",
+    "budget": "What would be a cheaper alternative?",
+    "compare": "Compare the first two products.",
+    "specs": "Which technical details matter most?",
+    "accessory": "Which accessories go with it?",
+    "stock": "Which of these are available now?",
+    "study": "Which laptop suits my studies?",
+    "headphones": "Show me quiet headphones for the office.",
+    "gaming": "Which gaming setup fits me?"
+  },
+  "limits": {
+    "maxLength": "Your message is too long. Please shorten it.",
+    "rate": "Too many requests. Please wait a moment.",
+    "empty": "Write a message first."
+  },
+  "empty": {
+    "title": "No conversation yet",
+    "text": "Start with one of the questions or describe what you're planning."
+  },
+  "side": {
+    "modesTitle": "Choose a mode",
+    "modesText": "The mode sharpens the answer. Without a selection I answer freely from the catalog.",
+    "howTitle": "How it works",
+    "how1": "Describe your everyday, your budget or a device you want to compare.",
+    "how2": "I search only the Klarwerk catalog – no invented products.",
+    "how3": "You get products, reasoning and, if you like, a direct comparison.",
+    "privacyTitle": "Demo & data",
+    "privacyText": "No external AI provider. Answers are generated locally from the demo catalog and are stored only in this session.",
+    "historyTitle": "Session history",
+    "historyText": "Your conversation stays in this tab until you delete it. There is no account and no cloud storage."
+  }
+}

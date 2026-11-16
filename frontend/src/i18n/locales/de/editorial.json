@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Magazin",
+    "subtitle": "Technik, besser verstanden.",
+    "intro": "Einordnungen statt Datenblätter. Geschrieben für Menschen, die eine Entscheidung treffen wollen.",
+    "issue": "Ausgabe 04 · 2026",
+    "featured": "Titelgeschichte",
+    "allArticles": "Alle Beiträge",
+    "latest": "Zuletzt erschienen",
+    "readMore": "Weiterlesen",
+    "readingTime": "{{count}} Min. Lesezeit",
+    "readingTimeShort": "{{count}} Min.",
+    "publishedOn": "Veröffentlicht am {{date}}",
+    "by": "Von {{author}}",
+    "share": "Artikel teilen",
+    "related": "Mehr aus dem Magazin",
+    "back": "Zurück zum Magazin",
+    "filterLabel": "Themen",
+    "empty": "Keine Artikel in diesem Thema.",
+    "emptyCta": "Alle Beiträge ansehen",
+    "authorRole": "Redaktion",
+    "newsletterTitle": "Der Klarwerk Briefing",
+    "newsletterText": "Monatlich: neue Produkte, ehrliche Tests und eine Idee, die weiterdenkt.",
+    "articleEnd": "Dieser Beitrag ist Teil des Klarwerk Magazins. Produkte und Preise sind Demo-Inhalte.",
+    "minRead": "Min. Lesezeit",
+    "topics": "Themen",
+    "about": "Über das Magazin",
+    "aboutText": "Das Klarwerk Magazin übersetzt Technik in Entscheidungen – ohne Hype, ohne Datenblatt-Prosa.",
+    "editorsPick": "Empfehlung der Redaktion",
+    "tableOfContents": "In diesem Artikel",
+    "moreArticles": "Weitere Beiträge"
+  },
+  "categories": {
+    "all": "Alle",
+    "guides": "Kaufberatung",
+    "comparison": "Vergleiche",
+    "knowledge": "Wissen",
+    "gaming": "Gaming",
+    "productivity": "Produktivität"
+  }
+}
