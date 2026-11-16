@@ -58,7 +58,7 @@ export function EntranceSplash({ onDone }: { onDone: () => void }) {
       <svg
         className="pointer-events-none absolute inset-0 h-full w-full"
         viewBox="0 0 1200 700"
-        preserveAspectRatio="xMidYMid slice"
+        preserveAspectRatio="xMidYMid meet"
         aria-hidden="true"
       >
         <defs>
