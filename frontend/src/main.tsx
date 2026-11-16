@@ -8,7 +8,7 @@ import { App } from '@/App';
 import { AppProviders } from '@/app/AppProviders';
 
 createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
+  <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
     <AppProviders>
       <App />
     </AppProviders>
