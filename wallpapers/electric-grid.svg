@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05080f"/>
+      <stop offset=".55" stop-color="#0a1120"/>
+      <stop offset="1" stop-color="#101a30"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#5865F2" stop-opacity="0"/>
+      <stop offset=".45" stop-color="#7E8AFB"/>
+      <stop offset="1" stop-color="#4FA3A5" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="vignette" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#05080f" stop-opacity=".8"/>
+      <stop offset=".5" stop-color="#05080f" stop-opacity="0"/>
+      <stop offset="1" stop-color="#05080f" stop-opacity=".8"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#A5AEFF" stroke-opacity=".07"/>
+    </pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <path d="M-40 1000 L520 470 L1000 470 L1500 120 L1980 120" fill="none" stroke="url(#beam)" stroke-width="5" filter="url(#glow)" opacity=".55"/>
+  <path d="M-40 1000 L520 470 L1000 470 L1500 120 L1980 120" fill="none" stroke="url(#beam)" stroke-width="1.6"/>
+  <g fill="#A5AEFF">
+    <circle cx="520" cy="470" r="4"/><circle cx="1000" cy="470" r="4"/><circle cx="1500" cy="120" r="4"/>
+  </g>
+  <g fill="none" stroke="#7E8AFB" stroke-opacity=".25">
+    <circle cx="520" cy="470" r="14"/><circle cx="1000" cy="470" r="14"/><circle cx="1500" cy="120" r="14"/>
+  </g>
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+  <circle cx="960" cy="620" r="300" fill="#5865F2" opacity=".07" filter="url(#glow)"/>
+</svg>
