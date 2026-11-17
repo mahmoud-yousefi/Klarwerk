@@ -1,0 +1,176 @@
+{
+  "paths": [
+    {
+      "id": "sound",
+      "accent": "#5865F2",
+      "image": "/assets/images/products/headphones-black.webp",
+      "article": "anc-verstehen",
+      "title": {
+        "de": "Klang verstehen",
+        "en": "Understand sound"
+      },
+      "text": {
+        "de": "Von Treibern, Codecs und Geräuschunterdrückung: was Kopfhörer wirklich unterscheidet – und was nur auf dem Datenblatt gut klingt.",
+        "en": "From drivers and codecs to noise cancelling: what really separates headphones – and what only looks good on a spec sheet."
+      },
+      "topics": [
+        { "de": "ANC richtig einsetzen", "en": "Using ANC well" },
+        { "de": "Codecs & Bluetooth", "en": "Codecs & Bluetooth" },
+        { "de": "Offen oder geschlossen", "en": "Open or closed" }
+      ]
+    },
+    {
+      "id": "photo",
+      "accent": "#9B72F2",
+      "image": "/assets/images/editorial/camera.webp",
+      "article": "kamera-grundlagen",
+      "title": {
+        "de": "Bild & Kamera",
+        "en": "Image & camera"
+      },
+      "text": {
+        "de": "Sensor, Blende, ISO und Stabilisierung: die vier Größen, die ein Foto prägen – ohne Fachchinesisch erklärt.",
+        "en": "Sensor, aperture, ISO and stabilisation: the four things that shape a photo – explained without jargon."
+      },
+      "topics": [
+        { "de": "Vollformat vs. APS-C", "en": "Full frame vs. APS-C" },
+        { "de": "Blende & Tiefe", "en": "Aperture & depth" },
+        { "de": "IBIS im Alltag", "en": "IBIS in daily use" }
+      ]
+    },
+    {
+      "id": "compute",
+      "accent": "#3E8BD8",
+      "image": "/assets/images/products/laptop-screen.webp",
+      "article": "laptop-fuer-das-studium",
+      "title": {
+        "de": "Computer & Leistung",
+        "en": "Computers & performance"
+      },
+      "text": {
+        "de": "Wann 16 GB reichen, warum der Prozessor seltener bremst als gedacht und wie du ein Notebook für fünf Jahre auswählst.",
+        "en": "When 16 GB is enough, why the processor is rarely the bottleneck, and how to choose a laptop for five years."
+      },
+      "topics": [
+        { "de": "RAM vs. CPU", "en": "RAM vs. CPU" },
+        { "de": "Displays & Farben", "en": "Displays & colour" },
+        { "de": "Akku im Alltag", "en": "Battery in real life" }
+      ]
+    },
+    {
+      "id": "home",
+      "accent": "#4FA3A5",
+      "image": "/assets/images/products/network.webp",
+      "article": "wifi-7-mehr-als-eine-zahl",
+      "title": {
+        "de": "Zuhause vernetzt",
+        "en": "Connected at home"
+      },
+      "text": {
+        "de": "Mesh, Repeater, Wi-Fi 7: wie ein stabiles Netz entsteht, das bis in den letzten Raum denkt.",
+        "en": "Mesh, repeaters, Wi-Fi 7: how to build a stable network that reaches the last room."
+      },
+      "topics": [
+        { "de": "Mesh statt Repeater", "en": "Mesh instead of repeaters" },
+        { "de": "Wi-Fi 7 einordnen", "en": "Putting Wi-Fi 7 in context" },
+        { "de": "Sicherheit & Gastnetz", "en": "Security & guest network" }
+      ]
+    },
+    {
+      "id": "play",
+      "accent": "#D9587A",
+      "image": "/assets/images/editorial/gaming-setup.webp",
+      "article": "handheld-gaming",
+      "title": {
+        "de": "Gaming mit Substanz",
+        "en": "Gaming with substance"
+      },
+      "text": {
+        "de": "Handheld, Cloud oder Konsole? Was Latenz, Display und Akku für dein Setup bedeuten.",
+        "en": "Handheld, cloud or console? What latency, display and battery mean for your setup."
+      },
+      "topics": [
+        { "de": "Latenz verstehen", "en": "Understanding latency" },
+        { "de": "OLED im Handheld", "en": "OLED in a handheld" },
+        { "de": "Akku & Kühlung", "en": "Battery & cooling" }
+      ]
+    },
+    {
+      "id": "desk",
+      "accent": "#C28A3D",
+      "image": "/assets/images/products/keyboard-marble.webp",
+      "article": "mechanische-tastatur-waehlen",
+      "title": {
+        "de": "Schreibtisch & Ergonomie",
+        "en": "Desk & ergonomics"
+      },
+      "text": {
+        "de": "Layouts, Switches und Höhe: die leisen Details, die den Unterschied zwischen okay und angenehm machen.",
+        "en": "Layouts, switches and height: the quiet details between okay and genuinely comfortable."
+      },
+      "topics": [
+        { "de": "60 % bis TKL", "en": "60% to TKL" },
+        { "de": "Linear vs. taktil", "en": "Linear vs. tactile" },
+        { "de": "Handgelenke entlasten", "en": "Sparing your wrists" }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "term": "OLED",
+      "text": {
+        "de": "Jedes Pixel leuchtet selbst. Das ergibt tiefe Schwarztöne und schnelle Reaktionen, kann aber bei statischen Inhalten einbrennen.",
+        "en": "Every pixel lights itself. That means deep blacks and fast response, but static content can cause burn-in."
+      }
+    },
+    {
+      "term": "Mini-LED",
+      "text": {
+        "de": "Viele kleine Hintergrundlichter hinter einem LCD. Hohe Helligkeit und guter Kontrast, ohne die Einbrenngefahr von OLED.",
+        "en": "Many small backlights behind an LCD. High brightness and strong contrast without OLED's burn-in risk."
+      }
+    },
+    {
+      "term": "ANC",
+      "text": {
+        "de": "Active Noise Cancelling nimmt Umgebungsgeräusche per Mikrofon auf und erzeugt ein Gegensignal. Am besten wirkt es bei tiefen, gleichmäßigen Geräuschen.",
+        "en": "Active Noise Cancelling listens with microphones and creates an opposing signal. It works best on low, steady sounds."
+      }
+    },
+    {
+      "term": "IBIS",
+      "text": {
+        "de": "In-Body Image Stabilisation bewegt den Sensor gegen Verwackeln. Besonders wertvoll bei wenig Licht und langen Brennweiten.",
+        "en": "In-body image stabilisation moves the sensor against shake. Most valuable in low light and at long focal lengths."
+      }
+    },
+    {
+      "term": "Wi-Fi 7",
+      "text": {
+        "de": "Der neue Standard nutzt breitere Kanäle und mehrere Bänder gleichzeitig. Der Gewinn zeigt sich vor allem bei vielen Geräten und kurzen Distanzen.",
+        "en": "The new standard uses wider channels and multiple bands at once. The gain shows most with many devices and short distances."
+      }
+    },
+    {
+      "term": "Hz",
+      "text": {
+        "de": "Hertz beschreibt, wie oft sich ein Bild pro Sekunde erneuert. 120 Hz fühlt sich flüssiger an als 60 Hz – sichtbar bei Bewegung und beim Scrollen.",
+        "en": "Hertz describes how often a screen refreshes per second. 120 Hz feels smoother than 60 Hz – visible in motion and scrolling."
+      }
+    },
+    {
+      "term": "Nits",
+      "text": {
+        "de": "Die Helligkeit eines Displays. 400 Nits reichen drinnen, für draußen und HDR sind 800 bis 1.000 Nits deutlich angenehmer.",
+        "en": "Display brightness. 400 nits is fine indoors; outdoors and HDR are much more comfortable at 800–1,000 nits."
+      }
+    },
+    {
+      "term": "Mesh",
+      "text": {
+        "de": "Mehrere Zugangspunkte bilden ein gemeinsames Netz und übergeben Geräte nahtlos weiter. Meist stabiler als ein einzelner Repeater.",
+        "en": "Several access points form one network and hand devices over seamlessly. Usually more stable than a single repeater."
+      }
+    }
+  ]
+}

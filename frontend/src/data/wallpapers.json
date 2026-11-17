@@ -1,0 +1,50 @@
+[
+  {
+    "id": "midnight-orbit",
+    "file": "/wallpapers/midnight-orbit.svg",
+    "tag": "dark",
+    "name": { "de": "Midnight Orbit", "en": "Midnight Orbit" },
+    "mood": { "de": "Ruhig · Tief · Fokussiert", "en": "Calm · Deep · Focused" },
+    "colors": ["#080D18", "#5865F2", "#C4AAF8"]
+  },
+  {
+    "id": "electric-grid",
+    "file": "/wallpapers/electric-grid.svg",
+    "tag": "dark",
+    "name": { "de": "Electric Grid", "en": "Electric Grid" },
+    "mood": { "de": "Präzise · Technisch", "en": "Precise · Technical" },
+    "colors": ["#05080F", "#7E8AFB", "#3E8BD8"]
+  },
+  {
+    "id": "violet-flow",
+    "file": "/wallpapers/violet-flow.svg",
+    "tag": "dark",
+    "name": { "de": "Violet Flow", "en": "Violet Flow" },
+    "mood": { "de": "Weich · Organisch", "en": "Soft · Organic" },
+    "colors": ["#0D1524", "#9B72F2", "#B08CF5"]
+  },
+  {
+    "id": "circuit-horizon",
+    "file": "/wallpapers/circuit-horizon.svg",
+    "tag": "minimal",
+    "name": { "de": "Circuit Horizon", "en": "Circuit Horizon" },
+    "mood": { "de": "Klar · Geradlinig", "en": "Clear · Linear" },
+    "colors": ["#080D18", "#4FA3A5", "#A5AEFF"]
+  },
+  {
+    "id": "soft-mist",
+    "file": "/wallpapers/soft-mist.svg",
+    "tag": "light",
+    "name": { "de": "Soft Mist", "en": "Soft Mist" },
+    "mood": { "de": "Hell · Leise", "en": "Light · Quiet" },
+    "colors": ["#F7F8FC", "#DCE3FF", "#9B72F2"]
+  },
+  {
+    "id": "signal-waves",
+    "file": "/wallpapers/signal-waves.svg",
+    "tag": "minimal",
+    "name": { "de": "Signal Waves", "en": "Signal Waves" },
+    "mood": { "de": "Verbunden · Weit", "en": "Connected · Open" },
+    "colors": ["#05080F", "#5865F2", "#4FA3A5"]
+  }
+]

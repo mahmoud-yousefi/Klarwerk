@@ -13,7 +13,7 @@ Nothing is hot-linked at runtime.
 - Reuses eight product images as category tiles under `categories/`.
 - Re-run with `node scripts/fetch-assets.mjs` (add `--force` to overwrite).
 
-Total source imagery: **37 files, ≈1.7 MB WebP** (plus 8 category copies and the favicon).
+Total source imagery: **41 files, ≈1.9 MB WebP** (plus 8 category copies and the favicon).
 
 ## License
 
@@ -65,6 +65,10 @@ Source URLs follow `https://images.unsplash.com/photo-<id>`.
 | `products/gaming-desk.webp` | 1200×800 | 45 KB | [photo-1629429407759-01cd3d7cfb38](https://images.unsplash.com/photo-1629429407759-01cd3d7cfb38) |
 | `editorial/gaming-setup.webp` | 1600×1068 | 143 KB | [photo-1598550476439-6847785fcea6](https://images.unsplash.com/photo-1598550476439-6847785fcea6) |
 | `editorial/camera.webp` | 1600×1067 | 24 KB | [photo-1526170375885-4d8ecf77b99f](https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f) |
+| `products/camera-front.webp` | 1200×800 | 18 KB | [photo-1500634245200-e5245c7574ef](https://images.unsplash.com/photo-1500634245200-e5245c7574ef) |
+| `products/camera-compact.webp` | 1200×800 | 31 KB | [photo-1510127034890-ba27508e9f1c](https://images.unsplash.com/photo-1510127034890-ba27508e9f1c) |
+| `products/camera-kit.webp` | 1200×1500 | 46 KB | [photo-1516035069371-29a1b244cc32](https://images.unsplash.com/photo-1516035069371-29a1b244cc32) |
+| `products/camera-body.webp` | 1200×795 | 26 KB | [photo-1452780212940-6f5c0d14d848](https://images.unsplash.com/photo-1452780212940-6f5c0d14d848) |
 | `editorial/controller.webp` | 1600×1067 | 23 KB | [photo-1606144042614-b2417e99c4e3](https://images.unsplash.com/photo-1606144042614-b2417e99c4e3) |
 | `editorial/workspace.webp` | 1600×900 | 81 KB | [photo-1593642632823-8f785ba67e45](https://images.unsplash.com/photo-1593642632823-8f785ba67e45) |
 

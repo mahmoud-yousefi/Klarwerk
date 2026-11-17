@@ -15,6 +15,8 @@ const ComparePage = lazy(() => import('@/pages/ComparePage'));
 const AssistantPage = lazy(() => import('@/pages/AssistantPage'));
 const MagazinePage = lazy(() => import('@/pages/MagazinePage'));
 const ArticlePage = lazy(() => import('@/pages/ArticlePage'));
+const LearnPage = lazy(() => import('@/pages/LearnPage'));
+const WallpapersPage = lazy(() => import('@/pages/WallpapersPage'));
 const InfoPage = lazy(() => import('@/pages/InfoPage'));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
 
@@ -74,6 +76,8 @@ export function App() {
             <Route path="/advisor" element={<AssistantPage />} />
             <Route path="/magazine" element={<MagazinePage />} />
             <Route path="/magazine/:slug" element={<ArticlePage />} />
+            <Route path="/learn" element={<LearnPage />} />
+            <Route path="/wallpapers" element={<WallpapersPage />} />
             <Route path="/info/:slug" element={<InfoPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>

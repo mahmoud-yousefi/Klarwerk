@@ -25,7 +25,13 @@ const imagePools = {
   audio: ['speaker-white', 'speaker-teal', 'speaker-yellow'],
   storage: ['circuit', 'backgrounds/gradient'],
   networking: ['network', 'circuit'],
-  cameras: ['editorial/camera', 'products/phone-white', 'products/laptop-screen'],
+  cameras: [
+    'editorial/camera',
+    'products/camera-front',
+    'products/camera-compact',
+    'products/camera-body',
+    'products/camera-kit',
+  ],
 };
 
 const colors = {
@@ -62,6 +68,9 @@ const seeds = {
     ['Vantis Fold 2', 1899, 4, 2025],
     ['Vantis Fold 2 Ultra', 2199, 5, 2026],
     ['Vantis One 11', 749, 1, 2024],
+    ['Vantis One 12 Mini', 799, 1, 2025],
+    ['Vantis Edge 5 Ultra', 999, 3, 2025],
+    ['Vantis Nova 4 Pro', 579, 1, 2025],
   ],
   laptops: [
     ['Nordvolt Aero 13', 1199, 2, 2025],
@@ -78,6 +87,9 @@ const seeds = {
     ['Nordvolt Air 14', 1099, 1, 2025],
     ['Nordvolt Titan 16', 2699, 5, 2025],
     ['Nordvolt Titan 18', 3199, 6, 2026],
+    ['Nordvolt Aero 13 OLED', 1299, 2, 2025],
+    ['Nordvolt Forge 14 Studio', 1699, 3, 2025],
+    ['Nordvolt Air 15', 1199, 2, 2025],
   ],
   tablets: [
     ['Meridian Slate 11', 449, 1, 2024],
@@ -90,6 +102,9 @@ const seeds = {
     ['Meridian Studio 14', 1249, 5, 2026],
     ['Vantis Pad 10', 329, 0, 2024],
     ['Vantis Pad 10 Pro', 479, 1, 2025],
+    ['Meridian Slate 11 Mini', 399, 0, 2024],
+    ['Meridian Note 13', 899, 3, 2025],
+    ['Vantis Pad 12', 549, 2, 2025],
   ],
   monitors: [
     ['Halcyon View 27', 349, 1, 2024],
@@ -101,6 +116,9 @@ const seeds = {
     ['Halcyon Play 32', 649, 3, 2025],
     ['Halcyon Frame 28', 429, 1, 2025],
     ['Halcyon View 24', 229, 0, 2024],
+    ['Halcyon View 29', 399, 1, 2025],
+    ['Halcyon Pro 27 5K', 899, 3, 2025],
+    ['Halcyon Play 24', 279, 0, 2024],
   ],
   headphones: [
     ['Auris Halo 1', 249, 1, 2024],
@@ -116,6 +134,9 @@ const seeds = {
     ['Auris Air Buds', 129, 0, 2024],
     ['Auris Air Buds Pro', 219, 2, 2025],
     ['Auris Classic 40', 99, 0, 2023],
+    ['Auris Halo 2 Pro', 399, 3, 2025],
+    ['Auris Drift Studio', 249, 2, 2025],
+    ['Auris Open Air', 199, 1, 2024],
   ],
   smartwatches: [
     ['Meridian Pulse 2', 249, 1, 2025],
@@ -127,6 +148,9 @@ const seeds = {
     ['Vantis Watch 4', 229, 1, 2025],
     ['Vantis Watch 4 Pro', 329, 2, 2025],
     ['Meridian Pulse 1', 179, 0, 2023],
+    ['Meridian Pulse 3', 279, 1, 2026],
+    ['Meridian Active 4', 349, 2, 2025],
+    ['Vantis Watch 5', 279, 1, 2026],
   ],
   gaming: [
     ['Kestrel Arc', 549, 2, 'handheld'],
@@ -140,6 +164,9 @@ const seeds = {
     ['Kestrel Dock 4K', 119, 1, 'accessory'],
     ['Kestrel Arena Pad', 89, 0, 'controller'],
     ['Kestrel Arc Studio', 799, 4, 'handheld'],
+    ['Kestrel Arc OLED', 649, 3, 'handheld'],
+    ['Kestrel Rail Mini', 59, 0, 'controller'],
+    ['Kestrel Vortex Air', 129, 1, 'headset'],
   ],
   keyboards: [
     ['Formwerk Type 65', 149, 1, '65'],
@@ -153,6 +180,9 @@ const seeds = {
     ['Kestrel Strike 60', 119, 0, '60'],
     ['Kestrel Strike Full', 159, 1, 'full'],
     ['Formwerk Type 100', 199, 2, 'full'],
+    ['Formwerk Type 65 Pro', 179, 2, '65'],
+    ['Formwerk Air 87', 159, 1, 'TKL'],
+    ['Kestrel Strike 75', 149, 1, '75'],
   ],
   mice: [
     ['Formwerk Glide', 69, 1],
@@ -164,6 +194,9 @@ const seeds = {
     ['Kestrel Talon Pro', 129, 2],
     ['Kestrel Talon Ultralight', 109, 2],
     ['Formwerk Glide Mini', 59, 0],
+    ['Formwerk Glide Air', 89, 1],
+    ['Formwerk Dart Pro', 69, 1],
+    ['Kestrel Talon Mini', 69, 0],
   ],
   audio: [
     ['Auris Pulse 200', 199, 1, 'speaker'],
@@ -175,6 +208,9 @@ const seeds = {
     ['Auris Move', 149, 1, 'speaker'],
     ['Auris Vinyl Hub', 349, 2, 'hifi'],
     ['Auris Pulse 500', 449, 4, 'speaker'],
+    ['Auris Pulse 250', 249, 1, 'speaker'],
+    ['Formwerk Soundbar Mini', 179, 0, 'soundbar'],
+    ['Auris Room Mini', 299, 2, 'speaker'],
   ],
   storage: [
     ['Flux Drive 1 TB', 89, 0, 'portable'],
@@ -185,6 +221,9 @@ const seeds = {
     ['Flux Vault 2 TB', 189, 1, 'desktop'],
     ['Flux Vault 4 TB', 329, 2, 'desktop'],
     ['Flux SSD Station 2 TB', 279, 2, 'desktop'],
+    ['Flux Drive 8 TB', 449, 3, 'portable'],
+    ['Flux Nano 2 TB', 149, 1, 'portable'],
+    ['Flux Vault 8 TB', 549, 3, 'desktop'],
   ],
   networking: [
     ['Flux Mesh 2', 149, 1, 'mesh'],
@@ -194,6 +233,9 @@ const seeds = {
     ['Flux Router X8', 279, 3, 'router'],
     ['Flux Switch 8', 89, 0, 'switch'],
     ['Flux Extender 6', 79, 0, 'extender'],
+    ['Flux Mesh 4', 399, 3, 'mesh'],
+    ['Flux Router X10', 349, 3, 'router'],
+    ['Flux Extender 7', 99, 1, 'extender'],
   ],
   cameras: [
     ['Auris Vision 24', 899, 2, 'mirrorless'],
@@ -204,6 +246,9 @@ const seeds = {
     ['Auris Action Cam 4K', 349, 1, 'action'],
     ['Auris Action Cam 5K', 499, 2, 'action'],
     ['Meridian Lens 50', 399, 2, 'lens'],
+    ['Auris Vision 48', 2499, 5, 'mirrorless'],
+    ['Auris Pocket 2', 599, 2, 'compact'],
+    ['Auris Action Cam Mini', 249, 0, 'action'],
   ],
 };
 
@@ -674,6 +719,11 @@ const highlightsFor = (category, specs) => {
       ['Einfache Einrichtung per App', 'Simple app-based setup'],
       ['WPA3 und Gastnetz', 'WPA3 and guest network'],
     ],
+    cameras: [
+      ['Großer Sensor mit natürlicher Tiefe', 'Large sensor with natural depth'],
+      ['Bildstabilisierung für ruhige Aufnahmen', 'Stabilisation for steady shots'],
+      ['Video mit flexiblen Farbprofilen', 'Video with flexible colour profiles'],
+    ],
   };
   return (map[category] ?? []).map(([de, en]) => ({ de, en }));
 };
@@ -692,6 +742,7 @@ const descriptionFor = (name, category, specs, tier) => {
     audio: `${name} füllt mittlere Räume mit einem erstaunlich großen Klangbild. Die Abstimmung ist warm, aber nicht dick, Stimmen bleiben klar. Über ${specs.connectivity} spielt er von nahezu jedem Gerät.`,
     storage: `${name} ist für Projekte gedacht, die nicht in die Cloud gehören. Die SSD erreicht bis zu ${specs.read} beim Lesen und bleibt dabei leise und kompakt. Hardware-Verschlüsselung schützt unterwegs.`,
     networking: `${name} verteilt ein stabiles WLAN bis in den letzten Raum. Die Einrichtung dauert wenige Minuten, und das Netz passt sich an die Auslastung an. WPA3 ist ab Werk aktiv.`,
+    cameras: `${name} ist eine ${specs.type} mit ${specs.sensor}. Die Kombination aus ${specs.af ?? 'präzisem Autofokus'} und ${specs.stabilizer} macht sie zu einem verlässlichen Begleiter für Reisen, Porträts und Alltag. Video gelingt in ${specs.video}, ohne dass die Bedienung zur Wissenschaft wird.`,
   };
   const en = {
     smartphones: `${name} is built for people who are always on the move: the ${specs.display} stays readable in daylight while the ${specs.chip} keeps apps and camera pipelines responsive. The ${specs.camera} renders natural colour, and the ${specs.battery} battery comfortably covers a full day.`,
@@ -706,6 +757,7 @@ const descriptionFor = (name, category, specs, tier) => {
     audio: `${name} fills medium rooms with a surprisingly wide soundstage. The tuning is warm without being thick, and voices remain clear. With ${specs.connectivity}, it plays from almost any device.`,
     storage: `${name} is made for projects that do not belong in the cloud. The SSD reaches up to ${specs.read} read speed while staying quiet and compact. Hardware encryption protects it on the move.`,
     networking: `${name} spreads a stable Wi-Fi signal into the last room. Setup takes minutes, and the network adapts to load. WPA3 is enabled out of the box.`,
+    cameras: `${name} pairs a high-resolution sensor with dependable autofocus and stabilisation, making it a reliable companion for travel, portraits and everyday life. The controls stay out of the way, and the image quality holds up beyond the first weekend.`,
   };
   return {
     de: tier >= 4 ? `${de[category]} Eine Entscheidung für die nächsten Jahre.` : de[category],

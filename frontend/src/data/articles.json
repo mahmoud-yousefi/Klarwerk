@@ -254,5 +254,197 @@
     "publishedAt": "2026-07-24",
     "readingMinutes": 5,
     "featured": false
+  },
+  {
+    "id": "art-09",
+    "slug": "kamera-grundlagen",
+    "category": "knowledge",
+    "title": {
+      "de": "Kamera-Grundlagen: Sensor, Blende, ISO – ohne Fachchinesisch",
+      "en": "Camera basics: sensor, aperture, ISO – without the jargon"
+    },
+    "excerpt": {
+      "de": "Vier Größen entscheiden über ein Foto. Wer sie versteht, braucht kein Datenblatt mehr – und kauft seltener das falsche Objektiv.",
+      "en": "Four things decide a photo. Once you understand them, you no longer need a spec sheet – and you buy the wrong lens less often."
+    },
+    "body": {
+      "de": [
+        "Der Sensor ist die Fläche, die Licht sammelt. Vollformat ist größer als APS-C, APS-C größer als Micro Four Thirds. Ein größerer Sensor sammelt mehr Licht und erlaubt eine weichere Unschärfe, macht Kamera und Objektive aber schwerer und teurer. Für Reisen, Familienfotos und Reportagen ist APS-C heute so gut, dass der Unterschied im Alltag selten der limitierende Faktor ist.",
+        "Die Blende steuert zwei Dinge gleichzeitig: wie viel Licht auf den Sensor fällt und wie tief der scharfe Bereich ist. f/1,8 lässt viel Licht herein und trennt das Motiv vom Hintergrund. f/8 ist ideal für Landschaften, weil mehr in der Schärfe liegt. Wer vor allem bei available light fotografiert, profitiert mehr von einer lichtstarken Festbrennweite als von einem weiteren Zoombereich.",
+        "ISO beschreibt die Verstärkung des Signals. Höhere Werte helfen bei wenig Licht, rauschen aber. Moderne Sensoren sind bis ISO 1600 oder 3200 meist unproblematisch; entscheidend ist, wie das Rauschen aussieht, nicht nur wie viel davon da ist. Belichte lieber etwas knapper und hebe die Schatten behutsam an, statt die ISO unnötig nach oben zu treiben.",
+        "Bleibt die Stabilisierung. IBIS bewegt den Sensor gegen Verwackeln und macht bei ruhigen Motiven längere Verschlusszeiten möglich. Bei Kindern, Tieren oder Sport hilft sie weniger – dort entscheidet die Verschlusszeit. Als Faustregel: mindestens 1/125 Sekunde für Menschen in Bewegung, 1/500 für schnelle Motive. Alles andere ist Übung, nicht Ausrüstung."
+      ],
+      "en": [
+        "The sensor is the surface that gathers light. Full frame is larger than APS-C, APS-C larger than Micro Four Thirds. A larger sensor gathers more light and allows softer separation, but makes bodies and lenses heavier and more expensive. For travel, family photos and reportage, APS-C is good enough today that the difference is rarely the limiting factor in daily use.",
+        "Aperture controls two things at once: how much light reaches the sensor and how deep the sharp area is. f/1.8 lets in plenty of light and separates the subject from the background. f/8 is ideal for landscapes because more stays in focus. If you mostly shoot in available light, a fast prime helps more than another zoom range.",
+        "ISO describes signal amplification. Higher values help in low light but add noise. Modern sensors are usually fine up to ISO 1600 or 3200; what matters is how the noise looks, not only how much there is. Expose a little tighter and lift shadows gently instead of pushing ISO unnecessarily.",
+        "Then there is stabilisation. IBIS moves the sensor against shake and allows longer shutter speeds with still subjects. It helps less with children, animals or sport – there, shutter speed decides. As a rule of thumb: at least 1/125 s for people in motion, 1/500 s for fast subjects. Everything else is practice, not equipment."
+      ]
+    },
+    "image": "/assets/images/editorial/camera.webp",
+    "author": "Lena Voss",
+    "publishedAt": "2026-11-12",
+    "readingMinutes": 7,
+    "featured": false
+  },
+  {
+    "id": "art-10",
+    "slug": "oled-vs-mini-led",
+    "category": "knowledge",
+    "title": {
+      "de": "OLED oder Mini-LED? Die ehrliche Antwort",
+      "en": "OLED or Mini-LED? The honest answer"
+    },
+    "excerpt": {
+      "de": "Schwarzwert, Helligkeit, Einbrennen: Beide Technologien haben klare Stärken. Die Frage ist, in welchem Raum du sie benutzt.",
+      "en": "Black level, brightness, burn-in: both technologies have clear strengths. The question is which room you use them in."
+    },
+    "body": {
+      "de": [
+        "OLED schaltet einzelne Pixel ab. Schwarz ist wirklich schwarz, Kontraste wirken bei Nacht und in dunklen Räumen präzise, und Reaktionszeiten sind extrem kurz. Der Preis dafür ist Helligkeit: Zwar erreichen moderne OLED-Panels 600 bis 1.000 Nits in Spitzen, halten das aber nicht dauerhaft über die ganze Fläche.",
+        "Mini-LED setzt auf viele kleine Hintergrundlichter hinter einem LCD. Das erlaubt sehr hohe Helligkeit über lange Zeit und ist im hellen Wohnzimmer oder bei HDR-Inhalten im Vorteil. Der Kompromiss zeigt sich bei feinen hellen Details auf dunklem Grund: Um sie herum entsteht ein leichter Hof, weil die Zonen nicht unendlich klein sind.",
+        "Einbrennen ist bei OLED kein Mythos, aber auch kein Alltagsproblem für die meisten. Wer stundenlang dieselbe Tabellenkalkulation oder dasselbe Spiel-HUD zeigt, sollte auf Mini-LED oder auf OLED mit guten Schutzfunktionen achten. Wer hauptsächlich Filme, Serien und wechselnde Inhalte schaut, hat in der Praxis wenig zu befürchten.",
+        "Für die Kaufentscheidung hilft eine einfache Frage: Ist der Raum meist hell, und wird der Bildschirm tagsüber für Arbeit genutzt? Dann ist Mini-LED oft die entspanntere Wahl. Ist der Raum dunkel und steht Bildqualität über Spitzenhelligkeit? Dann ist OLED schwer zu schlagen. Beides sind gute Antworten – nur für unterschiedliche Menschen."
+      ],
+      "en": [
+        "OLED switches individual pixels off. Black is truly black, contrast feels precise at night and in dark rooms, and response times are extremely short. The price is brightness: modern OLED panels reach 600–1,000 nits in peaks, but cannot sustain that across the whole screen.",
+        "Mini-LED uses many small backlights behind an LCD. That allows very high brightness over long periods and is an advantage in a bright living room or with HDR content. The compromise appears in fine bright details on dark backgrounds: a slight halo forms around them because the zones are not infinitely small.",
+        "Burn-in is not a myth on OLED, but it is not an everyday problem for most people. If you show the same spreadsheet or game HUD for hours, consider Mini-LED or an OLED with good protection features. If you mostly watch films, series and changing content, there is little to fear in practice.",
+        "One simple question helps the decision: is the room usually bright, and is the screen used for work during the day? Then Mini-LED is often the calmer choice. Is the room dark and image quality more important than peak brightness? Then OLED is hard to beat. Both are good answers – for different people."
+      ]
+    },
+    "image": "/assets/images/products/monitor-imac.webp",
+    "author": "Jonas Reiter",
+    "publishedAt": "2026-11-05",
+    "readingMinutes": 6,
+    "featured": false
+  },
+  {
+    "id": "art-11",
+    "slug": "mesh-oder-repeater",
+    "category": "guides",
+    "title": {
+      "de": "Mesh oder Repeater: Was dein WLAN wirklich braucht",
+      "en": "Mesh or repeater: what your Wi-Fi actually needs"
+    },
+    "excerpt": {
+      "de": "Ein zweiter Router ist nicht automatisch ein besseres Netz. Die entscheidenden Fragen sind Distanz, Wände und Geräteanzahl.",
+      "en": "A second router is not automatically a better network. The decisive questions are distance, walls and the number of devices."
+    },
+    "body": {
+      "de": [
+        "Ein Repeater nimmt ein bestehendes Signal auf und sendet es weiter. Das ist günstig und einfach, halbiert aber oft den Durchsatz, weil das Gerät gleichzeitig empfangen und senden muss. Für ein Arbeitszimmer mit einer Wand dazwischen kann das reichen. Für ein ganzes Haus mit mehreren stockwerken ist es meist die falsche Lösung.",
+        "Ein Mesh-System besteht aus mehreren Zugangspunkten, die ein gemeinsames Netz bilden und Geräte automatisch weiterreichen. Der Unterschied im Alltag ist nicht die Spitzengeschwindigkeit, sondern die Stabilität: Videocalls wechseln den Raum, ohne abzubrechen. Voraussetzung ist, dass die Knoten per Kabel oder über ein eigenes Funkband verbunden sind.",
+        "Die Platzierung ist wichtiger als die Anzahl der Knoten. Ein Mesh-Knoten in der Speisekammer hilft niemandem. Setze ihn dorthin, wo das Signal noch gut ankommt, aber der Raum dahinter versorgt werden soll – also etwa auf halber Strecke zwischen Router und Problemzone. Zwei gut platzierte Knoten schlagen vier schlecht platzierte.",
+        "Wi-Fi 7 ist ein Bonus, kein Grund zur Panik. Der Standard bringt mehr Kanäle und bessere Koordination, aber dein Internetanschluss bleibt der Flaschenhals. Wenn dein Netz heute stabil ist, lohnt der Wechsel selten nur wegen Wi-Fi 7. Wenn du viele Geräte, dicke Wände und regelmäßige Aussetzer hast, ist ein neues Mesh-System dagegen eine spürbare Verbesserung."
+      ],
+      "en": [
+        "A repeater picks up an existing signal and sends it on. That is cheap and simple, but often halves throughput because the device has to receive and transmit at the same time. For one office behind a wall, that can be enough. For a whole house across several floors, it is usually the wrong tool.",
+        "A mesh system consists of several access points that form one network and hand devices over automatically. The everyday difference is not peak speed but stability: video calls move between rooms without dropping. The prerequisite is that nodes are connected by cable or a dedicated radio band.",
+        "Placement matters more than the number of nodes. A mesh node in the pantry helps nobody. Put it where the signal is still good but the room behind it needs coverage – roughly halfway between router and problem area. Two well-placed nodes beat four badly placed ones.",
+        "Wi-Fi 7 is a bonus, not a reason to panic. The standard brings more channels and better coordination, but your internet connection remains the bottleneck. If your network is stable today, switching only for Wi-Fi 7 rarely pays off. If you have many devices, thick walls and regular dropouts, a new mesh system is a noticeable improvement."
+      ]
+    },
+    "image": "/assets/images/products/network.webp",
+    "author": "Mara Feld",
+    "publishedAt": "2026-10-30",
+    "readingMinutes": 5,
+    "featured": false
+  },
+  {
+    "id": "art-12",
+    "slug": "smartwatch-sensoren",
+    "category": "comparison",
+    "title": {
+      "de": "Smartwatch-Sensoren: Was sie messen – und was nicht",
+      "en": "Smartwatch sensors: what they measure – and what they don't"
+    },
+    "excerpt": {
+      "de": "Herzfrequenz, SpO₂, EKG, Hauttemperatur: Nicht jeder Wert ist gleich nützlich. Eine Einordnung ohne Gesundheitsversprechen.",
+      "en": "Heart rate, SpO₂, ECG, skin temperature: not every value is equally useful. A guide without health promises."
+    },
+    "body": {
+      "de": [
+        "Die optische Herzfrequenz ist der Kern fast jeder Smartwatch. Sie funktioniert bei ruhigen Messungen zuverlässig, wird bei schnellen Intervallen und lockerem Sitz aber ungenau. Für den Alltag und lockeres Training reicht sie meist. Wer ambitioniert läuft oder radelt, ist mit einem Brustgurt oft besser bedient – auch wenn die Uhr das nicht gerne hört.",
+        "SpO₂ wird über Lichtabsorption gemessen und ist im Schlaf am aussagekräftigsten. Die Werte schwanken natürlich, und eine Uhr ersetzt keine medizinische Diagnose. EKG-Funktionen können Vorhofflimmern erkennen, sind aber kein Ersatz für einen Arztbesuch. Nutze solche Werte als Hinweis, nicht als Befund.",
+        "Hauttemperatur und Stresswerte sind interessanter, als sie klingen. Sie helfen, Veränderungen über Wochen zu sehen: Schlaf, Erholung, Zyklus, Krankheit. Der einzelne Wert am Morgen sagt wenig. Der Verlauf über mehrere Nächte ist deutlich nützlicher – vorausgesetzt, du trägst die Uhr konsequent.",
+        "Die wichtigste Funktion ist am Ende oft die langweiligste: Akku und Tragekomfort. Eine Uhr, die zwei Wochen durchhält und nachts nicht stört, liefert mehr Daten als eine, die jeden Abend an den Lader muss. Achte auf ein Display, das im Dunkeln nicht blendet, und ein Armband, das nicht einschneidet. Alles andere ist Detail."
+      ],
+      "en": [
+        "Optical heart rate is the core of almost every smartwatch. It works reliably at rest but becomes less accurate during fast intervals or with a loose fit. For daily life and easy training it is usually enough. If you run or ride seriously, a chest strap often serves you better – even if the watch does not like hearing that.",
+        "SpO₂ is measured through light absorption and is most meaningful during sleep. Values fluctuate naturally, and a watch does not replace a medical diagnosis. ECG features can detect atrial fibrillation, but they are no substitute for a doctor's visit. Treat such values as a hint, not a finding.",
+        "Skin temperature and stress values are more interesting than they sound. They help you see changes over weeks: sleep, recovery, cycle, illness. A single morning value says little. The trend over several nights is far more useful – provided you wear the watch consistently.",
+        "In the end, the most important feature is often the most boring: battery life and comfort. A watch that lasts two weeks and does not disturb you at night provides more data than one that needs the charger every evening. Look for a display that does not blind you in the dark and a strap that does not pinch. Everything else is detail."
+      ]
+    },
+    "image": "/assets/images/products/watch-white.webp",
+    "author": "Nils Brandt",
+    "publishedAt": "2026-10-22",
+    "readingMinutes": 6,
+    "featured": false
+  },
+  {
+    "id": "art-13",
+    "slug": "handheld-gaming",
+    "category": "gaming",
+    "title": {
+      "de": "Handheld-Gaming: Mehr als ein kleines Display",
+      "en": "Handheld gaming: more than a small screen"
+    },
+    "excerpt": {
+      "de": "Latenz, OLED, Akku und Kühlung entscheiden, ob ein Handheld im Alltag funktioniert – nicht die Zahl auf dem Karton.",
+      "en": "Latency, OLED, battery and cooling decide whether a handheld works in daily life – not the number on the box."
+    },
+    "body": {
+      "de": [
+        "Ein Handheld ist ein Kompromiss, und das ist okay. Du bekommst Konsolen-ähnliche Leistung in einem Gerät, das in den Rucksack passt. Der Preis ist Wärme, Akku und ein Display, das kleiner ist als dein Fernseher. Entscheidend ist, ob du wirklich unterwegs spielst oder das Gerät am Ende doch nur auf dem Sofa liegt.",
+        "Latenz wird oft unterschätzt. Ein Cloud-Stream braucht ein stabiles Netz, ein lokales Spiel braucht ein gutes Display und schnelle Eingaben. Wenn du hauptsächlich zuhause spielst, ist ein 2,4-GHz-Controller oder ein Dock oft die bessere Investition als ein teureres Handheld-Modell. Unterwegs zählt die Verbindung mehr als die Rohleistung.",
+        "OLED ist bei Handhelds kein Luxus. Die kleineren Displays profitieren stark von echtem Schwarz, und die Reaktionszeit passt zu schnellen Spielen. Mini-LED oder gutes LCD sind tagsüber heller, aber in dunklen Räumen weniger beeindruckend. Achte außerdem auf PWM-Flimmern, wenn du empfindlich auf Bildschirme reagierst.",
+        "Akku und Kühlung entscheiden über die Langzeitnutzung. Ein Gerät, das unter Last laut wird, landet schneller in der Schublade als eines, das leise bleibt. Prüfe, ob du im Energiesparmodus spielen kannst, ohne dass die Bildrate einbricht. Genau dort zeigt sich, ob ein Handheld für deinen Alltag gebaut ist – nicht im Benchmark."
+      ],
+      "en": [
+        "A handheld is a compromise, and that is fine. You get console-like performance in a device that fits in a backpack. The price is heat, battery and a screen smaller than your TV. What matters is whether you really play on the move or whether it ends up on the sofa.",
+        "Latency is often underestimated. Cloud streaming needs a stable network; local play needs a good display and fast inputs. If you mostly play at home, a 2.4 GHz controller or a dock is often a better investment than a more expensive handheld. On the move, the connection matters more than raw power.",
+        "OLED is not a luxury on handhelds. Smaller screens benefit strongly from true black, and response time suits fast games. Mini-LED or a good LCD is brighter in daylight but less impressive in dark rooms. Also watch for PWM flicker if you are sensitive to screens.",
+        "Battery and cooling decide long-term use. A device that gets loud under load ends up in a drawer faster than one that stays quiet. Check whether you can play in a power-saving mode without the frame rate collapsing. That is where a handheld proves whether it is built for your day – not in a benchmark."
+      ]
+    },
+    "image": "/assets/images/editorial/gaming-setup.webp",
+    "author": "Lea Sommer",
+    "publishedAt": "2026-10-15",
+    "readingMinutes": 7,
+    "featured": false
+  },
+  {
+    "id": "art-14",
+    "slug": "akku-pflege",
+    "category": "knowledge",
+    "title": {
+      "de": "Akku-Pflege: Was wirklich hilft und was nur Mythos ist",
+      "en": "Battery care: what actually helps and what is a myth"
+    },
+    "excerpt": {
+      "de": "Vollladen, leerlaufen, Schnellladen: Die meisten Akku-Regeln stammen aus einer anderen Zeit. Was heute zählt.",
+      "en": "Full charge, deep discharge, fast charging: most battery rules come from another era. What matters today."
+    },
+    "body": {
+      "de": [
+        "Moderne Lithium-Ionen-Akkus mögen es am liebsten, wenn sie zwischen 20 und 80 Prozent bleiben. Das heißt nicht, dass du panisch werden musst, wenn du einmal bei 100 Prozent übernachtest. Entscheidend ist der langfristige Durchschnitt. Wer täglich bis 100 Prozent lädt und dann stundenlang am Kabel bleibt, altert den Akku schneller als jemand, der ihn in der Mitte hält.",
+        "Der alte Ratschlag, den Akku regelmäßig komplett leerlaufen zu lassen, ist überholt. Tiefentladung stresst Lithium-Ionen-Zellen. Ein gelegentliches Kalibrieren kann bei manchen Geräten sinnvoll sein, aber der normale Alltag sollte keine bewussten Null-Prozent-Zyklen enthalten. Lade lieber zwischendurch in kleinen Schritten.",
+        "Schnellladen ist heute gut kontrolliert. Die Geräte regeln Strom und Temperatur dynamisch, und ein zugelassenes Netzteil ist selten das Problem. Wärme ist der eigentliche Feind: Laden unter der Decke, in der prallen Sonne oder beim Spielen belastet den Akku mehr als die Ladegeschwindigkeit selbst. Wenn das Gerät warm wird, nimm es vom Kabel.",
+        "Für die Haltbarkeit zählt vor allem die Zahl der vollen Ladezyklen. Ein Akku mit 500 Zyklen ist nach etwa zwei Jahren Alltag oft bei 80 Prozent Restkapazität – das ist normal. Wenn du ihn schonst, gewinnst du vielleicht ein Jahr. Wenn du ihn nicht schonst, ist das kein Drama. Ein Akku ist ein Verschleißteil, kein rohes Ei."
+      ],
+      "en": [
+        "Modern lithium-ion batteries prefer staying between 20 and 80 percent. That does not mean you should panic if you leave it at 100 percent overnight once. The long-term average matters. Someone who charges to 100 percent every day and stays on the cable for hours ages the battery faster than someone who keeps it in the middle.",
+        "The old advice to regularly drain the battery completely is outdated. Deep discharge stresses lithium-ion cells. Occasional calibration can make sense on some devices, but normal life should not include deliberate zero-percent cycles. Charge in small steps instead.",
+        "Fast charging is well controlled today. Devices regulate current and temperature dynamically, and a certified charger is rarely the problem. Heat is the real enemy: charging under a blanket, in direct sun or while gaming stresses the battery more than the charging speed itself. If the device gets warm, unplug it.",
+        "Longevity mostly depends on full charge cycles. A battery rated for 500 cycles often sits around 80 percent capacity after about two years of daily use – that is normal. If you treat it gently, you may gain a year. If you do not, it is not a disaster. A battery is a wear item, not a raw egg."
+      ]
+    },
+    "image": "/assets/images/products/phone-desk.webp",
+    "author": "Mara Feld",
+    "publishedAt": "2026-10-08",
+    "readingMinutes": 5,
+    "featured": false
   }
 ]

@@ -7,6 +7,7 @@ import { ProductGrid } from '@/components/product/ProductGrid';
 import { EmptyState } from '@/components/ui/EmptyState';
 import { Drawer } from '@/components/ui/Drawer';
 import { CategoryLoader } from '@/components/ui/CategoryLoader';
+import { CategoryEntrance } from '@/components/catalog/CategoryEntrance';
 import {
   FilterPanel,
   type FilterState,
@@ -36,6 +37,7 @@ export default function CatalogPage() {
   const locale = i18n.language.startsWith('en') ? 'en' : 'de';
   const [searchParams, setSearchParams] = useSearchParams();
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [categoryEntrance, setCategoryEntrance] = useState(false);
 
   const search = searchParams.get('search') ?? '';
   const category = searchParams.get('category') ?? '';
@@ -51,6 +53,21 @@ export default function CatalogPage() {
   useEffect(() => {
     setSearchDraft(search);
   }, [search]);
+
+  // Each category gets a short, calm entrance before its products appear.
+  useEffect(() => {
+    if (!category || typeof window === 'undefined') {
+      setCategoryEntrance(false);
+      return;
+    }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setCategoryEntrance(false);
+      return;
+    }
+    setCategoryEntrance(true);
+    const timer = window.setTimeout(() => setCategoryEntrance(false), 1450);
+    return () => window.clearTimeout(timer);
+  }, [category]);
 
   const filters: FilterState = {
     category,
@@ -285,6 +302,19 @@ export default function CatalogPage() {
             <p className="text-[12px] text-ink-900/45">
               {t('filters.results', { count: total })}
             </p>
+            {isLoading && data && (
+              <span className="inline-flex items-center gap-1.5">
+                <CategoryLoader
+                  category={category || 'laptops'}
+                  size="sm"
+                  showLabel={false}
+                  className="gap-0"
+                />
+                <span className="text-[10px] text-ink-900/30">
+                  {t('store:catalog.refreshing')}
+                </span>
+              </span>
+            )}
             {activeChips.map((chip) => (
               <button
                 key={chip.key}
@@ -341,12 +371,15 @@ export default function CatalogPage() {
           </aside>
 
           <div>
-            {isLoading && !data ? (
+            {categoryEntrance && category ? (
+              <CategoryEntrance category={category} />
+            ) : isLoading && !data ? (
               <div className="flex flex-col items-center justify-center gap-6 py-24">
                 <CategoryLoader
                   category={category || 'laptops'}
                   size="lg"
-                  label={t('store:catalog.loading', { defaultValue: 'Lädt Produkte …' })}
+                  label={t('store:catalog.loading')}
+                  showProgress
                 />
               </div>
             ) : items.length === 0 ? (
@@ -365,7 +398,12 @@ export default function CatalogPage() {
               />
             ) : (
               <>
-                <div className={cn('transition-opacity duration-300', isLoading && 'opacity-60')}>
+                <div
+                  className={cn(
+                    'transition-opacity duration-300',
+                    isLoading ? 'opacity-60' : 'animate-[fade-up_0.55s_cubic-bezier(0.16,1,0.3,1)_both]',
+                  )}
+                >
                   <ProductGrid products={items} />
                 </div>
 

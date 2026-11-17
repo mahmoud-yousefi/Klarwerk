@@ -167,6 +167,119 @@
   }
 }
 
+/* ------------------------------------------------------------------ */
+/* Category loader motion                                              */
+/* ------------------------------------------------------------------ */
+
+@keyframes kw-loader-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(-0.6deg); }
+}
+
+@keyframes kw-loader-sway {
+  0%, 100% { transform: translateY(0) rotate(-2.4deg); }
+  50% { transform: translateY(-3px) rotate(2.4deg); }
+}
+
+@keyframes kw-loader-rumble {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-1px, 1px) rotate(-1.2deg); }
+  40% { transform: translate(1px, -1px) rotate(1.2deg); }
+  60% { transform: translate(-1px, -1px) rotate(-0.8deg); }
+  80% { transform: translate(1px, 1px) rotate(0.8deg); }
+}
+
+@keyframes kw-loader-throb {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.035); }
+}
+
+@keyframes kw-loader-scanline {
+  0% { top: -20%; opacity: 0; }
+  12% { opacity: 0.9; }
+  88% { opacity: 0.9; }
+  100% { top: 112%; opacity: 0; }
+}
+
+@keyframes kw-loader-wave {
+  0%, 100% { transform: scaleY(0.3); opacity: 0.45; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+@keyframes kw-loader-flash {
+  0%, 58%, 100% { opacity: 0; }
+  64%, 72% { opacity: 0.62; }
+}
+
+@keyframes kw-loader-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes kw-loader-tick {
+  0%, 100% { transform: translate(0, 0); opacity: 0.6; }
+  50% { transform: translate(3px, -2px); opacity: 1; }
+}
+
+@keyframes kw-loader-key {
+  0%, 100% { transform: translateY(0); opacity: 0.45; }
+  50% { transform: translateY(-2px); opacity: 1; }
+}
+
+@keyframes kw-loader-cursor {
+  0% { transform: translate(-60%, -20%); }
+  25% { transform: translate(60%, -55%); }
+  50% { transform: translate(70%, 45%); }
+  75% { transform: translate(-35%, 60%); }
+  100% { transform: translate(-60%, -20%); }
+}
+
+@keyframes kw-loader-data {
+  0%, 100% { transform: scaleX(0.22); opacity: 0.4; }
+  50% { transform: scaleX(1); opacity: 1; }
+}
+
+@keyframes kw-loader-signal {
+  0% { transform: scale(0.4); opacity: 0.85; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+
+@keyframes kw-loader-orbit {
+  to { stroke-dashoffset: -100; }
+}
+
+@keyframes kw-loader-spark {
+  0%, 100% { opacity: 0.25; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes kw-loader-progress {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(240%); }
+}
+
+@keyframes kw-loader-rumble-light {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.85; }
+}
+
+.kw-loader-float { animation: kw-loader-float 3.4s ease-in-out infinite; }
+.kw-loader-sway { animation: kw-loader-sway 3.2s ease-in-out infinite; }
+.kw-loader-rumble { animation: kw-loader-rumble 1.4s ease-in-out infinite; }
+.kw-loader-throb { animation: kw-loader-throb 2.4s ease-in-out infinite; }
+.kw-loader-scanline { animation: kw-loader-scanline 2.4s ease-in-out infinite; }
+.kw-loader-wave { animation: kw-loader-wave 0.9s ease-in-out infinite; transform-origin: bottom; }
+.kw-loader-flash { animation: kw-loader-flash 3.2s ease-in-out infinite; }
+.kw-loader-spin { animation: kw-loader-spin 9s linear infinite; }
+.kw-loader-tick { animation: kw-loader-tick 1s ease-in-out infinite; }
+.kw-loader-key { animation: kw-loader-key 1.3s ease-in-out infinite; }
+.kw-loader-cursor { animation: kw-loader-cursor 2.8s ease-in-out infinite; }
+.kw-loader-data { animation: kw-loader-data 1.4s ease-in-out infinite; transform-origin: left; }
+.kw-loader-signal { animation: kw-loader-signal 2.1s ease-out infinite; transform-origin: bottom right; }
+.kw-loader-orbit { animation: kw-loader-orbit 2.8s linear infinite; }
+.kw-loader-spark { animation: kw-loader-spark 2.2s ease-in-out infinite; }
+.kw-loader-progress { animation: kw-loader-progress 1.35s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
+.kw-loader-rumble-light { animation: kw-loader-rumble-light 1.4s ease-in-out infinite; }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

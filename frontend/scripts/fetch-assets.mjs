@@ -50,6 +50,10 @@ const manifest = [
   ['1629429407759-01cd3d7cfb38', 1200, 'products/gaming-desk'],
   ['1598550476439-6847785fcea6', 1600, 'editorial/gaming-setup'],
   ['1526170375885-4d8ecf77b99f', 1600, 'editorial/camera'],
+  ['1500634245200-e5245c7574ef', 1200, 'products/camera-front'],
+  ['1510127034890-ba27508e9f1c', 1200, 'products/camera-compact'],
+  ['1516035069371-29a1b244cc32', 1200, 'products/camera-kit'],
+  ['1452780212940-6f5c0d14d848', 1200, 'products/camera-body'],
   ['1606144042614-b2417e99c4e3', 1600, 'editorial/controller'],
   ['1593642632823-8f785ba67e45', 1600, 'editorial/workspace'],
 ];
