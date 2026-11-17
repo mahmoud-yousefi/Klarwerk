@@ -51,7 +51,7 @@ export default function ConfirmationPage() {
           items={[
             { label: t('common:product.breadcrumbHome'), to: '/' },
             { label: t('checkout:meta.title'), to: '/checkout' },
-            { label: t('checkout:confirmation.demoBadge') },
+            { label: order.id },
           ]}
           className="mb-8"
         />
@@ -66,7 +66,7 @@ export default function ConfirmationPage() {
                   <Check size={22} />
                 </span>
                 <span className="rounded-full border border-white/15 px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.16em] text-white/55">
-                  {t('checkout:confirmation.demoBadge')}
+                  {order.id}
                 </span>
               </div>
               <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.04] tracking-[-0.04em] sm:text-5xl">

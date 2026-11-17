@@ -17,6 +17,7 @@ import { useUiStore } from '@/stores/ui.store';
 import { useScrolled } from '@/hooks/useUi';
 import { Logo } from '@/components/ui/Logo';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { AccountMenu } from './AccountMenu';
 
 export function Header() {
   const { t, i18n } = useTranslation();
@@ -179,7 +180,7 @@ export function Header() {
                     </div>
 
                     <div className="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-white/8 pt-3">
-                      <p className="text-[10px] text-white/30">{t('demo.notice')}</p>
+                      <p className="text-[10px] text-white/30">{t('footer.madeIn')}</p>
                       <div className="flex items-center gap-3">
                         <Link
                           to="/wallpapers"
@@ -251,6 +252,8 @@ export function Header() {
 
           <LanguageSwitcher showIcon={false} className="flex sm:hidden" />
           <LanguageSwitcher className="hidden sm:flex" />
+
+          <AccountMenu />
 
           <Link
             to="/wishlist"

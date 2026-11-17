@@ -11,7 +11,7 @@
     "clearChat": "Clear conversation",
     "history": "History",
     "today": "Today",
-    "demoNote": "Demo assistant in mock mode. No external AI provider is contacted."
+    "demoNote": "Assistant in mock mode. No external AI provider is contacted."
   },
   "welcome": {
     "title": "Find the technology that fits your needs.",
@@ -52,7 +52,7 @@
     "send": "Send message",
     "stop": "Stop response",
     "hint": "Enter to send · Shift + Enter for a new line",
-    "disclaimer": "Answers are generated from the demo catalog and may contain errors.",
+    "disclaimer": "Answers are generated from the catalog and may contain errors.",
     "charCount": "{{count}} / {{max}}"
   },
   "message": {
@@ -62,7 +62,7 @@
     "streaming": "Writing response …",
     "stopped": "Response stopped.",
     "errorTitle": "The response could not be completed.",
-    "errorText": "The demo stream was interrupted. You can try again.",
+    "errorText": "The response stream was interrupted. You can try again.",
     "retry": "Try again",
     "copy": "Copy response",
     "copied": "Copied",
@@ -85,7 +85,7 @@
     "unavailable": "Currently unavailable",
     "showAll": "See all {{count}} suggestions",
     "why": "Why it fits",
-    "demoNote": "Prices and availability from the demo catalog."
+    "demoNote": "Prices and availability from the catalog."
   },
   "comparison": {
     "title": "Direct comparison",
@@ -132,8 +132,8 @@
     "how1": "Describe your everyday, your budget or a device you want to compare.",
     "how2": "I search only the Klarwerk catalog – no invented products.",
     "how3": "You get products, reasoning and, if you like, a direct comparison.",
-    "privacyTitle": "Demo & data",
-    "privacyText": "No external AI provider. Answers are generated locally from the demo catalog and are stored only in this session.",
+    "privacyTitle": "Privacy",
+    "privacyText": "No external AI provider. Answers are generated locally from the catalog and are stored only in this session.",
     "historyTitle": "Session history",
     "historyText": "Your conversation stays in this tab until you delete it. There is no account and no cloud storage."
   }

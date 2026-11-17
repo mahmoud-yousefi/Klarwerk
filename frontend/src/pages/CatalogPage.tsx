@@ -437,7 +437,7 @@ export default function CatalogPage() {
                 )}
 
                 <p className="mt-6 text-center text-[10px] text-ink-900/30">
-                  {t('demo.notice')}{' '}
+                  {t('common:footer.madeIn')} ·{' '}
                   <Link to="/info/about" className="underline underline-offset-2 hover:text-ink-900/60">
                     {t('footer.about')}
                   </Link>

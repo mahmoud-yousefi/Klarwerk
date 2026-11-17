@@ -24,6 +24,8 @@ import { useCartStore } from '@/stores/cart.store';
 import { getProductById } from '@/lib/catalog';
 import { createCheckoutSchema, type CheckoutFormValues } from '@/lib/validation';
 import { createDemoOrder } from '@/services/checkout.service';
+import { useAuthStore } from '@/stores/auth.store';
+import { CheckoutAuthGate } from '@/components/auth/CheckoutAuthGate';
 import { formatPrice } from '@/lib/utils';
 import { cn } from '@/lib/utils';
 import site from '@/data/site.json';
@@ -65,6 +67,7 @@ const countryOptions = [
 
 export default function CheckoutPage() {
   const { t, i18n } = useTranslation('checkout');
+  const user = useAuthStore((state) => state.user);
   const locale = i18n.language.startsWith('en') ? 'en' : 'de';
   const navigate = useNavigate();
   const { lines, subtotal, count } = useCartDetails();
@@ -167,6 +170,10 @@ export default function CheckoutPage() {
         />
       </div>
     );
+  }
+
+  if (!user) {
+    return <CheckoutAuthGate />;
   }
 
   const addressSummary = [
@@ -458,9 +465,6 @@ export default function CheckoutPage() {
                         <span className="flex items-center gap-2 text-[12px] font-medium">
                           <method.icon size={14} className="text-ink-900/40" />
                           {t(method.titleKey)}
-                          <span className="ml-auto rounded bg-ink-900/[0.055] px-1.5 py-0.5 text-[8px] uppercase tracking-wider text-ink-900/35">
-                            {t('payment.demoBadge')}
-                          </span>
                         </span>
                         <span className="mt-1 block text-[10px] leading-relaxed text-ink-900/45">
                           {t(method.textKey)}

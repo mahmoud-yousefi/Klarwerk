@@ -117,9 +117,6 @@ export default function InfoPage() {
                   {page.subtitle[locale]}
                 </p>
               </div>
-              <span className="rounded-full border border-ink-900/10 bg-white px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.12em] text-ink-900/40">
-                {t('common:demo.label')}
-              </span>
             </div>
 
             <div className="mt-6 space-y-3">
@@ -169,7 +166,7 @@ export default function InfoPage() {
               </div>
               <div className="flex flex-wrap items-center justify-between gap-2 border-t border-ink-900/8 bg-mist/60 px-5 py-3">
                 <p className="flex items-center gap-1.5 text-[9px] text-ink-900/35">
-                  <ShieldCheck size={10} /> {t('common:demo.notice')}
+                  <ShieldCheck size={10} /> {t('common:footer.madeIn')}
                 </p>
                 <Link
                   to="/"

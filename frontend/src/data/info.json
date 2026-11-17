@@ -1,59 +1,83 @@
 [
   {
     "id": "shipping",
-    "title": { "de": "Versand", "en": "Shipping" },
+    "title": {
+      "de": "Versand",
+      "en": "Shipping"
+    },
     "subtitle": {
       "de": "Schnell, nachvollziehbar und ohne Kleingedrucktes.",
       "en": "Fast, trackable and without small print."
     },
     "sections": [
       {
-        "heading": { "de": "Lieferzeiten", "en": "Delivery times" },
+        "heading": {
+          "de": "Lieferzeiten",
+          "en": "Delivery times"
+        },
         "body": {
-          "de": "Bestellungen bis 15 Uhr verlassen unser Lager am selben Werktag. Die Standardlieferung dauert 2–4 Werktage, Express 1–2 Werktage. Alle Angaben sind Demo-Werte.",
-          "en": "Orders placed before 3pm leave our warehouse the same working day. Standard delivery takes 2–4 working days, express 1–2. All values are demo data."
+          "de": "Bestellungen bis 15 Uhr verlassen unser Lager am selben Werktag. Die Standardlieferung dauert 2–4 Werktage, Express 1–2 Werktage. Alle Angaben sind Richtwerte.",
+          "en": "Orders placed before 3pm leave our warehouse the same working day. Standard delivery takes 2–4 working days, express 1–2. All values are sample data."
         }
       },
       {
-        "heading": { "de": "Versandkosten", "en": "Shipping costs" },
+        "heading": {
+          "de": "Versandkosten",
+          "en": "Shipping costs"
+        },
         "body": {
-          "de": "Der Standardversand kostet 4,90 € und ist ab 50 € Warenwert kostenlos. Express kostet 9,90 €. Diese Preise sind illustrativ und werden im Demo-Checkout angezeigt.",
-          "en": "Standard shipping costs €4.90 and is free from €50. Express costs €9.90. These prices are illustrative and shown in the demo checkout."
+          "de": "Der Standardversand kostet 4,90 € und ist ab 50 € Warenwert kostenlos. Express kostet 9,90 €. Diese Preise sind illustrativ und werden im Checkout angezeigt.",
+          "en": "Standard shipping costs €4.90 and is free from €50. Express costs €9.90. These prices are illustrative and shown in checkout."
         }
       },
       {
-        "heading": { "de": "Sendungsverfolgung", "en": "Tracking" },
+        "heading": {
+          "de": "Sendungsverfolgung",
+          "en": "Tracking"
+        },
         "body": {
-          "de": "In einer echten Bestellung würdest du nach dem Versand eine E-Mail mit Tracking-Link erhalten. Dieser Demo-Shop versendet keine E-Mails.",
-          "en": "In a real order you would receive an email with a tracking link after dispatch. This demo shop does not send emails."
+          "de": "In einer echten Bestellung würdest du nach dem Versand eine E-Mail mit Tracking-Link erhalten. Dieser Shop versendet keine E-Mails.",
+          "en": "In a real order you would receive an email with a tracking link after dispatch. This shop does not send emails."
         }
       }
     ]
   },
   {
     "id": "returns",
-    "title": { "de": "Rückgabe", "en": "Returns" },
+    "title": {
+      "de": "Rückgabe",
+      "en": "Returns"
+    },
     "subtitle": {
       "de": "In Ruhe testen. Wenn es nicht passt, geht es zurück.",
       "en": "Test at home. If it doesn't fit, send it back."
     },
     "sections": [
       {
-        "heading": { "de": "30 Tage Zeit", "en": "30 days" },
+        "heading": {
+          "de": "30 Tage Zeit",
+          "en": "30 days"
+        },
         "body": {
           "de": "Du kannst jedes Produkt innerhalb von 30 Tagen nach Erhalt zurückgeben. Voraussetzung ist ein vollständiger, unbeschädigter Zustand mit Originalverpackung.",
           "en": "You can return any product within 30 days of receipt, provided it is complete, undamaged and in its original packaging."
         }
       },
       {
-        "heading": { "de": "So funktioniert es", "en": "How it works" },
+        "heading": {
+          "de": "So funktioniert es",
+          "en": "How it works"
+        },
         "body": {
-          "de": "In einer echten Bestellung würdest du im Kundenkonto eine Rücksendung anlegen und ein vorfrankiertes Label erhalten. In dieser Demo gibt es keinen echten Rückgabeprozess.",
-          "en": "In a real order you would create a return in your account and receive a prepaid label. This demo has no real returns process."
+          "de": "In einer echten Bestellung würdest du im Kundenkonto eine Rücksendung anlegen und ein vorfrankiertes Label erhalten. In dieser Vorschau gibt es keinen echten Rückgabeprozess.",
+          "en": "In a real order you would create a return in your account and receive a prepaid label. There is no real returns process."
         }
       },
       {
-        "heading": { "de": "Erstattung", "en": "Refund" },
+        "heading": {
+          "de": "Erstattung",
+          "en": "Refund"
+        },
         "body": {
           "de": "Erstattungen erfolgen auf dem ursprünglichen Zahlungsweg, sobald die Rücksendung geprüft wurde. Auch dieser Ablauf ist hier nur beschrieben, nicht implementiert.",
           "en": "Refunds are issued to the original payment method once the return has been inspected. This flow is described here but not implemented."
@@ -63,21 +87,30 @@
   },
   {
     "id": "warranty",
-    "title": { "de": "Garantie", "en": "Warranty" },
+    "title": {
+      "de": "Garantie",
+      "en": "Warranty"
+    },
     "subtitle": {
       "de": "Direkt abgewickelt, ohne Umwege.",
       "en": "Handled directly, without detours."
     },
     "sections": [
       {
-        "heading": { "de": "Gesetzliche Gewährleistung", "en": "Statutory warranty" },
+        "heading": {
+          "de": "Gesetzliche Gewährleistung",
+          "en": "Statutory warranty"
+        },
         "body": {
           "de": "Für alle Produkte gilt die gesetzliche Gewährleistung. Zusätzlich bieten ausgewählte Geräte eine Herstellergarantie von bis zu drei Jahren.",
           "en": "All products are covered by statutory warranty. Selected devices additionally include a manufacturer warranty of up to three years."
         }
       },
       {
-        "heading": { "de": "Service über Klarwerk", "en": "Service via Klarwerk" },
+        "heading": {
+          "de": "Service über Klarwerk",
+          "en": "Service via Klarwerk"
+        },
         "body": {
           "de": "In einer echten Bestellung würdest du dich direkt an unseren Service wenden. Wir koordinieren Reparatur oder Austausch mit dem Hersteller – du musst nicht selbst herausfinden, wer zuständig ist.",
           "en": "In a real order you would contact our service team directly. We coordinate repair or replacement with the manufacturer – you don't have to work out who is responsible."
@@ -87,90 +120,126 @@
   },
   {
     "id": "faq",
-    "title": { "de": "Häufige Fragen", "en": "Frequently asked questions" },
+    "title": {
+      "de": "Häufige Fragen",
+      "en": "Frequently asked questions"
+    },
     "subtitle": {
       "de": "Kurze Antworten auf die wichtigsten Fragen.",
       "en": "Short answers to the most important questions."
     },
     "sections": [
       {
-        "heading": { "de": "Ist Klarwerk ein echter Shop?", "en": "Is Klarwerk a real shop?" },
+        "heading": {
+          "de": "Ist Klarwerk ein echter Shop?",
+          "en": "Is Klarwerk a real shop?"
+        },
         "body": {
           "de": "Nein. Klarwerk ist ein Portfolio-Projekt. Produkte, Marken und Preise sind frei erfunden. Es werden keine echten Bestellungen oder Zahlungen verarbeitet.",
           "en": "No. Klarwerk is a portfolio project. Products, brands and prices are fictional. No real orders or payments are processed."
         }
       },
       {
-        "heading": { "de": "Woher kommen die Produktbilder?", "en": "Where do the product images come from?" },
+        "heading": {
+          "de": "Woher kommen die Produktbilder?",
+          "en": "Where do the product images come from?"
+        },
         "body": {
-          "de": "Die Demo-Bilder stammen von Unsplash und werden unter der Unsplash-Lizenz verwendet. Die Quellen sind im Asset-Katalog dokumentiert.",
-          "en": "The demo images come from Unsplash and are used under the Unsplash License. Sources are documented in the asset catalog."
+          "de": "Die Bilder stammen von Unsplash und werden unter der Unsplash-Lizenz verwendet. Die Quellen sind im Asset-Katalog dokumentiert.",
+          "en": "The images come from Unsplash and are used under the Unsplash License. Sources are documented in the asset catalog."
         }
       },
       {
-        "heading": { "de": "Funktioniert der KI-Berater wirklich?", "en": "Does the AI advisor really work?" },
+        "heading": {
+          "de": "Funktioniert der KI-Berater wirklich?",
+          "en": "Does the AI advisor really work?"
+        },
         "body": {
           "de": "Aktuell läuft der Berater im Mock-Modus: Er durchsucht den lokalen Katalog und erzeugt Antworten ohne externen Anbieter. Die Architektur ist für echte Streaming-Anbieter vorbereitet.",
           "en": "The advisor currently runs in mock mode: it searches the local catalog and generates responses without an external provider. The architecture is ready for real streaming providers."
         }
       },
       {
-        "heading": { "de": "Kann ich mein Konto löschen?", "en": "Can I delete my account?" },
+        "heading": {
+          "de": "Kann ich mein Konto löschen?",
+          "en": "Can I delete my account?"
+        },
         "body": {
-          "de": "Es gibt in dieser Demo keine Konten. Warenkorb und Merkliste werden lokal in deinem Browser gespeichert und können dort jederzeit geleert werden.",
-          "en": "There are no accounts in this demo. Cart and wishlist are stored locally in your browser and can be cleared at any time."
+          "de": "Es gibt in dieser Vorschau keine Konten. Warenkorb und Merkliste werden lokal in deinem Browser gespeichert und können dort jederzeit geleert werden.",
+          "en": "There are no accounts in this preview. Cart and wishlist are stored locally in your browser and can be cleared at any time."
         }
       }
     ]
   },
   {
     "id": "privacy",
-    "title": { "de": "Datenschutz", "en": "Privacy" },
+    "title": {
+      "de": "Datenschutz",
+      "en": "Privacy"
+    },
     "subtitle": {
-      "de": "So wenig Daten wie möglich – auch in der Demo.",
-      "en": "As little data as possible – even in the demo."
+      "de": "So wenig Daten wie möglich – auch in der Vorschau.",
+      "en": "As little data as possible – even in the preview."
     },
     "sections": [
       {
-        "heading": { "de": "Lokale Speicherung", "en": "Local storage" },
+        "heading": {
+          "de": "Lokale Speicherung",
+          "en": "Local storage"
+        },
         "body": {
           "de": "Warenkorb, Merkliste, Vergleich und Spracheinstellung werden ausschließlich im LocalStorage deines Browsers gespeichert. Es findet keine Übertragung an einen Server statt.",
           "en": "Cart, wishlist, comparison and language preference are stored only in your browser's localStorage. Nothing is transmitted to a server."
         }
       },
       {
-        "heading": { "de": "Demo-Daten", "en": "Demo data" },
+        "heading": {
+          "de": "Beispieldaten",
+          "en": "data"
+        },
         "body": {
-          "de": "Im Demo-Checkout eingegebene Adressdaten werden nur lokal verarbeitet und nicht versendet. Bitte verwende dennoch keine echten sensiblen Daten.",
-          "en": "Address details entered in the demo checkout are processed locally and never sent. Please avoid entering real sensitive data anyway."
+          "de": "Im Checkout eingegebene Adressdaten werden nur lokal verarbeitet und nicht versendet. Bitte verwende dennoch keine echten sensiblen Daten.",
+          "en": "Address details entered in the checkout are processed locally and never sent. Please avoid entering real sensitive data anyway."
         }
       },
       {
-        "heading": { "de": "Keine Tracker", "en": "No trackers" },
+        "heading": {
+          "de": "Keine Tracker",
+          "en": "No trackers"
+        },
         "body": {
-          "de": "Diese Demo verwendet keine Analyse- oder Marketing-Cookies von Drittanbietern.",
-          "en": "This demo uses no third-party analytics or marketing cookies."
+          "de": "Diese verwendet keine Analyse- oder Marketing-Cookies von Drittanbietern.",
+          "en": "This site uses no third-party analytics or marketing cookies."
         }
       }
     ]
   },
   {
     "id": "terms",
-    "title": { "de": "AGB", "en": "Terms" },
+    "title": {
+      "de": "AGB",
+      "en": "Terms"
+    },
     "subtitle": {
-      "de": "Demo-Bedingungen, kurz und klar.",
-      "en": "Demo terms, short and clear."
+      "de": "Bedingungen, kurz und klar.",
+      "en": "terms, short and clear."
     },
     "sections": [
       {
-        "heading": { "de": "Demo-Charakter", "en": "Demo nature" },
+        "heading": {
+          "de": "Vorschau-Charakter",
+          "en": "nature"
+        },
         "body": {
           "de": "Klarwerk ist ein nicht-kommerzielles Portfolio-Projekt. Es kommt kein Kaufvertrag zustande. Alle Preise und Verfügbarkeiten sind illustrativ.",
           "en": "Klarwerk is a non-commercial portfolio project. No contract of sale is formed. All prices and availability are illustrative."
         }
       },
       {
-        "heading": { "de": "Zahlung", "en": "Payment" },
+        "heading": {
+          "de": "Zahlung",
+          "en": "Payment"
+        },
         "body": {
           "de": "Es werden keine echten Zahlungen verarbeitet und keine Zahlungsdaten erhoben. Die Auswahl einer Zahlungsart im Checkout hat ausschließlich demonstrativen Charakter.",
           "en": "No real payments are processed and no payment data is collected. Selecting a payment method in checkout is purely demonstrative."
@@ -180,48 +249,66 @@
   },
   {
     "id": "imprint",
-    "title": { "de": "Impressum", "en": "Imprint" },
+    "title": {
+      "de": "Impressum",
+      "en": "Imprint"
+    },
     "subtitle": {
       "de": "Angaben gemäß § 5 DDG – fiktiv.",
       "en": "Information pursuant to § 5 DDG – fictional."
     },
     "sections": [
       {
-        "heading": { "de": "Anbieter", "en": "Provider" },
+        "heading": {
+          "de": "Anbieter",
+          "en": "Provider"
+        },
         "body": {
-          "de": "Klarwerk Demo GmbH · Speicherstadt 12 · 20457 Hamburg · Deutschland. Diese Angaben sind frei erfunden und dienen nur der Demonstration.",
-          "en": "Klarwerk Demo GmbH · Speicherstadt 12 · 20457 Hamburg · Germany. These details are fictional and for demonstration only."
+          "de": "Klarwerk GmbH · Speicherstadt 12 · 20457 Hamburg · Deutschland. Diese Angaben sind frei erfunden und dienen nur der Demonstration.",
+          "en": "Klarwerk GmbH · Speicherstadt 12 · 20457 Hamburg · Germany. These details are fictional and for demonstration only."
         }
       },
       {
-        "heading": { "de": "Kontakt", "en": "Contact" },
+        "heading": {
+          "de": "Kontakt",
+          "en": "Contact"
+        },
         "body": {
-          "de": "E-Mail: hallo@klarwerk.demo · Telefon: +49 40 123 456 78. Beide Kontaktwege sind Demo-Daten.",
-          "en": "Email: hallo@klarwerk.demo · Phone: +49 40 123 456 78. Both are demo details."
+          "de": "E-Mail: hallo@klarwerk.de · Telefon: +49 40 123 456 78. Beide Kontaktwege sind Beispieldaten.",
+          "en": "Email: hallo@klarwerk.de · Phone: +49 40 123 456 78. Both are sample details."
         }
       }
     ]
   },
   {
     "id": "about",
-    "title": { "de": "Über Klarwerk", "en": "About Klarwerk" },
+    "title": {
+      "de": "Über Klarwerk",
+      "en": "About Klarwerk"
+    },
     "subtitle": {
       "de": "Technik, die weiterdenkt.",
       "en": "Technology that thinks ahead."
     },
     "sections": [
       {
-        "heading": { "de": "Die Idee", "en": "The idea" },
+        "heading": {
+          "de": "Die Idee",
+          "en": "The idea"
+        },
         "body": {
           "de": "Klarwerk ist als Premium-Elektronikhändler gedacht, der Produkte nicht lauter macht, als sie sind. Klare Informationen, ehrliche Einordnungen und ein KI-Berater, der den Katalog kennt – nicht die ganze Welt.",
           "en": "Klarwerk is conceived as a premium electronics retailer that doesn't make products louder than they are. Clear information, honest context and an AI advisor that knows the catalog – not the whole world."
         }
       },
       {
-        "heading": { "de": "Das Projekt", "en": "The project" },
+        "heading": {
+          "de": "Das Projekt",
+          "en": "The project"
+        },
         "body": {
-          "de": "Diese Anwendung ist ein Portfolio-Projekt. Sie demonstriert Storefront, Katalog, Demo-Checkout und einen katalogbasierten KI-Berater in deutscher und englischer Sprache.",
-          "en": "This application is a portfolio project. It demonstrates a storefront, catalog, demo checkout and a catalog-grounded AI advisor in German and English."
+          "de": "Diese Anwendung ist ein Portfolio-Projekt. Sie demonstriert Storefront, Katalog, Checkout und einen katalogbasierten KI-Berater in deutscher und englischer Sprache.",
+          "en": "This application is a portfolio project. It demonstrates a storefront, catalog, checkout and a catalog-grounded AI advisor in German and English."
         }
       }
     ]

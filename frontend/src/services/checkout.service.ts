@@ -52,6 +52,9 @@ const readOrders = (): DemoOrder[] => {
 
 export const getDemoOrder = (id: string) => readOrders().find((order) => order.id === id);
 
+/** Read every order placed through the storefront checkout (newest first). */
+export const getStoredOrders = (): DemoOrder[] => readOrders();
+
 const persistOrder = (order: DemoOrder) => {
   const orders = [order, ...readOrders()].slice(0, 10);
   localStorage.setItem(ORDERS_KEY, JSON.stringify(orders));

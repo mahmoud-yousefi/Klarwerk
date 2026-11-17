@@ -213,7 +213,7 @@ export default function ProductPage() {
               </div>
 
               <p className="mt-3 text-center text-[10px] text-ink-900/35">
-                {t('store:productPage.addToCartNote')} · {t('store:productPage.demoNote')}
+                {t('store:productPage.addToCartNote')}
               </p>
             </div>
 
@@ -330,9 +330,6 @@ export default function ProductPage() {
               <h2 className="font-display text-2xl font-semibold tracking-[-0.03em]">
                 {t('store:productPage.reviewsTitle')}
               </h2>
-              <p className="mt-1 text-[11px] text-ink-900/40">
-                {t('store:productPage.reviewDemo')}
-              </p>
             </div>
             <span className="text-[12px] text-ink-900/45">
               {t('store:productPage.reviewSummary', {
@@ -371,7 +368,7 @@ export default function ProductPage() {
         </section>
 
         <p className="mt-12 text-[10px] leading-relaxed text-ink-900/30">
-          {t('store:productPage.demoNote')} {t('product.specsNote')}{' '}
+          {t('product.specsNote')}{' '}
           {t('product.freeFrom', { amount: formatPrice(site.freeShippingFrom, locale) })}.
         </p>
       </div>

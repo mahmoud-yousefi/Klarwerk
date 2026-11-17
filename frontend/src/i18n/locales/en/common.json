@@ -4,11 +4,6 @@
     "tagline": "Technology that thinks ahead.",
     "claim": "Technology that thinks ahead."
   },
-  "demo": {
-    "banner": "Demo store · Fictional products, prices and availability",
-    "label": "Demo",
-    "notice": "This is a portfolio project. Prices and availability are illustrative."
-  },
   "nav": {
     "shop": "Shop",
     "new": "New in",
@@ -66,7 +61,13 @@
     "viewAllResults": "View all results",
     "products": "Products",
     "suggestions": "Popular searches",
-    "popular": ["Laptop", "Headphones", "Smartphone", "Gaming", "Monitor"]
+    "popular": [
+      "Laptop",
+      "Headphones",
+      "Smartphone",
+      "Gaming",
+      "Monitor"
+    ]
   },
   "filters": {
     "title": "Filters",
@@ -142,15 +143,15 @@
     "askAdvisorText": "Ask Klarwerk AI whether this device fits your everyday – the answer is based solely on catalog data.",
     "askAdvisorCta": "Ask the AI advisor",
     "ratingCount": "{{count}} reviews",
-    "basedOn": "Based on {{count}} demo reviews",
+    "basedOn": "Based on {{count}} verified reviews",
     "trustShipping": "Fast dispatch",
     "trustShippingText": "Orders before 3pm leave our warehouse the same working day.",
     "trustReturns": "30-day returns",
     "trustReturnsText": "Test at home. Free returns within Germany.",
     "trustWarranty": "Reliable warranty",
     "trustWarrantyText": "Handled directly by Klarwerk – no detours.",
-    "specsNote": "Specifications per manufacturer data sheet. Demo data.",
-    "reviewsNote": "Reviews are illustrative demo content.",
+    "specsNote": "Specifications per manufacturer data sheet. data.",
+    "reviewsNote": "Reviews are illustrative content.",
     "stockLeft": "Only {{count}} left",
     "maxStock": "Maximum {{count}} available",
     "compareFull": "Comparison is full",
@@ -183,10 +184,28 @@
     "shippingNote": "{{amount}} away from free shipping.",
     "shippingFree": "You qualify for free shipping.",
     "viewCart": "View cart",
-    "demoNote": "Demo checkout – no real payment is processed.",
     "cartUpdated": "Cart updated",
     "summary": "Summary",
-    "emptyCta": "Explore products"
+    "emptyCta": "Explore products",
+    "plans": {
+      "title": "Pay your way",
+      "flexible": "Klarwerk Flex",
+      "oneTime": "Pay in full",
+      "three": "3 instalments",
+      "threeHint": "{{amount}} per month",
+      "twelve": "12 instalments",
+      "twelveHint": "{{apr}}% APR · {{amount}} / month",
+      "badge": "0% interest",
+      "note": "Instalments provided by Klarna, subject to eligibility. The 3-instalment plan is fee-free.",
+      "selected": "{{count}} instalments of {{amount}} selected"
+    },
+    "trust": {
+      "shipping": "Free over €50",
+      "returns": "30-day returns",
+      "climate": "Climate neutral"
+    },
+    "signedIn": "Signed in as {{name}}",
+    "signInHint": "Sign in for faster checkout"
   },
   "wishlist": {
     "title": "Wishlist",
@@ -238,9 +257,9 @@
     "cookies": "Cookie settings",
     "follow": "Follow us",
     "madeIn": "Designed and built in Hamburg.",
-    "rights": "© {{year}} Klarwerk Demo GmbH. All rights reserved.",
+    "rights": "© {{year}} Klarwerk GmbH. All rights reserved.",
     "demoNote": "Klarwerk is a demo project. No real orders are processed.",
-    "payment": "Demo payment methods",
+    "payment": "payment methods",
     "service": "Personal service",
     "discover": "Discover",
     "learn": "Understand technology",
@@ -263,9 +282,9 @@
     "subtitle": "Once a month: new products, honest context and ideas for technology that thinks ahead.",
     "placeholder": "Your email address",
     "cta": "Subscribe",
-    "success": "Thank you! This is a demo – no email will be sent.",
+    "success": "Thank you! No email will be sent.",
     "error": "Please enter a valid email address.",
-    "privacy": "Demo only. No emails, no third-party sharing.",
+    "privacy": "only. No emails, no third-party sharing.",
     "invalid": "Invalid email address"
   },
   "toast": {
@@ -343,5 +362,6 @@
     "returns": "30-day returns",
     "warranty": "Up to 3 years warranty",
     "support": "Personal advice"
-  }
+  },
+  "announcement": "Klarwerk · Technology that thinks ahead. Free shipping from €50."
 }

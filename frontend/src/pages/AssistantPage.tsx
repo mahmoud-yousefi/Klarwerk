@@ -400,10 +400,6 @@ export default function AssistantPage() {
             </div>
           </aside>
         </div>
-
-        <p className="mt-5 text-center text-[10px] leading-relaxed text-ink-900/30">
-          {t('assistant:meta.demoNote')}
-        </p>
       </div>
 
       <Modal

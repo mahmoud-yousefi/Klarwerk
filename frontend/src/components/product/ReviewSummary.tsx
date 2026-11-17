@@ -98,9 +98,6 @@ export function ReviewSummary({ product }: { product: Product }) {
                   ))}
                 </div>
               </div>
-              <span className="ml-auto rounded-full bg-ink-900/5 px-2 py-0.5 text-[9px] uppercase tracking-wider text-ink-900/35">
-                {t('demo.label')}
-              </span>
             </div>
             <blockquote className="mt-3 text-[13px] leading-relaxed text-ink-900/65">
               {locale === 'de' ? `„${sample.text}“` : `“${sample.text}”`}

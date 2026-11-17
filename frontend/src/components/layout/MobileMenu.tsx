@@ -107,7 +107,6 @@ export function MobileMenu() {
             </span>
             <LanguageSwitcher variant="light" />
           </div>
-          <p className="text-[10px] leading-relaxed text-ink-900/35">{t('demo.notice')}</p>
         </div>
       </div>
     </Drawer>

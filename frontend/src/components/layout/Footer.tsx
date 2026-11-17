@@ -327,9 +327,6 @@ export function Footer() {
             </div>
             <div className="flex flex-wrap items-center gap-3">
               <LanguageSwitcher />
-              <span className="rounded-full border border-white/10 px-2 py-1 text-[8px] uppercase tracking-[0.12em] text-white/25">
-                {t('demo.label')}
-              </span>
             </div>
           </div>
         </div>

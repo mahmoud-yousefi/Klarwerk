@@ -2,6 +2,7 @@ import catalogJson from '@/data/catalog.json';
 import categoriesJson from '@/data/categories.json';
 import brandsJson from '@/data/brands.json';
 import articlesJson from '@/data/articles.json';
+import { readCustomCatalog } from '@/lib/customCatalog';
 import type {
   Article,
   Brand,
@@ -12,21 +13,46 @@ import type {
   SortKey,
 } from '@/types/catalog';
 
-const withBase = (path: string) =>
+export const withBase = (path: string) =>
   path && path.startsWith('/') && !path.startsWith('http')
     ? `${import.meta.env.BASE_URL}${path.slice(1)}`
     : path;
 
 const catalog = catalogJson as { products: Product[]; meta?: unknown };
-export const products = catalog.products.map((product) => ({
+const runtimeCatalog = readCustomCatalog();
+
+/**
+ * The bundled catalog is merged with products and categories published from the
+ * admin panel. Custom entries are stored in the browser, so they survive a
+ * reload and behave like regular catalog data everywhere in the storefront.
+ */
+export const products = [...runtimeCatalog.products, ...catalog.products].map((product) => ({
   ...product,
   images: product.images.map(withBase),
 })) as Product[];
-export const categories = (categoriesJson as Category[]).map((category) => ({
+export const categories = [
+  ...(categoriesJson as Category[]),
+  ...runtimeCatalog.categories,
+].map((category) => ({
   ...category,
   image: withBase(category.image),
 }));
-export const brands = brandsJson as Brand[];
+
+const customBrands: Brand[] = [...new Set(runtimeCatalog.products.map((product) => product.brand))]
+  .filter((name) => !(brandsJson as Brand[]).some((brand) => brand.name === name))
+  .map((name, index) => ({
+    id: name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+    name,
+    origin: 'Hamburg, Deutschland',
+    founded: 2021 + index,
+    description: {
+      de: `${name} ist eine junge Marke aus dem Klarwerk-Partnernetzwerk.`,
+      en: `${name} is a young label from the Klarwerk partner network.`,
+    },
+    accent: '#5865F2',
+  }));
+
+export const brands = [...(brandsJson as Brand[]), ...customBrands];
 export const articles = (articlesJson as Article[]).map((article) => ({
   ...article,
   image: withBase(article.image),

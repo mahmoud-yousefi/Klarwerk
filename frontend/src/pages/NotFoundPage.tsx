@@ -69,10 +69,6 @@ export default function NotFoundPage() {
             </Link>
           ))}
         </div>
-
-        <p className="mt-10 max-w-xs text-[9px] leading-relaxed text-white/20">
-          {t('demo.banner')}
-        </p>
       </div>
     </div>
   );

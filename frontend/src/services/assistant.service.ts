@@ -255,7 +255,7 @@ const buildStoreReply = (text: string, locale: Locale, budget: number | null): M
   if (/versand|lieferung|shipping|delivery/.test(text)) {
     return {
       text: de
-        ? 'Der Standardversand dauert 2–4 Werktage und kostet 4,90 € – ab 50 € Warenwert ist er kostenlos. Express liegt bei 9,90 € und kommt in 1–2 Werktagen. Bestellungen bis 15 Uhr verlassen unser Lager am selben Werktag.\n\nDas ist ein Demo-Shop: Es wird nichts wirklich versendet.'
+        ? 'Der Standardversand dauert 2–4 Werktage und kostet 4,90 € – ab 50 € Warenwert ist er kostenlos. Express liegt bei 9,90 € und kommt in 1–2 Werktagen. Bestellungen bis 15 Uhr verlassen unser Lager am selben Werktag.\n\nDas ist ein Shop: Es wird nichts wirklich versendet.'
         : 'Standard shipping takes 2–4 working days and costs €4.90 – free from €50. Express is €9.90 and arrives in 1–2 working days. Orders before 3pm leave our warehouse the same working day.\n\nThis is a demo shop: nothing is actually shipped.',
       productIds: [],
       compareIds: [],
@@ -265,7 +265,7 @@ const buildStoreReply = (text: string, locale: Locale, budget: number | null): M
   if (/ruckgabe|return/.test(text)) {
     return {
       text: de
-        ? 'Du hast 30 Tage Zeit für eine Rückgabe – vorausgesetzt, das Gerät ist vollständig und unbeschädigt. In dieser Demo gibt es keinen echten Rücksendeprozess; die Bedingungen sind nur beschrieben. Wenn du ein Gerät vergleichen möchtest, bevor du dich entscheidest, helfe ich gern.'
+        ? 'Du hast 30 Tage Zeit für eine Rückgabe – vorausgesetzt, das Gerät ist vollständig und unbeschädigt. In dieser Vorschau gibt es keinen echten Rücksendeprozess; die Bedingungen sind nur beschrieben. Wenn du ein Gerät vergleichen möchtest, bevor du dich entscheidest, helfe ich gern.'
         : 'You have 30 days to return an item, provided it is complete and undamaged. This demo has no real returns process; the conditions are described only. If you want to compare devices before deciding, I’m happy to help.',
       productIds: [],
       compareIds: [],
@@ -275,8 +275,8 @@ const buildStoreReply = (text: string, locale: Locale, budget: number | null): M
   if (/garantie|warranty/.test(text)) {
     return {
       text: de
-        ? 'Alle Produkte haben die gesetzliche Gewährleistung; ausgewählte Geräte zusätzlich bis zu drei Jahre Herstellergarantie. Die Abwicklung läuft in einer echten Bestellung direkt über Klarwerk. Demo-Hinweis: Hier wird kein Servicefall erzeugt.'
-        : 'All products include statutory warranty; selected devices add up to three years of manufacturer warranty. In a real order, service is handled directly by Klarwerk. Demo note: no service case is created here.',
+        ? 'Alle Produkte haben die gesetzliche Gewährleistung; ausgewählte Geräte zusätzlich bis zu drei Jahre Herstellergarantie. Die Abwicklung läuft in einer echten Bestellung direkt über Klarwerk. Hinweis: Hier wird kein Servicefall erzeugt.'
+        : 'All products include statutory warranty; selected devices add up to three years of manufacturer warranty. In a real order, service is handled directly by Klarwerk. note: no service case is created here.',
       productIds: [],
       compareIds: [],
       suggestions: [t('suggestions.stock', locale), t('suggestions.specs', locale)],
@@ -285,7 +285,7 @@ const buildStoreReply = (text: string, locale: Locale, budget: number | null): M
   if (/bezahl|payment|rechnung|invoice/.test(text)) {
     return {
       text: de
-        ? 'Im Demo-Checkout kannst du zwischen Rechnung, PayPal, Kreditkarte und SEPA wählen. Es werden keine Zahlungsdaten erhoben und keine Zahlung ausgelöst – die Auswahl dient nur der Demonstration.'
+        ? 'Im Checkout kannst du zwischen Rechnung, PayPal, Kreditkarte und SEPA wählen. Es werden keine Zahlungsdaten erhoben und keine Zahlung ausgelöst – die Auswahl dient nur der Demonstration.'
         : 'In the demo checkout you can choose invoice, PayPal, credit card or SEPA. No payment data is collected and no payment is triggered – the selection is for demonstration only.',
       productIds: [],
       compareIds: [],

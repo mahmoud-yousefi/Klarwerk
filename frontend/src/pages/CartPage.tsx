@@ -230,10 +230,6 @@ export default function CartPage() {
               >
                 {t('cart.checkout')} <ArrowRight size={15} />
               </Link>
-              <p className="mt-2 text-center text-[10px] text-ink-900/35">
-                {t('cart.demoNote')}
-              </p>
-
               <ul className="mt-5 space-y-2 border-t border-ink-900/8 pt-4">
                 {[
                   { icon: Truck, text: t('store:cartPage.deliveryValue') },

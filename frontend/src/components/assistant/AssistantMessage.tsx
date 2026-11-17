@@ -195,9 +195,6 @@ export function AssistantMessage({
           <div className="mt-3">
             <p className="mb-2 flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.12em] text-ink-900/35">
               {t('recommendations.title')}
-              <span className="font-normal normal-case tracking-normal text-ink-900/25">
-                {t('recommendations.demoNote')}
-              </span>
             </p>
             <div className="grid gap-2.5 sm:grid-cols-2">
               {visibleProducts.map((product) => (

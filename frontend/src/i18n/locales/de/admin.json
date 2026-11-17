@@ -1,0 +1,475 @@
+{
+  "nav": {
+    "overview": "Übersicht",
+    "orders": "Bestellungen",
+    "products": "Produkte",
+    "categories": "Kategorien",
+    "customers": "Kunden",
+    "inbox": "Postfach",
+    "analytics": "Analytics",
+    "settings": "Einstellungen"
+  },
+  "shell": {
+    "workspace": "Arbeitsbereich",
+    "menu": "Verwaltung",
+    "backToShop": "Zum Shop",
+    "shop": "Shop",
+    "search": "Bestellungen, Kunden, Produkte …",
+    "notifications": "Benachrichtigungen",
+    "preview": "Vorschau",
+    "footer": "Klarwerk Control · Daten werden lokal in diesem Browser gespeichert",
+    "live": "Live"
+  },
+  "common": {
+    "all": "Alle ansehen",
+    "allCategories": "Alle Kategorien",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "create": "Anlegen",
+    "delete": "Löschen",
+    "search": "Suchen",
+    "status": "Status",
+    "items": "Artikel",
+    "view": "Ansehen",
+    "manage": "Verwalten",
+    "close": "Schließen"
+  },
+  "status": {
+    "paid": "Bezahlt",
+    "processing": "In Bearbeitung",
+    "shipped": "Versendet",
+    "delivered": "Zugestellt",
+    "refunded": "Erstattet",
+    "pending": "Ausstehend"
+  },
+  "statuses": {
+    "open": "Offen",
+    "pending": "Wartet",
+    "resolved": "Erledigt",
+    "approved": "Genehmigt",
+    "declined": "Abgelehnt"
+  },
+  "segments": {
+    "new": "Neu",
+    "returning": "Wiederkehrend",
+    "vip": "VIP",
+    "at-risk": "Abwanderungsrisiko"
+  },
+  "requests": {
+    "return": "Rücksendung",
+    "warranty": "Garantiefall",
+    "address": "Adressänderung",
+    "invoice": "Rechnung",
+    "preorder": "Warteliste",
+    "approve": "Genehmigen",
+    "decline": "Ablehnen"
+  },
+  "overview": {
+    "welcome": "Willkommen zurück, {{name}}.",
+    "welcomeHint": "Dein Handel läuft rund – hier ist der Puls des Tages.",
+    "ctaProduct": "Produkt anlegen",
+    "kpi": {
+      "revenue": "Umsatz · 14 Tage",
+      "revenueHint": "gegenüber der Vorperiode",
+      "profit": "Bruttogewinn",
+      "profitHint": "34 % durchschnittliche Marge",
+      "orders": "Bestellungen",
+      "ordersHint": "stornofrei gezählt",
+      "aov": "Ø Warenkorb",
+      "aovHint": "pro bezahlter Bestellung"
+    },
+    "revenue": {
+      "title": "Umsatz & Gewinn",
+      "subtitle": "Tägliche Entwicklung der letzten 14 Tage",
+      "revenue": "Umsatz",
+      "profit": "Gewinn"
+    },
+    "goal": {
+      "title": "Monatsziel",
+      "subtitle": "Fortschritt aus bestätigten Bestellungen",
+      "margin": "Marge",
+      "returning": "Stammkunden",
+      "conversion": "Conversion"
+    },
+    "satisfaction": {
+      "title": "Zufriedenheit",
+      "subtitle": "Verifizierte Bewertungen & Umfragen",
+      "score": "Kundenzufriedenheit",
+      "responses": "{{count}} Antworten"
+    },
+    "channels": {
+      "title": "Umsatz nach Kanal",
+      "subtitle": "Anteil am Gesamtumsatz",
+      "foot": "Organic bleibt der stärkste Kanal – Newsletter konvertiert am besten."
+    },
+    "categories": {
+      "title": "Kategorien-Mix",
+      "subtitle": "Umsatzanteil der letzten 30 Tage",
+      "center": "gesamt"
+    },
+    "funnel": {
+      "title": "Conversion-Funnel",
+      "subtitle": "Vom Besuch zur Bestellung",
+      "visits": "Besuche",
+      "views": "Produktansichten",
+      "cart": "In den Warenkorb",
+      "checkout": "Checkout gestartet",
+      "orders": "Bestellungen",
+      "total": "Gesamt-Conversion"
+    },
+    "heatmap": {
+      "title": "Bestellzeiten",
+      "subtitle": "Wochentag × Uhrzeit · letzte 30 Tage",
+      "low": "ruhig",
+      "high": "geschäftig"
+    },
+    "recentOrders": {
+      "title": "Neueste Bestellungen",
+      "subtitle": "Live aus dem Checkout"
+    },
+    "topProducts": {
+      "title": "Bestseller",
+      "subtitle": "Umsatzstärkste Produkte",
+      "product": "Produkt",
+      "units": "Stück",
+      "revenue": "Umsatz",
+      "margin": "Marge",
+      "trend": "Trend"
+    },
+    "inbox": {
+      "title": "Postfach",
+      "subtitle": "{{count}} offene Anliegen",
+      "resolve": "Als erledigt markieren",
+      "empty": "Alles beantwortet. Sehr gut."
+    },
+    "stock": {
+      "title": "Bestandswarnung",
+      "subtitle": "{{count}} Produkte unter Mindestbestand",
+      "empty": "Alle Bestände gesund"
+    },
+    "foot": {
+      "session": "Ø Sitzungsdauer",
+      "customers": "Kunden im CRM",
+      "reviews": "Neue Bewertungen"
+    }
+  },
+  "orders": {
+    "eyebrow": "Fulfillment",
+    "title": "Bestellungen",
+    "subtitle": "Zahlung, Versand und Status an einem Ort – inklusive aller Checkout-Eingänge.",
+    "export": "CSV exportieren",
+    "awaiting": "Offene anzeigen",
+    "summary": {
+      "revenue": "Umsatz gesamt",
+      "open": "Zu bearbeiten",
+      "shipped": "Unterwegs",
+      "refunded": "Erstattet"
+    },
+    "search": "Bestellnummer, Kunde, Ort …",
+    "count": "{{count}} Bestellungen",
+    "table": {
+      "order": "Bestellung",
+      "customer": "Kunde",
+      "date": "Datum",
+      "payment": "Zahlung",
+      "total": "Summe"
+    },
+    "empty": "Keine Bestellungen für diese Auswahl.",
+    "detail": {
+      "eyebrow": "Bestelldetail",
+      "customer": "Kunde",
+      "address": "Lieferort",
+      "payment": "Zahlungsart",
+      "items": "Positionen",
+      "total": "Bestellwert",
+      "setStatus": "Status ändern"
+    }
+  },
+  "products": {
+    "eyebrow": "Katalog",
+    "title": "Produkte",
+    "subtitle": "Sortiment pflegen, neue Artikel veröffentlichen und Bestände im Blick behalten.",
+    "create": "Produkt anlegen",
+    "published": {
+      "title": "„{{name}}“ ist veröffentlicht.",
+      "hint": "Der Artikel erscheint nach dem Aufruf des Shops im gesamten Sortiment.",
+      "view": "Im Shop ansehen"
+    },
+    "stats": {
+      "total": "Artikel im Sortiment",
+      "custom": "Eigene Produkte",
+      "lowStock": "Bestand niedrig",
+      "stockValue": "Bestandswert"
+    },
+    "search": "Produktname, Marke, SKU …",
+    "count": "{{count}} Produkte",
+    "quickAdd": "Schnell anlegen",
+    "sortLabel": "Sortierung",
+    "sort": {
+      "newest": "Neueste zuerst",
+      "priceAsc": "Preis aufsteigend",
+      "priceDesc": "Preis absteigend",
+      "stock": "Bestand aufsteigend"
+    },
+    "table": {
+      "product": "Produkt",
+      "category": "Kategorie",
+      "price": "Preis",
+      "stock": "Bestand",
+      "source": "Quelle"
+    },
+    "source": {
+      "custom": "Eigenes",
+      "catalog": "Katalog"
+    },
+    "empty": "Keine Produkte gefunden.",
+    "form": {
+      "eyebrow": "Neuer Artikel",
+      "title": "Produkt anlegen",
+      "subtitle": "Der Artikel wird sofort im gesamten Shop veröffentlicht.",
+      "name": "Produktname",
+      "namePlaceholder": "z. B. Aurora Studio 32",
+      "brand": "Marke",
+      "category": "Kategorie",
+      "price": "Preis",
+      "originalPrice": "Streichpreis",
+      "optional": "optional",
+      "stock": "Bestand",
+      "availability": "Verfügbarkeit",
+      "taglineDe": "Kurzbeschreibung DE",
+      "taglineEn": "Kurzbeschreibung EN",
+      "taglinePlaceholder": "Ein Satz, der Lust macht.",
+      "descriptionDe": "Beschreibung DE",
+      "descriptionEn": "Beschreibung EN",
+      "descriptionPlaceholder": "Material, Technik, Alltag – was den Artikel besonders macht.",
+      "image": "Produktbild",
+      "pickImage": "Bild wählen",
+      "accent": "Akzentfarbe",
+      "tags": "Tags",
+      "tagsPlaceholder": "audio, neu, studio",
+      "featured": "Auf der Startseite zeigen",
+      "isNew": "Als Neuheit markieren",
+      "publishing": "Wird veröffentlicht …",
+      "publish": "Produkt veröffentlichen",
+      "required": "Bitte Name und gültigen Preis angeben."
+    },
+    "availability": {
+      "in_stock": "Auf Lager",
+      "low_stock": "Nur noch wenige",
+      "preorder": "Vorbestellung",
+      "out_of_stock": "Nicht verfügbar"
+    }
+  },
+  "categories": {
+    "eyebrow": "Sortiment",
+    "title": "Kategorien",
+    "subtitle": "Neue Welten für den Shop – mit eigenem Bild, Farbe und Beschreibung.",
+    "create": "Kategorie anlegen",
+    "created": {
+      "title": "„{{name}}“ ist bereit.",
+      "hint": "Die Kategorie wird im Shop angezeigt, sobald du sie aufrufst.",
+      "view": "Kategorie ansehen"
+    },
+    "stats": {
+      "total": "Kategorien",
+      "custom": "Eigene Kategorien",
+      "products": "Artikel zugeordnet"
+    },
+    "builtIn": "Katalog",
+    "engine": {
+      "title": "Kategorie-Engine",
+      "subtitle": "Struktur, Bild und Farbe in einem Durchlauf",
+      "text": "Beim Anlegen baut die Engine die Kategorie in drei Schritten zusammen: Struktur, visuelle Assets und Veröffentlichung. Danach ist sie sofort im Shop verfügbar.",
+      "cta": "Engine starten"
+    },
+    "loader": {
+      "title": "Kategorie wird gebaut",
+      "subtitle": "Die Engine setzt Struktur und Bild zusammen – einen Moment.",
+      "structure": "Struktur",
+      "visuals": "Bild & Farbe",
+      "publish": "Veröffentlichen"
+    },
+    "form": {
+      "eyebrow": "Neue Kategorie",
+      "title": "Kategorie anlegen",
+      "subtitle": "Name, Bild und Akzent – mehr braucht es nicht.",
+      "nameDe": "Name DE",
+      "nameEn": "Name EN",
+      "descriptionDe": "Beschreibung DE",
+      "descriptionEn": "Beschreibung EN",
+      "descriptionPlaceholder": "Wofür steht diese Kategorie?",
+      "image": "Kategoriebild",
+      "pickImage": "Bild wählen",
+      "accent": "Akzentfarbe",
+      "icon": "Icon",
+      "create": "Kategorie bauen",
+      "required": "Bitte gib mindestens den deutschen Namen ein.",
+      "defaultDescription": "Eine neue Auswahl aus dem Klarwerk-Sortiment."
+    }
+  },
+  "customers": {
+    "eyebrow": "CRM",
+    "title": "Kunden",
+    "subtitle": "Beziehungen, Warenkörbe und Segmente – alles, was das Team wissen muss.",
+    "stats": {
+      "total": "Kunden",
+      "vip": "VIP-Kunden",
+      "avg": "Ø Umsatz",
+      "repeat": "Wiederkäufer"
+    },
+    "search": "Name, E-Mail, Ort …",
+    "count": "{{count}} Kunden",
+    "segmentLabel": "Segment",
+    "table": {
+      "customer": "Kunde",
+      "location": "Ort",
+      "orders": "Bestellungen",
+      "spend": "Umsatz",
+      "segment": "Segment",
+      "lastOrder": "Letzte Bestellung"
+    },
+    "empty": "Keine Kunden für diese Auswahl.",
+    "detail": {
+      "spend": "Umsatz gesamt",
+      "orders": "Bestellungen",
+      "avg": "Ø Bestellwert",
+      "since": "Kunde seit",
+      "email": "E-Mail schreiben"
+    }
+  },
+  "inbox": {
+    "eyebrow": "Service",
+    "title": "Postfach",
+    "subtitle": "Anfragen, Rücksendungen und offene Wünsche – direkt beantwortet.",
+    "openCount": "{{count}} offen",
+    "requestCount": "{{count}} Anfragen",
+    "tabs": {
+      "messages": "Nachrichten",
+      "requests": "Anfragen"
+    },
+    "count": "{{count}} Nachrichten",
+    "empty": "Keine Nachrichten in dieser Ansicht.",
+    "replyPlaceholder": "Antwort schreiben …",
+    "openMail": "In E-Mail-App öffnen",
+    "send": "Antwort senden"
+  },
+  "analytics": {
+    "eyebrow": "Business Intelligence",
+    "title": "Analytics",
+    "subtitle": "Umsatz, Marge und Kundenbindung – bis auf die Ebene des einzelnen Artikels.",
+    "range": "Letzte 30 Tage",
+    "kpi": {
+      "revenue": "Bruttoumsatz",
+      "revenueHint": "30 Tage, ohne Stornos",
+      "margin": "Nettomarge",
+      "marginHint": "nach Einkauf & Versand",
+      "roas": "Werbe-ROAS",
+      "roasHint": "Revenue je Werbe-Euro",
+      "refund": "Erstattungsquote",
+      "refundHint": "Anteil am Umsatz"
+    },
+    "trend": {
+      "title": "Umsatzkurve",
+      "subtitle": "Täglicher Umsatz und Gewinn der letzten 30 Tage",
+      "revenue": "Umsatz",
+      "profit": "Gewinn"
+    },
+    "satisfaction": {
+      "title": "Kundenzufriedenheit",
+      "subtitle": "Bewertungen & Umfragen kombiniert",
+      "avg": "Ø Bewertung",
+      "nps": "NPS {{value}}",
+      "response": "Antwortquote",
+      "reviews": "Bewertungen",
+      "target": "Ziel",
+      "aboveTarget": "über dem Ziel"
+    },
+    "traffic": {
+      "title": "Traffic-Quellen",
+      "subtitle": "Besuche und Conversion je Kanal"
+    },
+    "channels": {
+      "title": "Kanalanteil",
+      "subtitle": "Anteil am Gesamtumsatz"
+    },
+    "mix": {
+      "title": "Kategorien",
+      "subtitle": "Umsatzverteilung",
+      "center": "gesamt"
+    },
+    "cohorts": {
+      "title": "Kohorten-Bindung",
+      "subtitle": "Wiederkaufrate je Einstiegsmonat",
+      "foot": "Monat 0 = 100 % (Erstkauf). Werte danach zeigen aktive Wiederkäufer."
+    },
+    "reviews": {
+      "title": "Kundenstimmen",
+      "subtitle": "Die neuesten verifizierten Bewertungen",
+      "verified": "verifiziert"
+    },
+    "insights": {
+      "title": "Handlungsempfehlungen",
+      "subtitle": "Automatisch aus den Daten abgeleitet",
+      "oneTitle": "Audio wächst am schnellsten",
+      "oneText": "Aurora Buds Pro treiben 31 % des Umsatzes. Ein Bundles-Angebot mit dem Flux Hub könnte den Warenkorb um 18 € heben.",
+      "twoTitle": "Stammkunden kaufen häufiger",
+      "twoText": "Wiederkäufer bestellen 2,4× häufiger. Ein Early-Access-Newsletter für Konto-Inhaber hat das Potenzial, die Retention um 6 % zu steigern.",
+      "threeTitle": "Marge bei Zubehör stärker",
+      "threeText": "Zubehör erzielt 46 % Marge bei kürzerer Lieferzeit. Eine stärkere Platzierung im Checkout kann den Gewinn pro Bestellung erhöhen."
+    }
+  },
+  "settings": {
+    "eyebrow": "Konfiguration",
+    "title": "Einstellungen",
+    "subtitle": "Shop-Identität, Service und Daten – alles an einem Ort.",
+    "save": "Änderungen speichern",
+    "saved": "Einstellungen gespeichert.",
+    "savedShort": "Gespeichert",
+    "discard": "Zurücksetzen",
+    "store": {
+      "title": "Shop-Profil",
+      "subtitle": "Diese Angaben erscheinen in Bestellungen und E-Mails.",
+      "name": "Shop-Name",
+      "email": "Support-E-Mail",
+      "phone": "Support-Telefon",
+      "lowStock": "Mindestbestand",
+      "goal": "Monatsziel (€)",
+      "target": "Zufriedenheitsziel",
+      "currency": "Währung"
+    },
+    "toggles": {
+      "title": "Automatisierung",
+      "subtitle": "Assistenten und Service-Regeln",
+      "autoReply": "Automatische Eingangsbestätigung",
+      "autoReplyText": "Kunden erhalten sofort eine ruhige Bestätigung ihrer Anfrage.",
+      "express": "Expressversand anbieten",
+      "expressText": "Zeigt die Express-Option im Checkout für alle Bestellungen.",
+      "newsletter": "Newsletter-Anmeldung",
+      "newsletterText": "Double-Opt-in am Ende des Checkouts anzeigen."
+    },
+    "account": {
+      "title": "Konto",
+      "subtitle": "Aktuelle Admin-Sitzung",
+      "signOut": "Abmelden"
+    },
+    "data": {
+      "title": "Daten & Speicher",
+      "subtitle": "Alles bleibt lokal in diesem Browser.",
+      "products": "Eigene Produkte",
+      "categories": "Eigene Kategorien",
+      "note": "Klarwerk Control speichert Änderungen in localStorage. Nichts wird an einen Server gesendet.",
+      "resetWorkspace": "Workspace zurücksetzen",
+      "resetContent": "Eigene Inhalte löschen"
+    },
+    "confirm": {
+      "title": "Wirklich zurücksetzen?",
+      "contentTitle": "Eigene Inhalte löschen?",
+      "workspaceTitle": "Workspace zurücksetzen?",
+      "contentText": "Alle selbst angelegten Produkte und Kategorien werden aus diesem Browser entfernt. Der restliche Shop bleibt unverändert.",
+      "workspaceText": "Bestellungen, Kunden, Nachrichten und Einstellungen werden auf den Ausgangszustand gesetzt. Eigene Produkte bleiben erhalten.",
+      "confirm": "Zurücksetzen",
+      "contentDone": "Eigene Inhalte entfernt.",
+      "workspaceDone": "Workspace zurückgesetzt."
+    }
+  }
+}

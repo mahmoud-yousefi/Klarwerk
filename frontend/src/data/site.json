@@ -4,24 +4,33 @@
       "id": "standard",
       "price": 4.9,
       "freeFrom": 50,
-      "days": { "de": "2–4 Werktage", "en": "2–4 working days" }
+      "days": {
+        "de": "2–4 Werktage",
+        "en": "2–4 working days"
+      }
     },
     {
       "id": "express",
       "price": 9.9,
-      "days": { "de": "1–2 Werktage", "en": "1–2 working days" }
+      "days": {
+        "de": "1–2 Werktage",
+        "en": "1–2 working days"
+      }
     }
   ],
   "vatRate": 0.19,
   "returnDays": 30,
   "freeShippingFrom": 50,
-  "supportHours": { "de": "Mo–Fr, 8–18 Uhr", "en": "Mon–Fri, 8am–6pm" },
+  "supportHours": {
+    "de": "Mo–Fr, 8–18 Uhr",
+    "en": "Mon–Fri, 8am–6pm"
+  },
   "company": {
-    "name": "Klarwerk Demo GmbH",
+    "name": "Klarwerk GmbH",
     "street": "Speicherstadt 12",
     "city": "20457 Hamburg",
     "country": "Deutschland",
-    "email": "hallo@klarwerk.demo",
+    "email": "hallo@klarwerk.de",
     "phone": "+49 40 123 456 78"
   }
 }

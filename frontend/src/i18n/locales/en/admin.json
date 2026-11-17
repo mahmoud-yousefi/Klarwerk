@@ -1,0 +1,475 @@
+{
+  "nav": {
+    "overview": "Overview",
+    "orders": "Orders",
+    "products": "Products",
+    "categories": "Categories",
+    "customers": "Customers",
+    "inbox": "Inbox",
+    "analytics": "Analytics",
+    "settings": "Settings"
+  },
+  "shell": {
+    "workspace": "Workspace",
+    "menu": "Manage",
+    "backToShop": "Back to shop",
+    "shop": "Shop",
+    "search": "Orders, customers, products …",
+    "notifications": "Notifications",
+    "preview": "Preview",
+    "footer": "Klarwerk Control · data is stored locally in this browser",
+    "live": "Live"
+  },
+  "common": {
+    "all": "View all",
+    "allCategories": "All categories",
+    "save": "Save",
+    "cancel": "Cancel",
+    "create": "Create",
+    "delete": "Delete",
+    "search": "Search",
+    "status": "Status",
+    "items": "items",
+    "view": "View",
+    "manage": "Manage",
+    "close": "Close"
+  },
+  "status": {
+    "paid": "Paid",
+    "processing": "Processing",
+    "shipped": "Shipped",
+    "delivered": "Delivered",
+    "refunded": "Refunded",
+    "pending": "Pending"
+  },
+  "statuses": {
+    "open": "Open",
+    "pending": "Waiting",
+    "resolved": "Resolved",
+    "approved": "Approved",
+    "declined": "Declined"
+  },
+  "segments": {
+    "new": "New",
+    "returning": "Returning",
+    "vip": "VIP",
+    "at-risk": "At risk"
+  },
+  "requests": {
+    "return": "Return",
+    "warranty": "Warranty",
+    "address": "Address change",
+    "invoice": "Invoice",
+    "preorder": "Waitlist",
+    "approve": "Approve",
+    "decline": "Decline"
+  },
+  "overview": {
+    "welcome": "Welcome back, {{name}}.",
+    "welcomeHint": "Your store is running smoothly – here is today's pulse.",
+    "ctaProduct": "Add product",
+    "kpi": {
+      "revenue": "Revenue · 14 days",
+      "revenueHint": "versus previous period",
+      "profit": "Gross profit",
+      "profitHint": "34% average margin",
+      "orders": "Orders",
+      "ordersHint": "counted without cancellations",
+      "aov": "Avg. basket",
+      "aovHint": "per paid order"
+    },
+    "revenue": {
+      "title": "Revenue & profit",
+      "subtitle": "Daily movement over the last 14 days",
+      "revenue": "Revenue",
+      "profit": "Profit"
+    },
+    "goal": {
+      "title": "Monthly goal",
+      "subtitle": "Progress from confirmed orders",
+      "margin": "Margin",
+      "returning": "Returning",
+      "conversion": "Conversion"
+    },
+    "satisfaction": {
+      "title": "Satisfaction",
+      "subtitle": "Verified reviews & surveys",
+      "score": "Customer satisfaction",
+      "responses": "{{count}} responses"
+    },
+    "channels": {
+      "title": "Revenue by channel",
+      "subtitle": "Share of total revenue",
+      "foot": "Organic remains the strongest channel – newsletter converts best."
+    },
+    "categories": {
+      "title": "Category mix",
+      "subtitle": "Revenue share of the last 30 days",
+      "center": "total"
+    },
+    "funnel": {
+      "title": "Conversion funnel",
+      "subtitle": "From visit to order",
+      "visits": "Visits",
+      "views": "Product views",
+      "cart": "Added to cart",
+      "checkout": "Checkout started",
+      "orders": "Orders",
+      "total": "Overall conversion"
+    },
+    "heatmap": {
+      "title": "Order times",
+      "subtitle": "Weekday × hour · last 30 days",
+      "low": "quiet",
+      "high": "busy"
+    },
+    "recentOrders": {
+      "title": "Latest orders",
+      "subtitle": "Live from checkout"
+    },
+    "topProducts": {
+      "title": "Bestsellers",
+      "subtitle": "Top products by revenue",
+      "product": "Product",
+      "units": "Units",
+      "revenue": "Revenue",
+      "margin": "Margin",
+      "trend": "Trend"
+    },
+    "inbox": {
+      "title": "Inbox",
+      "subtitle": "{{count}} open conversations",
+      "resolve": "Mark as resolved",
+      "empty": "All answered. Nicely done."
+    },
+    "stock": {
+      "title": "Stock alert",
+      "subtitle": "{{count}} products below threshold",
+      "empty": "All stock levels healthy"
+    },
+    "foot": {
+      "session": "Avg. session",
+      "customers": "CRM customers",
+      "reviews": "New reviews"
+    }
+  },
+  "orders": {
+    "eyebrow": "Fulfilment",
+    "title": "Orders",
+    "subtitle": "Payment, shipping and status in one place – including every checkout entry.",
+    "export": "Export CSV",
+    "awaiting": "Show open",
+    "summary": {
+      "revenue": "Total revenue",
+      "open": "To process",
+      "shipped": "In transit",
+      "refunded": "Refunded"
+    },
+    "search": "Order number, customer, city …",
+    "count": "{{count}} orders",
+    "table": {
+      "order": "Order",
+      "customer": "Customer",
+      "date": "Date",
+      "payment": "Payment",
+      "total": "Total"
+    },
+    "empty": "No orders for this selection.",
+    "detail": {
+      "eyebrow": "Order detail",
+      "customer": "Customer",
+      "address": "Delivery",
+      "payment": "Payment method",
+      "items": "Items",
+      "total": "Order value",
+      "setStatus": "Change status"
+    }
+  },
+  "products": {
+    "eyebrow": "Catalog",
+    "title": "Products",
+    "subtitle": "Curate the range, publish new pieces and keep stock in view.",
+    "create": "Add product",
+    "published": {
+      "title": "“{{name}}” is live.",
+      "hint": "The product appears across the shop once you open it.",
+      "view": "View in shop"
+    },
+    "stats": {
+      "total": "Products in range",
+      "custom": "Custom products",
+      "lowStock": "Low stock",
+      "stockValue": "Stock value"
+    },
+    "search": "Product name, brand, SKU …",
+    "count": "{{count}} products",
+    "quickAdd": "Quick add",
+    "sortLabel": "Sorting",
+    "sort": {
+      "newest": "Newest first",
+      "priceAsc": "Price ascending",
+      "priceDesc": "Price descending",
+      "stock": "Stock ascending"
+    },
+    "table": {
+      "product": "Product",
+      "category": "Category",
+      "price": "Price",
+      "stock": "Stock",
+      "source": "Source"
+    },
+    "source": {
+      "custom": "Custom",
+      "catalog": "Catalog"
+    },
+    "empty": "No products found.",
+    "form": {
+      "eyebrow": "New piece",
+      "title": "Add product",
+      "subtitle": "The product is published across the shop right away.",
+      "name": "Product name",
+      "namePlaceholder": "e.g. Aurora Studio 32",
+      "brand": "Brand",
+      "category": "Category",
+      "price": "Price",
+      "originalPrice": "Compare-at price",
+      "optional": "optional",
+      "stock": "Stock",
+      "availability": "Availability",
+      "taglineDe": "Tagline DE",
+      "taglineEn": "Tagline EN",
+      "taglinePlaceholder": "One line that makes it desirable.",
+      "descriptionDe": "Description DE",
+      "descriptionEn": "Description EN",
+      "descriptionPlaceholder": "Material, engineering, everyday life – what makes it special.",
+      "image": "Product image",
+      "pickImage": "Pick image",
+      "accent": "Accent colour",
+      "tags": "Tags",
+      "tagsPlaceholder": "audio, new, studio",
+      "featured": "Show on the homepage",
+      "isNew": "Mark as new",
+      "publishing": "Publishing …",
+      "publish": "Publish product",
+      "required": "Please add a name and a valid price."
+    },
+    "availability": {
+      "in_stock": "In stock",
+      "low_stock": "Low stock",
+      "preorder": "Pre-order",
+      "out_of_stock": "Unavailable"
+    }
+  },
+  "categories": {
+    "eyebrow": "Range",
+    "title": "Categories",
+    "subtitle": "New worlds for the shop – with their own image, colour and description.",
+    "create": "Add category",
+    "created": {
+      "title": "“{{name}}” is ready.",
+      "hint": "The category is shown in the shop as soon as you open it.",
+      "view": "View category"
+    },
+    "stats": {
+      "total": "Categories",
+      "custom": "Custom categories",
+      "products": "Products assigned"
+    },
+    "builtIn": "Catalog",
+    "engine": {
+      "title": "Category engine",
+      "subtitle": "Structure, image and colour in one pass",
+      "text": "When you create a category the engine assembles it in three steps: structure, visual assets and publishing. It is available in the shop immediately afterwards.",
+      "cta": "Start engine"
+    },
+    "loader": {
+      "title": "Building category",
+      "subtitle": "The engine is assembling structure and image – one moment.",
+      "structure": "Structure",
+      "visuals": "Image & colour",
+      "publish": "Publish"
+    },
+    "form": {
+      "eyebrow": "New category",
+      "title": "Add category",
+      "subtitle": "Name, image and accent – that is all it takes.",
+      "nameDe": "Name DE",
+      "nameEn": "Name EN",
+      "descriptionDe": "Description DE",
+      "descriptionEn": "Description EN",
+      "descriptionPlaceholder": "What does this category stand for?",
+      "image": "Category image",
+      "pickImage": "Pick image",
+      "accent": "Accent colour",
+      "icon": "Icon",
+      "create": "Build category",
+      "required": "Please enter at least the German name.",
+      "defaultDescription": "A new selection from the Klarwerk range."
+    }
+  },
+  "customers": {
+    "eyebrow": "CRM",
+    "title": "Customers",
+    "subtitle": "Relationships, baskets and segments – everything the team needs to know.",
+    "stats": {
+      "total": "Customers",
+      "vip": "VIP customers",
+      "avg": "Avg. revenue",
+      "repeat": "Repeat buyers"
+    },
+    "search": "Name, email, city …",
+    "count": "{{count}} customers",
+    "segmentLabel": "Segment",
+    "table": {
+      "customer": "Customer",
+      "location": "Location",
+      "orders": "Orders",
+      "spend": "Revenue",
+      "segment": "Segment",
+      "lastOrder": "Last order"
+    },
+    "empty": "No customers for this selection.",
+    "detail": {
+      "spend": "Total revenue",
+      "orders": "Orders",
+      "avg": "Avg. order",
+      "since": "Customer since",
+      "email": "Send email"
+    }
+  },
+  "inbox": {
+    "eyebrow": "Service",
+    "title": "Inbox",
+    "subtitle": "Questions, returns and open wishes – answered right here.",
+    "openCount": "{{count}} open",
+    "requestCount": "{{count}} requests",
+    "tabs": {
+      "messages": "Messages",
+      "requests": "Requests"
+    },
+    "count": "{{count}} messages",
+    "empty": "No messages in this view.",
+    "replyPlaceholder": "Write a reply …",
+    "openMail": "Open in mail app",
+    "send": "Send reply"
+  },
+  "analytics": {
+    "eyebrow": "Business intelligence",
+    "title": "Analytics",
+    "subtitle": "Revenue, margin and retention – down to the level of a single product.",
+    "range": "Last 30 days",
+    "kpi": {
+      "revenue": "Gross revenue",
+      "revenueHint": "30 days, excluding refunds",
+      "margin": "Net margin",
+      "marginHint": "after cost of goods & shipping",
+      "roas": "Ad ROAS",
+      "roasHint": "revenue per ad euro",
+      "refund": "Refund rate",
+      "refundHint": "share of revenue"
+    },
+    "trend": {
+      "title": "Revenue curve",
+      "subtitle": "Daily revenue and profit over the last 30 days",
+      "revenue": "Revenue",
+      "profit": "Profit"
+    },
+    "satisfaction": {
+      "title": "Customer satisfaction",
+      "subtitle": "Reviews & surveys combined",
+      "avg": "Avg. rating",
+      "nps": "NPS {{value}}",
+      "response": "Response rate",
+      "reviews": "Reviews",
+      "target": "Target",
+      "aboveTarget": "above target"
+    },
+    "traffic": {
+      "title": "Traffic sources",
+      "subtitle": "Visits and conversion by channel"
+    },
+    "channels": {
+      "title": "Channel share",
+      "subtitle": "Share of total revenue"
+    },
+    "mix": {
+      "title": "Categories",
+      "subtitle": "Revenue distribution",
+      "center": "total"
+    },
+    "cohorts": {
+      "title": "Cohort retention",
+      "subtitle": "Repeat purchase rate by starting month",
+      "foot": "Month 0 = 100% (first purchase). Later values show active returning buyers."
+    },
+    "reviews": {
+      "title": "Customer voices",
+      "subtitle": "The latest verified reviews",
+      "verified": "verified"
+    },
+    "insights": {
+      "title": "Recommended actions",
+      "subtitle": "Derived automatically from the data",
+      "oneTitle": "Audio is growing fastest",
+      "oneText": "Aurora Buds Pro drive 31% of revenue. A bundle with the Flux Hub could lift the basket by €18.",
+      "twoTitle": "Regulars buy more often",
+      "twoText": "Returning customers order 2.4× more often. An early-access newsletter for account holders could raise retention by 6%.",
+      "threeTitle": "Accessories carry higher margin",
+      "threeText": "Accessories achieve 46% margin with shorter delivery times. Stronger placement in checkout can raise profit per order."
+    }
+  },
+  "settings": {
+    "eyebrow": "Configuration",
+    "title": "Settings",
+    "subtitle": "Store identity, service and data – all in one place.",
+    "save": "Save changes",
+    "saved": "Settings saved.",
+    "savedShort": "Saved",
+    "discard": "Discard",
+    "store": {
+      "title": "Store profile",
+      "subtitle": "These details appear in orders and emails.",
+      "name": "Store name",
+      "email": "Support email",
+      "phone": "Support phone",
+      "lowStock": "Low stock threshold",
+      "goal": "Monthly goal (€)",
+      "target": "Satisfaction target",
+      "currency": "Currency"
+    },
+    "toggles": {
+      "title": "Automation",
+      "subtitle": "Assistants and service rules",
+      "autoReply": "Automatic acknowledgement",
+      "autoReplyText": "Customers receive a calm confirmation of their request right away.",
+      "express": "Offer express shipping",
+      "expressText": "Shows the express option in checkout for all orders.",
+      "newsletter": "Newsletter signup",
+      "newsletterText": "Display double opt-in at the end of checkout."
+    },
+    "account": {
+      "title": "Account",
+      "subtitle": "Current admin session",
+      "signOut": "Sign out"
+    },
+    "data": {
+      "title": "Data & storage",
+      "subtitle": "Everything stays local in this browser.",
+      "products": "Custom products",
+      "categories": "Custom categories",
+      "note": "Klarwerk Control stores changes in localStorage. Nothing is sent to a server.",
+      "resetWorkspace": "Reset workspace",
+      "resetContent": "Delete custom content"
+    },
+    "confirm": {
+      "title": "Reset for real?",
+      "contentTitle": "Delete custom content?",
+      "workspaceTitle": "Reset workspace?",
+      "contentText": "All products and categories you created will be removed from this browser. The rest of the shop stays untouched.",
+      "workspaceText": "Orders, customers, messages and settings return to their starting state. Custom products are kept.",
+      "confirm": "Reset",
+      "contentDone": "Custom content removed.",
+      "workspaceDone": "Workspace reset."
+    }
+  }
+}

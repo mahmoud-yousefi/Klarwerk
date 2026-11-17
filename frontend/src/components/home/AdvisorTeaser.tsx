@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, Check, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { Reveal } from '@/components/ui/Reveal';
 import { asset } from '@/lib/catalog';
 
@@ -53,10 +53,6 @@ export function AdvisorTeaser() {
                 {t('store:home.advisor.cta')}
                 <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
               </Link>
-              <span className="flex items-center gap-2 text-[11px] text-white/35">
-                <Check size={13} className="text-emerald-400" />
-                {t('assistant:meta.demoNote')}
-              </span>
             </div>
           </div>
         </Reveal>

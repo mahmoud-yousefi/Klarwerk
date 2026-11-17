@@ -4,11 +4,6 @@
     "tagline": "Technik, die weiterdenkt.",
     "claim": "Technik, die weiterdenkt."
   },
-  "demo": {
-    "banner": "Demo-Shop · Fiktive Produkte, Preise und Verfügbarkeiten",
-    "label": "Demo",
-    "notice": "Dies ist ein Portfolio-Projekt. Preise und Verfügbarkeiten sind illustrativ."
-  },
   "nav": {
     "shop": "Shop",
     "new": "Neuheiten",
@@ -66,7 +61,13 @@
     "viewAllResults": "Alle Ergebnisse ansehen",
     "products": "Produkte",
     "suggestions": "Beliebte Suchen",
-    "popular": ["Laptop", "Kopfhörer", "Smartphone", "Gaming", "Monitor"]
+    "popular": [
+      "Laptop",
+      "Kopfhörer",
+      "Smartphone",
+      "Gaming",
+      "Monitor"
+    ]
   },
   "filters": {
     "title": "Filter",
@@ -142,15 +143,15 @@
     "askAdvisorText": "Frag Klarwerk AI, ob dieses Gerät zu deinem Alltag passt – die Antwort basiert ausschließlich auf den Katalogdaten.",
     "askAdvisorCta": "KI-Berater fragen",
     "ratingCount": "{{count}} Bewertungen",
-    "basedOn": "Basierend auf {{count}} Demo-Bewertungen",
+    "basedOn": "Basierend auf {{count}} Bewertungen",
     "trustShipping": "Schneller Versand",
     "trustShippingText": "Bestellungen vor 15 Uhr verlassen unser Lager am selben Werktag.",
     "trustReturns": "30 Tage Rückgabe",
     "trustReturnsText": "In Ruhe testen. Kostenlose Rücksendung innerhalb Deutschlands.",
     "trustWarranty": "Verlässliche Garantie",
     "trustWarrantyText": "Abwicklung direkt über Klarwerk – ohne Umwege.",
-    "specsNote": "Alle Angaben gemäß Herstellerdatenblatt. Demo-Daten.",
-    "reviewsNote": "Bewertungen sind illustrative Demo-Inhalte.",
+    "specsNote": "Alle Angaben gemäß Herstellerdatenblatt. Beispieldaten.",
+    "reviewsNote": "Bewertungen sind illustrative Inhalte.",
     "stockLeft": "Nur noch {{count}} Stück",
     "maxStock": "Maximal {{count}} Stück verfügbar",
     "compareFull": "Vergleich ist voll",
@@ -183,10 +184,28 @@
     "shippingNote": "Noch {{amount}} bis zum kostenlosen Versand.",
     "shippingFree": "Du erhältst kostenlosen Versand.",
     "viewCart": "Warenkorb ansehen",
-    "demoNote": "Demo-Checkout – es wird keine echte Zahlung ausgelöst.",
     "cartUpdated": "Warenkorb aktualisiert",
     "summary": "Zusammenfassung",
-    "emptyCta": "Produkte entdecken"
+    "emptyCta": "Produkte entdecken",
+    "plans": {
+      "title": "Flexibel zahlen",
+      "flexible": "Klarwerk Flex",
+      "oneTime": "Einmalzahlung",
+      "three": "3 Raten",
+      "threeHint": "{{amount}} pro Monat",
+      "twelve": "12 Raten",
+      "twelveHint": "{{apr}} % eff. Zins · {{amount}} / Monat",
+      "badge": "0 % Zinsen",
+      "note": "Ratenkauf über Klarna. Bonitätsprüfung vorbehalten. Bei 3 Raten fallen keine Gebühren an.",
+      "selected": "{{count}} Raten à {{amount}} ausgewählt"
+    },
+    "trust": {
+      "shipping": "Versand ab 50 € frei",
+      "returns": "30 Tage Rückgabe",
+      "climate": "Klimaneutral"
+    },
+    "signedIn": "Angemeldet als {{name}}",
+    "signInHint": "Anmelden für schnellere Kasse"
   },
   "wishlist": {
     "title": "Merkliste",
@@ -238,9 +257,9 @@
     "cookies": "Cookie-Einstellungen",
     "follow": "Folge uns",
     "madeIn": "Gestaltet und gebaut in Hamburg.",
-    "rights": "© {{year}} Klarwerk Demo GmbH. Alle Rechte vorbehalten.",
-    "demoNote": "Klarwerk ist ein Demo-Projekt. Es werden keine echten Bestellungen verarbeitet.",
-    "payment": "Demo-Zahlungsarten",
+    "rights": "© {{year}} Klarwerk GmbH. Alle Rechte vorbehalten.",
+    "demoNote": "Klarwerk ist ein Portfolio-Projekt. Es werden keine echten Bestellungen verarbeitet.",
+    "payment": "Zahlungsarten",
     "service": "Persönlicher Service",
     "discover": "Entdecken",
     "learn": "Technik verstehen",
@@ -263,9 +282,9 @@
     "subtitle": "Einmal im Monat: neue Produkte, ehrliche Einordnungen und Ideen für Technik, die weiterdenkt.",
     "placeholder": "Deine E-Mail-Adresse",
     "cta": "Anmelden",
-    "success": "Danke! Dies ist eine Demo – es wird keine E-Mail versendet.",
+    "success": "Danke! Dies ist eine – es wird keine E-Mail versendet.",
     "error": "Bitte gib eine gültige E-Mail-Adresse ein.",
-    "privacy": "Demo ohne Versand. Keine Weitergabe an Dritte.",
+    "privacy": "ohne Versand. Keine Weitergabe an Dritte.",
     "invalid": "Ungültige E-Mail-Adresse"
   },
   "toast": {
@@ -343,5 +362,6 @@
     "returns": "30 Tage Rückgabe",
     "warranty": "Bis zu 3 Jahre Garantie",
     "support": "Persönliche Beratung"
-  }
+  },
+  "announcement": "Klarwerk · Technik, die weiterdenkt. Versandkostenfrei ab 50 €."
 }
