@@ -57,7 +57,7 @@ export function CustomersTab({ query }: { query: string }) {
         subtitle={t('customers.subtitle')}
       />
 
-      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-3 grid-cols-2 xl:grid-cols-4">
         {[
           { label: t('customers.stats.total'), value: customers.length.toString(), icon: Users, tone: 'text-electric-600' },
           { label: t('customers.stats.vip'), value: vipCount.toString(), icon: Crown, tone: 'text-violet-600' },

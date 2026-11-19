@@ -59,7 +59,7 @@ export function AnalyticsTab() {
         }
       />
 
-      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-3 grid-cols-2 xl:grid-cols-4">
         <StatCard
           label={t('analytics.kpi.revenue')}
           value={formatPrice(revenue, locale)}

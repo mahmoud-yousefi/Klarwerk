@@ -125,7 +125,7 @@ export function OrdersTab({ query }: { query: string }) {
         }
       />
 
-      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-3 grid-cols-2 xl:grid-cols-4">
         {[
           { label: t('orders.summary.revenue'), value: formatPrice(totals.revenue, locale), icon: CreditCard, tone: 'text-electric-600' },
           { label: t('orders.summary.open'), value: totals.open.toString(), icon: Package, tone: 'text-violet-600' },

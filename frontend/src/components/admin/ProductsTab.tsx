@@ -102,7 +102,7 @@ export function ProductsTab({ query }: { query: string }) {
         </div>
       )}
 
-      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-3 grid-cols-2 xl:grid-cols-4">
         {[
           { label: t('products.stats.total'), value: allProducts.length.toString(), icon: Package, tone: 'text-electric-600' },
           { label: t('products.stats.custom'), value: customProducts.length.toString(), icon: Sparkles, tone: 'text-violet-600' },
