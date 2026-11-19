@@ -254,7 +254,7 @@ export default function CheckoutPage() {
           </span>
         </div>
 
-        <div className="mt-7 grid gap-8 lg:grid-cols-[1.35fr_0.85fr] lg:items-start">
+        <div className="mt-7 grid gap-8 lg:grid-cols-[1.5fr_1fr] xl:grid-cols-[1.6fr_0.9fr] lg:items-start">
           <div className="rounded-3xl border border-ink-900/8 bg-white p-6 sm:p-8">
             {step === 'address' && (
               <form onSubmit={continueFromAddress} noValidate>
