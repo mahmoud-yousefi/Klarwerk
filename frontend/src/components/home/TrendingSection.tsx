@@ -9,7 +9,7 @@ export function TrendingSection() {
 
   return (
     <section className="bg-white py-20 sm:py-24">
-      <div className="container-x">
+      <div className="container-x overflow-hidden">
         <Reveal>
           <ProductRail
             products={products}
