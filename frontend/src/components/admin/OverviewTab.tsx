@@ -327,14 +327,20 @@ export function OverviewTab({ onNavigate }: { onNavigate: (tab: string) => void 
           }
         >
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[420px] text-left">
+            <table className="w-full min-w-0 text-left">
               <thead>
                 <tr className="text-[8.5px] uppercase tracking-[0.12em] text-ink-900/35">
                   <th className="pb-2 font-medium">{t('overview.topProducts.product')}</th>
-                  <th className="pb-2 text-right font-medium">{t('overview.topProducts.units')}</th>
+                  <th className="hidden pb-2 text-right font-medium sm:table-cell">
+                    {t('overview.topProducts.units')}
+                  </th>
                   <th className="pb-2 text-right font-medium">{t('overview.topProducts.revenue')}</th>
-                  <th className="pb-2 text-right font-medium">{t('overview.topProducts.margin')}</th>
-                  <th className="pb-2 text-right font-medium">{t('overview.topProducts.trend')}</th>
+                  <th className="hidden pb-2 text-right font-medium sm:table-cell">
+                    {t('overview.topProducts.margin')}
+                  </th>
+                  <th className="hidden pb-2 text-right font-medium sm:table-cell">
+                    {t('overview.topProducts.trend')}
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-ink-900/6">
@@ -344,12 +350,16 @@ export function OverviewTab({ onNavigate }: { onNavigate: (tab: string) => void 
                       <p className="font-medium text-ink-900">{product.name}</p>
                       <p className="text-[9px] text-ink-900/35">{product.sku}</p>
                     </td>
-                    <td className="py-2 text-right tabular-nums text-ink-900/65">{product.units}</td>
+                    <td className="hidden py-2 text-right tabular-nums text-ink-900/65 sm:table-cell">
+                      {product.units}
+                    </td>
                     <td className="py-2 text-right font-semibold tabular-nums">
                       {formatPrice(product.revenue, locale)}
                     </td>
-                    <td className="py-2 text-right tabular-nums text-ink-900/65">{product.margin}%</td>
-                    <td className="py-2 text-right">
+                    <td className="hidden py-2 text-right tabular-nums text-ink-900/65 sm:table-cell">
+                      {product.margin}%
+                    </td>
+                    <td className="hidden py-2 text-right sm:table-cell">
                       <span
                         className={
                           product.trend >= 0

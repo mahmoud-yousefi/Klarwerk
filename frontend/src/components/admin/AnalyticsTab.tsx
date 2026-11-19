@@ -197,7 +197,7 @@ export function AnalyticsTab() {
 
         <Panel title={t('analytics.cohorts.title')} subtitle={t('analytics.cohorts.subtitle')}>
           <div className="overflow-x-auto">
-            <div className="min-w-[300px]">
+            <div className="min-w-0">
               <div className="grid grid-cols-[46px_repeat(6,1fr)] gap-1">
                 <span />
                 {[0, 1, 2, 3, 4, 5].map((month) => (

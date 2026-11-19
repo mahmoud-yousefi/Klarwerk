@@ -107,7 +107,7 @@ export function CustomersTab({ query }: { query: string }) {
         </div>
 
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[680px] text-left">
+          <table className="w-full min-w-0 text-left">
             <thead>
               <tr className="border-b border-ink-900/6 text-[8.5px] uppercase tracking-[0.12em] text-ink-900/35">
                 <th className="px-4 py-2.5 font-medium">{t('customers.table.customer')}</th>
