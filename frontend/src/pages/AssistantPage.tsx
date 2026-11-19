@@ -189,6 +189,10 @@ export default function AssistantPage() {
   useEffect(() => {
     const node = scrollRef.current;
     if (!node) return;
+    // Only follow the stream when the user is already near the bottom.
+    // Otherwise leave their scroll position untouched so they can read freely.
+    const isNearBottom = node.scrollTop + node.clientHeight >= node.scrollHeight - 96;
+    if (!isNearBottom) return;
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     node.scrollTo({
       top: node.scrollHeight,

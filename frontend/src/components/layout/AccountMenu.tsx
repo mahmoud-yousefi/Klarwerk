@@ -75,7 +75,7 @@ export function AccountMenu() {
       {open && (
         <div
           role="menu"
-          className="absolute right-0 top-full z-50 mt-2.5 w-[268px] animate-scale-in overflow-hidden rounded-2xl border border-white/10 bg-ink-800/95 p-2 shadow-[0_30px_70px_-24px_rgba(0,0,0,0.9)] backdrop-blur-2xl"
+          className="absolute right-0 top-full z-50 mt-2.5 w-[min(268px,calc(100vw-1.5rem))] animate-scale-in overflow-hidden rounded-2xl border border-white/10 bg-ink-800/95 p-2 shadow-[0_30px_70px_-24px_rgba(0,0,0,0.9)] backdrop-blur-2xl"
         >
           {user ? (
             <>

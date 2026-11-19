@@ -93,7 +93,7 @@ export function AuthForm({ mode }: AuthFormProps) {
   };
 
   return (
-    <div className="grid overflow-hidden rounded-[28px] border border-ink-900/10 bg-white shadow-lift lg:grid-cols-[1.08fr_0.92fr]">
+    <div className="grid overflow-hidden rounded-[24px] border border-ink-900/10 bg-white shadow-lift sm:rounded-[28px] lg:grid-cols-[1.08fr_0.92fr]">
       <div className="relative p-6 sm:p-9 lg:p-11">
         <div
           aria-hidden
@@ -315,15 +315,15 @@ export function AuthForm({ mode }: AuthFormProps) {
 export function AuthPage({ mode }: AuthFormProps) {
   const { t } = useTranslation('auth');
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-x-hidden">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px] bg-gradient-to-b from-electric-500/[0.08] via-violet-500/[0.04] to-transparent"
       />
-      <div className="container-x py-10 sm:py-14">
+      <div className="container-x px-4 py-8 sm:py-10 md:py-14">
         <div className="mx-auto w-full max-w-5xl">
           <AuthForm mode={mode} />
-          <p className="mt-4 flex items-center justify-center gap-1.5 text-[10.5px] text-ink-900/35">
+          <p className="mt-4 flex items-center justify-center gap-1.5 text-center text-[10.5px] text-ink-900/35">
             <ShieldCheck size={12} />
             {t('gate.note')}
           </p>
