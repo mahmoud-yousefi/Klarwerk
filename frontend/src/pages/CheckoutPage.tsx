@@ -212,7 +212,7 @@ export default function CheckoutPage() {
           {t('meta.demoNotice')}
         </div>
 
-        <div className="mt-6 flex items-center gap-1.5 overflow-x-auto border-b border-ink-900/8 pb-4">
+        <div className="mt-6 flex flex-wrap items-center gap-1.5 border-b border-ink-900/8 pb-4">
           {steps.map((entry, index) => {
             const done = index < stepIndex;
             const active = index === stepIndex;
