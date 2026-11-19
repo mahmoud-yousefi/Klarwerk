@@ -321,7 +321,7 @@ export function AuthPage({ mode }: AuthFormProps) {
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px] bg-gradient-to-b from-electric-500/[0.08] via-violet-500/[0.04] to-transparent"
       />
       <div className="container-x px-4 py-8 sm:py-10 md:py-14">
-        <div className="mx-auto w-full max-w-5xl">
+        <div className="mx-auto w-full max-w-7xl">
           <AuthForm mode={mode} />
           <p className="mt-4 flex items-center justify-center gap-1.5 text-center text-[10.5px] text-ink-900/35">
             <ShieldCheck size={12} />
