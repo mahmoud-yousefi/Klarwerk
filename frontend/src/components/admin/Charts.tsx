@@ -565,36 +565,34 @@ export function Heatmap({
 }) {
   const max = Math.max(...matrix.flat(), 1);
   return (
-    <div className="overflow-x-auto">
-      <div className="min-w-[420px]">
-        <div className="grid" style={{ gridTemplateColumns: `34px repeat(${columns.length}, 1fr)` }}>
-          <span />
-          {columns.map((column) => (
-            <span key={column} className="pb-1 text-center text-[8.5px] text-ink-900/35">
-              {column}
+    <div className="w-full">
+      <div className="grid gap-0" style={{ gridTemplateColumns: `28px repeat(${columns.length}, minmax(0, 1fr))` }}>
+        <span />
+        {columns.map((column) => (
+          <span key={column} className="pb-1 text-center text-[8px] text-ink-900/35 sm:text-[8.5px]">
+            {column}
+          </span>
+        ))}
+        {matrix.map((row, rowIndex) => (
+          <div key={rows[rowIndex] ?? rowIndex} className="contents">
+            <span className="flex items-center text-[8px] text-ink-900/40 sm:text-[9px]">
+              {rows[rowIndex]}
             </span>
-          ))}
-          {matrix.map((row, rowIndex) => (
-            <div key={rows[rowIndex] ?? rowIndex} className="contents">
-              <span className="flex items-center text-[9px] text-ink-900/40">
-                {rows[rowIndex]}
-              </span>
-              {row.map((value, columnIndex) => {
-                const intensity = value / max;
-                return (
-                  <span
-                    key={`${rowIndex}-${columnIndex}`}
-                    title={`${rows[rowIndex]} ${columns[columnIndex]}: ${value}`}
-                    className="m-[1.5px] h-5 rounded-[3px] transition-transform hover:scale-110"
-                    style={{
-                      backgroundColor: `rgba(88,101,242,${0.06 + intensity * 0.82})`,
-                    }}
-                  />
-                );
-              })}
-            </div>
-          ))}
-        </div>
+            {row.map((value, columnIndex) => {
+              const intensity = value / max;
+              return (
+                <span
+                  key={`${rowIndex}-${columnIndex}`}
+                  title={`${rows[rowIndex]} ${columns[columnIndex]}: ${value}`}
+                  className="m-[1px] h-4 rounded-[2px] transition-transform hover:scale-110 sm:m-[1.5px] sm:h-5 sm:rounded-[3px]"
+                  style={{
+                    backgroundColor: `rgba(88,101,242,${0.06 + intensity * 0.82})`,
+                  }}
+                />
+              );
+            })}
+          </div>
+        ))}
       </div>
     </div>
   );
