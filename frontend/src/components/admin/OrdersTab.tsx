@@ -174,14 +174,47 @@ export function OrdersTab({ query }: { query: string }) {
           </div>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="divide-y divide-ink-900/[0.045] md:hidden">
+          {filtered.slice(0, 24).map((order) => (
+            <button
+              key={order.id}
+              type="button"
+              onClick={() => setSelected(order)}
+              className="flex w-full items-start justify-between gap-3 p-3.5 text-left transition hover:bg-ink-900/[0.02]"
+            >
+              <div className="min-w-0">
+                <p className="flex flex-wrap items-center gap-1.5 text-[11.5px] font-semibold tabular-nums text-ink-900">
+                  {order.id}
+                  <StatusBadge status={order.status} />
+                </p>
+                <p className="mt-1 truncate text-[11px] text-ink-900/60">{order.customer}</p>
+                <p className="mt-0.5 truncate text-[9.5px] text-ink-900/35">
+                  {new Intl.DateTimeFormat(locale === 'de' ? 'de-DE' : 'en-GB', {
+                    day: '2-digit',
+                    month: 'short',
+                  }).format(new Date(order.date))}
+                  {' · '}
+                  {order.payment}
+                </p>
+              </div>
+              <span className="shrink-0 text-right text-[12px] font-semibold tabular-nums">
+                {formatPrice(order.total, locale)}
+              </span>
+            </button>
+          ))}
+          {filtered.length === 0 && (
+            <p className="px-4 py-10 text-center text-[12px] text-ink-900/40">{t('orders.empty')}</p>
+          )}
+        </div>
+
+        <div className="hidden overflow-x-auto md:block">
           <table className="w-full min-w-0 text-left">
             <thead>
               <tr className="border-b border-ink-900/6 text-[8.5px] uppercase tracking-[0.12em] text-ink-900/35">
                 <th className="px-4 py-2.5 font-medium">{t('orders.table.order')}</th>
                 <th className="px-3 py-2.5 font-medium">{t('orders.table.customer')}</th>
-                <th className="px-3 py-2.5 font-medium">{t('orders.table.date')}</th>
-                <th className="px-3 py-2.5 font-medium">{t('orders.table.payment')}</th>
+                <th className="hidden px-3 py-2.5 font-medium xl:table-cell">{t('orders.table.date')}</th>
+                <th className="hidden px-3 py-2.5 font-medium lg:table-cell">{t('orders.table.payment')}</th>
                 <th className="px-3 py-2.5 font-medium">{t('common.status')}</th>
                 <th className="px-3 py-2.5 text-right font-medium">{t('orders.table.total')}</th>
                 <th className="w-8 px-3 py-2.5" />
@@ -196,10 +229,12 @@ export function OrdersTab({ query }: { query: string }) {
                 >
                   <td className="px-4 py-2.5 font-medium tabular-nums text-ink-900">{order.id}</td>
                   <td className="px-3 py-2.5">
-                    <p className="font-medium text-ink-900">{order.customer}</p>
-                    <p className="text-[9.5px] text-ink-900/35">{order.email}</p>
+                    <p className="max-w-[180px] truncate font-medium text-ink-900">{order.customer}</p>
+                    <p className="hidden max-w-[180px] truncate text-[9.5px] text-ink-900/35 xl:block">
+                      {order.email}
+                    </p>
                   </td>
-                  <td className="px-3 py-2.5 text-ink-900/55">
+                  <td className="hidden px-3 py-2.5 text-ink-900/55 xl:table-cell">
                     {new Intl.DateTimeFormat(locale === 'de' ? 'de-DE' : 'en-GB', {
                       day: '2-digit',
                       month: 'short',
@@ -211,7 +246,7 @@ export function OrdersTab({ query }: { query: string }) {
                       }).format(new Date(order.date))}
                     </span>
                   </td>
-                  <td className="px-3 py-2.5 text-ink-900/55">{order.payment}</td>
+                  <td className="hidden px-3 py-2.5 text-ink-900/55 lg:table-cell">{order.payment}</td>
                   <td className="px-3 py-2.5">
                     <StatusBadge status={order.status} />
                   </td>
@@ -228,7 +263,7 @@ export function OrdersTab({ query }: { query: string }) {
         </div>
 
         {filtered.length === 0 && (
-          <p className="px-4 py-10 text-center text-[12px] text-ink-900/40">{t('orders.empty')}</p>
+          <p className="hidden px-4 py-10 text-center text-[12px] text-ink-900/40 md:block">{t('orders.empty')}</p>
         )}
       </Panel>
 

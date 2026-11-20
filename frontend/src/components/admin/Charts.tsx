@@ -1,6 +1,33 @@
-import { useId, useMemo, useState } from 'react';
+import { useEffect, useId, useMemo, useState } from 'react';
 import { cn, formatNumber, formatPrice } from '@/lib/utils';
 import type { Locale } from '@/types/catalog';
+
+/* ------------------------------------------------------------------ */
+/* Shared entrance animation                                           */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Returns 0 on the first paint and 1 one frame later, so CSS transitions
+ * can animate charts from an empty state every time they mount.
+ */
+function useChartProgress(delay = 60) {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    let frame = 0;
+    const timer = window.setTimeout(() => {
+      frame = window.requestAnimationFrame(() => setProgress(1));
+    }, delay);
+    return () => {
+      window.clearTimeout(timer);
+      window.cancelAnimationFrame(frame);
+    };
+  }, [delay]);
+
+  return progress;
+}
+
+const drawEase = 'cubic-bezier(0.16, 1, 0.3, 1)';
 
 /* ------------------------------------------------------------------ */
 /* Sparkline                                                           */
@@ -16,6 +43,7 @@ export function Sparkline({
   className?: string;
 }) {
   const id = useId();
+  const progress = useChartProgress(80);
   const width = 120;
   const height = 34;
   const min = Math.min(...values);
@@ -37,7 +65,7 @@ export function Sparkline({
           <stop offset="100%" stopColor={color} stopOpacity="0" />
         </linearGradient>
       </defs>
-      <path d={area} fill={`url(#spark-${id})`} />
+      <path d={area} fill={`url(#spark-${id})`} style={{ opacity: progress, transition: `opacity 700ms ${drawEase}` }} />
       <path
         d={line}
         fill="none"
@@ -45,6 +73,10 @@ export function Sparkline({
         strokeWidth="1.8"
         strokeLinecap="round"
         strokeLinejoin="round"
+        pathLength={1}
+        strokeDasharray="1"
+        strokeDashoffset={1 - progress}
+        style={{ transition: `stroke-dashoffset 900ms ${drawEase}` }}
       />
     </svg>
   );
@@ -82,6 +114,7 @@ export function RevenueAreaChart({
   height?: number;
 }) {
   const id = useId();
+  const progress = useChartProgress();
   const [hover, setHover] = useState<number | null>(null);
   const width = 760;
   const padX = 42;
@@ -161,14 +194,22 @@ export function RevenueAreaChart({
           );
         })}
 
-        <path d={revenueArea} fill={`url(#area-${id})`} />
+        <path
+          d={revenueArea}
+          fill={`url(#area-${id})`}
+          style={{ opacity: progress, transition: `opacity 800ms ${drawEase}` }}
+        />
         <path
           d={profitLine}
           fill="none"
           stroke="#4FA3A5"
           strokeWidth="1.7"
-          strokeDasharray="4 4"
+          strokeLinecap="round"
           vectorEffect="non-scaling-stroke"
+          pathLength={1}
+          strokeDasharray="1"
+          strokeDashoffset={1 - progress}
+          style={{ transition: `stroke-dashoffset 1100ms ${drawEase}` }}
         />
         <path
           d={revenueLine}
@@ -177,6 +218,10 @@ export function RevenueAreaChart({
           strokeWidth="2.2"
           strokeLinecap="round"
           vectorEffect="non-scaling-stroke"
+          pathLength={1}
+          strokeDasharray="1"
+          strokeDashoffset={1 - progress}
+          style={{ transition: `stroke-dashoffset 1000ms ${drawEase}` }}
         />
 
         {coords.map(({ x, y, point }, index) => (
@@ -277,15 +322,22 @@ export interface BarDatum {
 }
 
 export function Bars3D({ data, suffix = '%' }: { data: BarDatum[]; suffix?: string }) {
+  const progress = useChartProgress();
   const max = Math.max(...data.map((entry) => entry.value), 1);
   return (
-    <div className="flex h-[210px] items-end gap-3 px-1 pt-6" style={{ perspective: '900px' }}>
-      {data.map((entry) => {
+    <div
+      className="flex h-[228px] items-end gap-2 px-1 pb-5 pt-6 sm:gap-3"
+      style={{ perspective: '900px' }}
+    >
+      {data.map((entry, index) => {
         const ratio = entry.value / max;
         return (
-          <div key={entry.label} className="group flex h-full flex-1 flex-col justify-end">
+          <div
+            key={entry.label}
+            className="group relative flex h-full flex-1 flex-col justify-end"
+          >
             <div className="relative mb-2 text-center">
-              <span className="text-[11px] font-semibold tabular-nums text-ink-900/70">
+              <span className="text-[10px] font-semibold tabular-nums text-ink-900/70 sm:text-[11px]">
                 {entry.value}
                 {suffix}
               </span>
@@ -293,7 +345,10 @@ export function Bars3D({ data, suffix = '%' }: { data: BarDatum[]; suffix?: stri
             <div
               className="relative transition-transform duration-500 group-hover:-translate-y-1"
               style={{
-                height: `${Math.max(ratio * 100, 6)}%`,
+                height: `${Math.max(ratio * 100 * progress, progress ? 6 : 0)}%`,
+                opacity: progress ? 1 : 0,
+                transition: `height 1000ms ${drawEase}, opacity 320ms ease`,
+                transitionDelay: `${index * 55}ms`,
                 transformStyle: 'preserve-3d',
                 transform: 'rotateX(10deg) rotateY(-18deg)',
               }}
@@ -322,6 +377,9 @@ export function Bars3D({ data, suffix = '%' }: { data: BarDatum[]; suffix?: stri
                 }}
               />
             </div>
+            <span className="absolute inset-x-0 -bottom-5 truncate text-center text-[8px] font-medium uppercase tracking-[0.04em] text-ink-900/35 sm:text-[8.5px] sm:tracking-[0.08em]">
+              {entry.label}
+            </span>
           </div>
         );
       })}
@@ -347,6 +405,7 @@ export function DonutChart({
   centerValue?: string;
 }) {
   const total = data.reduce((sum, entry) => sum + entry.value, 0) || 1;
+  const progress = useChartProgress();
   const radius = (size - thickness) / 2;
   const circumference = 2 * Math.PI * radius;
   let offset = 0;
@@ -374,9 +433,10 @@ export function DonutChart({
                 fill="none"
                 stroke={entry.color}
                 strokeWidth={thickness}
-                strokeDasharray={`${Math.max(dash - 3, 0)} ${circumference}`}
+                strokeDasharray={`${Math.max(dash * progress - 3, 0)} ${circumference}`}
                 strokeDashoffset={-offset}
                 strokeLinecap="round"
+                style={{ transition: `stroke-dasharray 1000ms ${drawEase}` }}
               />
             );
             offset += dash;
@@ -425,6 +485,7 @@ export function SatisfactionGauge({
 }) {
   const size = 190;
   const stroke = 14;
+  const progress = useChartProgress();
   const radius = (size - stroke * 2) / 2;
   const centerX = size / 2;
   const centerY = size / 2 + 14;
@@ -436,12 +497,9 @@ export function SatisfactionGauge({
   };
 
   const start = polar(180);
-  const end = polar(180 + ratio * 180);
   const trackEnd = polar(360);
   const needleAngle = 180 + ratio * 180;
-  const needle = polar(needleAngle);
 
-  const arc = `M${start.x} ${start.y} A${radius} ${radius} 0 ${ratio > 0.5 ? 1 : 0} 1 ${end.x} ${end.y}`;
   const track = `M${start.x} ${start.y} A${radius} ${radius} 0 1 1 ${trackEnd.x} ${trackEnd.y}`;
 
   return (
@@ -462,21 +520,33 @@ export function SatisfactionGauge({
           strokeLinecap="round"
         />
         <path
-          d={arc}
+          d={track}
           fill="none"
           stroke="url(#gauge-gradient)"
           strokeWidth={stroke}
           strokeLinecap="round"
+          pathLength={1}
+          strokeDasharray={`${ratio * progress} 1`}
+          style={{ transition: `stroke-dasharray 1100ms ${drawEase}` }}
         />
-        <line
-          x1={centerX}
-          y1={centerY}
-          x2={needle.x}
-          y2={needle.y}
-          stroke="rgba(8,13,24,0.55)"
-          strokeWidth="2"
-          strokeLinecap="round"
-        />
+        <g
+          style={{
+            transformBox: 'view-box',
+            transformOrigin: `${centerX}px ${centerY}px`,
+            transform: `rotate(${180 + (needleAngle - 180) * progress}deg)`,
+            transition: `transform 1000ms ${drawEase}`,
+          }}
+        >
+          <line
+            x1={centerX}
+            y1={centerY}
+            x2={centerX + radius * 0.82}
+            y2={centerY}
+            stroke="rgba(8,13,24,0.55)"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+        </g>
         <circle cx={centerX} cy={centerY} r="4" fill="#080D18" />
         <text
           x={centerX}
@@ -485,7 +555,7 @@ export function SatisfactionGauge({
           className="fill-ink-900"
           style={{ fontSize: 27, fontWeight: 600 }}
         >
-          {value.toFixed(1)}
+          {(value * progress).toFixed(1)}
         </text>
         <text
           x={centerX}
@@ -512,6 +582,7 @@ export function FunnelChart({
 }: {
   steps: Array<{ label: string; value: number; color: string }>;
 }) {
+  const progress = useChartProgress();
   const max = Math.max(...steps.map((step) => step.value), 1);
   return (
     <div className="space-y-2">
@@ -521,9 +592,9 @@ export function FunnelChart({
         const conversion = previous ? (step.value / previous.value) * 100 : 100;
         return (
           <div key={step.label}>
-            <div className="mb-1 flex items-center justify-between text-[10.5px]">
-              <span className="text-ink-900/60">{step.label}</span>
-              <span className="flex items-center gap-2">
+            <div className="mb-1 flex items-center justify-between gap-2 text-[10.5px]">
+              <span className="truncate text-ink-900/60">{step.label}</span>
+              <span className="flex shrink-0 items-center gap-2">
                 <span className="font-semibold tabular-nums text-ink-900/75">
                   {step.value.toLocaleString('de-DE')}
                 </span>
@@ -536,10 +607,12 @@ export function FunnelChart({
             </div>
             <div className="h-6 overflow-hidden rounded-md bg-ink-900/[0.04]">
               <div
-                className="flex h-full items-center rounded-md px-2 transition-[width] duration-700"
+                className="flex h-full items-center rounded-md px-2"
                 style={{
-                  width: `${Math.max(ratio * 100, 4)}%`,
+                  width: `${Math.max(ratio * 100 * progress, progress ? 4 : 0)}%`,
                   background: `linear-gradient(90deg, ${step.color} 0%, ${step.color}bb 100%)`,
+                  transition: `width 900ms ${drawEase}`,
+                  transitionDelay: `${index * 70}ms`,
                 }}
               />
             </div>
@@ -584,9 +657,10 @@ export function Heatmap({
                 <span
                   key={`${rowIndex}-${columnIndex}`}
                   title={`${rows[rowIndex]} ${columns[columnIndex]}: ${value}`}
-                  className="m-[1px] h-4 rounded-[2px] transition-transform hover:scale-110 sm:m-[1.5px] sm:h-5 sm:rounded-[3px]"
+                  className="admin-cell m-[1px] h-4 rounded-[2px] transition-transform hover:scale-110 sm:m-[1.5px] sm:h-5 sm:rounded-[3px]"
                   style={{
                     backgroundColor: `rgba(88,101,242,${0.06 + intensity * 0.82})`,
+                    animationDelay: `${(rowIndex * row.length + columnIndex) * 10}ms`,
                   }}
                 />
               );
@@ -612,6 +686,7 @@ export function GoalRing({
   locale: Locale;
 }) {
   const ratio = Math.min(value / target, 1);
+  const progress = useChartProgress();
   const size = 132;
   const stroke = 11;
   const radius = (size - stroke) / 2;
@@ -642,12 +717,13 @@ export function GoalRing({
             stroke="url(#goal-gradient)"
             strokeWidth={stroke}
             strokeLinecap="round"
-            strokeDasharray={`${circumference * ratio} ${circumference}`}
+            strokeDasharray={`${circumference * ratio * progress} ${circumference}`}
+            style={{ transition: `stroke-dasharray 1100ms ${drawEase}` }}
           />
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <span className="font-display text-xl font-semibold tabular-nums">
-            {Math.round(ratio * 100)}%
+            {Math.round(ratio * progress * 100)}%
           </span>
           <span className="text-[9px] uppercase tracking-[0.12em] text-ink-900/35">
             {formatNumber(Math.round(value / 1000), locale)}k /{' '}
@@ -662,5 +738,62 @@ export function GoalRing({
         <p className="text-[10px] leading-relaxed text-ink-900/40">bis zum Monatsziel</p>
       </div>
     </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Horizontal bar list                                                 */
+/* ------------------------------------------------------------------ */
+
+export function BarList({
+  data,
+  locale,
+  showShare = true,
+}: {
+  data: Array<{ label: string; value: number; color: string }>;
+  locale: Locale;
+  showShare?: boolean;
+}) {
+  const progress = useChartProgress();
+  const max = Math.max(...data.map((entry) => entry.value), 1);
+  const total = data.reduce((sum, entry) => sum + entry.value, 0) || 1;
+
+  return (
+    <ul className="space-y-2.5">
+      {data.map((entry, index) => (
+        <li key={entry.label}>
+          <div className="mb-1 flex items-center justify-between gap-2 text-[10.5px]">
+            <span className="flex min-w-0 items-center gap-1.5 text-ink-900/60">
+              <span
+                className="h-1.5 w-1.5 shrink-0 rounded-full"
+                style={{ backgroundColor: entry.color }}
+              />
+              <span className="truncate">{entry.label}</span>
+            </span>
+            <span className="flex shrink-0 items-center gap-2">
+              {showShare && (
+                <span className="rounded-full bg-ink-900/[0.04] px-1.5 py-0.5 text-[8.5px] font-medium tabular-nums text-ink-900/40">
+                  {Math.round((entry.value / total) * 100)}%
+                </span>
+              )}
+              <span className="font-semibold tabular-nums text-ink-900/75">
+                {formatPrice(entry.value, locale)}
+              </span>
+            </span>
+          </div>
+          <div className="h-1.5 overflow-hidden rounded-full bg-ink-900/6">
+            <div
+              className="h-full rounded-full"
+              style={{
+                width: `${Math.max((entry.value / max) * 100 * progress, progress ? 2 : 0)}%`,
+                background: `linear-gradient(90deg, ${entry.color} 0%, ${entry.color}bb 100%)`,
+                transition: `width 1000ms ${drawEase}`,
+                transitionDelay: `${index * 45}ms`,
+              }}
+            />
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 }

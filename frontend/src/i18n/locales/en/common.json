@@ -234,6 +234,7 @@
     "show": "Open comparison",
     "onlyDifferences": "Differences only",
     "emptyCta": "Compare products",
+    "same": "All products share these features.",
     "count": "{{count}} of {{max}} products"
   },
   "footer": {

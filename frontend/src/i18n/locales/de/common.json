@@ -234,6 +234,7 @@
     "show": "Vergleich anzeigen",
     "onlyDifferences": "Nur Unterschiede",
     "emptyCta": "Produkte vergleichen",
+    "same": "Alle Produkte teilen diese Merkmale.",
     "count": "{{count}} von {{max}} Produkten"
   },
   "footer": {

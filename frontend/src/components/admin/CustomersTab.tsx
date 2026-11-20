@@ -106,16 +106,50 @@ export function CustomersTab({ query }: { query: string }) {
           </div>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="divide-y divide-ink-900/[0.045] md:hidden">
+          {filtered.map((customer, index) => (
+            <button
+              key={customer.id}
+              type="button"
+              onClick={() => setSelected(customer)}
+              className="flex w-full items-center gap-3 p-3.5 text-left transition hover:bg-ink-900/[0.02]"
+            >
+              <span
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[10px] font-bold text-white"
+                style={{ backgroundColor: avatarColors[index % avatarColors.length] }}
+              >
+                {getInitials(customer.name)}
+              </span>
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-[11.5px] font-semibold text-ink-900">{customer.name}</p>
+                <p className="truncate text-[9.5px] text-ink-900/35">{customer.email}</p>
+                <p className="mt-0.5 text-[9px] text-ink-900/35">
+                  {customer.orders} {t('customers.table.orders')} · {customer.country}
+                </p>
+              </div>
+              <div className="flex shrink-0 flex-col items-end gap-1">
+                <span className="text-[11.5px] font-semibold tabular-nums">
+                  {formatPrice(customer.spend, locale)}
+                </span>
+                <SegmentBadge segment={customer.segment} />
+              </div>
+            </button>
+          ))}
+          {filtered.length === 0 && (
+            <p className="px-4 py-10 text-center text-[12px] text-ink-900/40">{t('customers.empty')}</p>
+          )}
+        </div>
+
+        <div className="hidden overflow-x-auto md:block">
           <table className="w-full min-w-0 text-left">
             <thead>
               <tr className="border-b border-ink-900/6 text-[8.5px] uppercase tracking-[0.12em] text-ink-900/35">
                 <th className="px-4 py-2.5 font-medium">{t('customers.table.customer')}</th>
-                <th className="px-3 py-2.5 font-medium">{t('customers.table.location')}</th>
-                <th className="px-3 py-2.5 text-right font-medium">{t('customers.table.orders')}</th>
+                <th className="hidden px-3 py-2.5 font-medium lg:table-cell">{t('customers.table.location')}</th>
+                <th className="hidden px-3 py-2.5 text-right font-medium sm:table-cell">{t('customers.table.orders')}</th>
                 <th className="px-3 py-2.5 text-right font-medium">{t('customers.table.spend')}</th>
                 <th className="px-3 py-2.5 font-medium">{t('customers.table.segment')}</th>
-                <th className="px-3 py-2.5 font-medium">{t('customers.table.lastOrder')}</th>
+                <th className="hidden px-3 py-2.5 font-medium xl:table-cell">{t('customers.table.lastOrder')}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-ink-900/[0.045]">
@@ -134,13 +168,13 @@ export function CustomersTab({ query }: { query: string }) {
                         {getInitials(customer.name)}
                       </span>
                       <div className="min-w-0">
-                        <p className="truncate font-medium text-ink-900">{customer.name}</p>
-                        <p className="truncate text-[9.5px] text-ink-900/35">{customer.email}</p>
+                        <p className="max-w-[160px] truncate font-medium text-ink-900">{customer.name}</p>
+                        <p className="max-w-[160px] truncate text-[9.5px] text-ink-900/35">{customer.email}</p>
                       </div>
                     </div>
                   </td>
-                  <td className="px-3 py-2.5 text-ink-900/55">{customer.country}</td>
-                  <td className="px-3 py-2.5 text-right tabular-nums text-ink-900/65">
+                  <td className="hidden px-3 py-2.5 text-ink-900/55 lg:table-cell">{customer.country}</td>
+                  <td className="hidden px-3 py-2.5 text-right tabular-nums text-ink-900/65 sm:table-cell">
                     {customer.orders}
                   </td>
                   <td className="px-3 py-2.5 text-right font-semibold tabular-nums">
@@ -149,7 +183,7 @@ export function CustomersTab({ query }: { query: string }) {
                   <td className="px-3 py-2.5">
                     <SegmentBadge segment={customer.segment} />
                   </td>
-                  <td className="px-3 py-2.5 text-[10.5px] text-ink-900/45">
+                  <td className="hidden px-3 py-2.5 text-[10.5px] text-ink-900/45 xl:table-cell">
                     {new Intl.DateTimeFormat(locale === 'de' ? 'de-DE' : 'en-GB', {
                       day: '2-digit',
                       month: 'short',
@@ -162,7 +196,7 @@ export function CustomersTab({ query }: { query: string }) {
         </div>
 
         {filtered.length === 0 && (
-          <p className="px-4 py-10 text-center text-[12px] text-ink-900/40">{t('customers.empty')}</p>
+          <p className="hidden px-4 py-10 text-center text-[12px] text-ink-900/40 md:block">{t('customers.empty')}</p>
         )}
       </Panel>
 

@@ -7,6 +7,7 @@
     "customers": "Kunden",
     "inbox": "Postfach",
     "analytics": "Analytics",
+    "accounting": "Buchhaltung",
     "settings": "Einstellungen"
   },
   "shell": {
@@ -151,6 +152,15 @@
       "session": "Ø Sitzungsdauer",
       "customers": "Kunden im CRM",
       "reviews": "Neue Bewertungen"
+    },
+    "finance": {
+      "title": "Finanzen im Blick",
+      "subtitle": "Aktuelle Periode · automatisch aus der Buchhaltung",
+      "netProfit": "Gewinn",
+      "vat": "USt.-Zahllast",
+      "receivables": "Offene Forderungen",
+      "expenses": "Betriebskosten",
+      "open": "Buchhaltung öffnen"
     }
   },
   "orders": {
@@ -416,6 +426,117 @@
       "twoText": "Wiederkäufer bestellen 2,4× häufiger. Ein Early-Access-Newsletter für Konto-Inhaber hat das Potenzial, die Retention um 6 % zu steigern.",
       "threeTitle": "Marge bei Zubehör stärker",
       "threeText": "Zubehör erzielt 46 % Marge bei kürzerer Lieferzeit. Eine stärkere Platzierung im Checkout kann den Gewinn pro Bestellung erhöhen."
+    }
+  },
+  "accounting": {
+    "eyebrow": "Finanzen",
+    "title": "Buchhaltung",
+    "subtitle": "Umsatz, Kosten und Liquidität – die Zahlen hinter dem Shop.",
+    "rangeLabel": "Zeitraum",
+    "range": {
+      "m3": "3 Monate",
+      "m6": "6 Monate",
+      "m12": "12 Monate"
+    },
+    "export": "CSV exportieren",
+    "kpi": {
+      "netRevenue": "Nettoumsatz",
+      "netRevenueHint": "ohne USt. und Stornos",
+      "grossProfit": "Rohertrag",
+      "grossProfitHint": "nach Wareneinsatz",
+      "expenses": "Betriebskosten",
+      "expensesHint": "Personal, Tools, Marketing",
+      "netProfit": "Gewinn",
+      "netProfitHint": "nach Steuern"
+    },
+    "cashflow": {
+      "title": "Umsatz & Ergebnis",
+      "subtitle": "Monatliche Entwicklung im Zeitraum",
+      "revenue": "Umsatz",
+      "profit": "Ergebnis"
+    },
+    "vat": {
+      "title": "Umsatzsteuer",
+      "subtitle": "Aktuelle Periode",
+      "payable": "USt.-Zahllast",
+      "output": "Umsatzsteuer",
+      "input": "Vorsteuer",
+      "note": "Vorauszahlung zum 10. des Folgemonats. Alle Beträge inkl. 19 % USt."
+    },
+    "payouts": {
+      "title": "Auszahlungen",
+      "subtitle": "Nächste Gutschriften",
+      "pending": "Ausstehend",
+      "settled": "Verbucht"
+    },
+    "pnl": {
+      "title": "Gewinn- und Verlustrechnung",
+      "subtitle": "Konsolidiert für den gewählten Zeitraum",
+      "revenue": "Umsatzerlöse",
+      "refunds": "Erlösschmälerungen",
+      "netRevenue": "Nettoumsatz",
+      "cogs": "Wareneinsatz",
+      "grossProfit": "Rohertrag",
+      "opex": "Betriebskosten",
+      "marketing": "Marketing",
+      "ebit": "Betriebsergebnis",
+      "tax": "Steuern (30 %)",
+      "netProfit": "Jahresüberschuss",
+      "margin": "Nettomarge"
+    },
+    "expenses": {
+      "title": "Kostenstruktur",
+      "subtitle": "Anteil an den Gesamtkosten",
+      "center": "Kosten",
+      "cogs": "Wareneinsatz",
+      "personnel": "Personal",
+      "marketing": "Marketing",
+      "tools": "Tools & Software",
+      "logistics": "Logistik",
+      "refunds": "Erstattungen"
+    },
+    "invoices": {
+      "title": "Rechnungen",
+      "subtitle": "Offene Posten und Zahlungseingänge",
+      "count": "{{count}} Rechnungen",
+      "all": "Alle",
+      "table": {
+        "invoice": "Rechnung",
+        "customer": "Kunde",
+        "issued": "Datum",
+        "due": "Fällig",
+        "amount": "Betrag",
+        "status": "Status"
+      },
+      "status": {
+        "paid": "Bezahlt",
+        "open": "Offen",
+        "overdue": "Überfällig",
+        "draft": "Entwurf"
+      },
+      "empty": "Keine Rechnungen in dieser Auswahl."
+    },
+    "aging": {
+      "title": "Offene Posten",
+      "subtitle": "Fälligkeit nach Tagen",
+      "receivables": "Forderungen",
+      "overdue": "überfällig",
+      "current": "Nicht fällig",
+      "d14": "1–14 Tage",
+      "d30": "15–30 Tage",
+      "d60": "31–60 Tage",
+      "d90": "60+ Tage"
+    },
+    "summary": {
+      "title": "Kennzahlen",
+      "subtitle": "Liquidität & Forderungsmanagement",
+      "orders": "Bestellungen gesamt",
+      "orderRevenue": "Bestellumsatz",
+      "dso": "Ø Zahlungsziel",
+      "runway": "Liquiditätsreserve",
+      "days": "Tage",
+      "months": "Monate",
+      "note": "Automatisch aus Bestellungen und Rechnungen berechnet."
     }
   },
   "settings": {

@@ -5,6 +5,7 @@ import {
   ArrowLeft,
   BarChart3,
   Bell,
+  Calculator,
   FolderTree,
   LayoutDashboard,
   LogOut,
@@ -29,9 +30,10 @@ import { CategoriesTab } from '@/components/admin/CategoriesTab';
 import { CustomersTab } from '@/components/admin/CustomersTab';
 import { InboxTab } from '@/components/admin/InboxTab';
 import { AnalyticsTab } from '@/components/admin/AnalyticsTab';
+import { AccountingTab } from '@/components/admin/AccountingTab';
 import { SettingsTab } from '@/components/admin/SettingsTab';
 
-type Tab = 'overview' | 'orders' | 'products' | 'categories' | 'customers' | 'inbox' | 'analytics' | 'settings';
+type Tab = 'overview' | 'orders' | 'products' | 'categories' | 'customers' | 'inbox' | 'analytics' | 'accounting' | 'settings';
 
 const navItems: Array<{ id: Tab; icon: typeof LayoutDashboard }> = [
   { id: 'overview', icon: LayoutDashboard },
@@ -41,6 +43,7 @@ const navItems: Array<{ id: Tab; icon: typeof LayoutDashboard }> = [
   { id: 'customers', icon: Users },
   { id: 'inbox', icon: Mail },
   { id: 'analytics', icon: BarChart3 },
+  { id: 'accounting', icon: Calculator },
   { id: 'settings', icon: Settings },
 ];
 
@@ -93,6 +96,8 @@ export function AdminPage() {
         return <InboxTab query={query} />;
       case 'analytics':
         return <AnalyticsTab />;
+      case 'accounting':
+        return <AccountingTab query={query} />;
       case 'settings':
         return <SettingsTab />;
       default:
@@ -277,7 +282,11 @@ export function AdminPage() {
           </div>
         </header>
 
-        <main className="mx-auto w-full max-w-[1440px] p-4 sm:p-6">{renderTab()}</main>
+        <main className="mx-auto w-full max-w-[1440px] overflow-x-hidden p-4 sm:p-6">
+          <div key={tab} className="admin-enter">
+            {renderTab()}
+          </div>
+        </main>
       </div>
     </div>
   );

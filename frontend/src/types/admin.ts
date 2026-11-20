@@ -85,3 +85,33 @@ export interface RevenuePoint {
   profit: number;
   orders: number;
 }
+
+export type InvoiceStatus = 'paid' | 'open' | 'overdue' | 'draft';
+
+export interface AdminInvoice {
+  id: string;
+  customer: string;
+  email: string;
+  amount: number;
+  vat: number;
+  issued: string;
+  due: string;
+  status: InvoiceStatus;
+}
+
+export interface FinanceMonth {
+  month: string;
+  revenue: number;
+  cogs: number;
+  opex: number;
+  marketing: number;
+  refunds: number;
+}
+
+export interface PayoutEntry {
+  id: string;
+  provider: string;
+  amount: number;
+  date: string;
+  status: 'pending' | 'settled';
+}

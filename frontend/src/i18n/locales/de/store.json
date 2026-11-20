@@ -197,6 +197,7 @@
     "subtitle": "Die wichtigsten Merkmale im direkten Vergleich.",
     "emptyTitle": "Noch keine Produkte im Vergleich",
     "emptyText": "Wähle bis zu vier Produkte aus dem Katalog aus, um sie nebeneinander zu sehen.",
+    "mobileHint": "Jedes Produkt zeigt unten seine wichtigsten Merkmale – die farbig markierten unterscheiden sich.",
     "addProducts": "Produkte auswählen",
     "filterDifferences": "Nur Unterschiede anzeigen",
     "removeProduct": "{{name}} aus dem Vergleich entfernen",

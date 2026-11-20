@@ -250,7 +250,7 @@ export function Header() {
             <Search size={18} />
           </button>
 
-          <LanguageSwitcher showIcon={false} className="flex sm:hidden" />
+          <LanguageSwitcher showIcon={false} className="flex max-[359px]:hidden sm:hidden" />
           <LanguageSwitcher className="hidden sm:flex" />
 
           <AccountMenu />

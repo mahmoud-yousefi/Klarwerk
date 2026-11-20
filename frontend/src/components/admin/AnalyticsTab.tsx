@@ -118,7 +118,7 @@ export function AnalyticsTab() {
 
         <div className="space-y-4">
           <Panel title={t('analytics.satisfaction.title')} subtitle={t('analytics.satisfaction.subtitle')}>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col items-center gap-4 sm:flex-row">
               <SatisfactionGauge
                 value={satisfaction.score}
                 label={t('analytics.satisfaction.avg')}

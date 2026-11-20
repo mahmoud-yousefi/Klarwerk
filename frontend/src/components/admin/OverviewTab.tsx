@@ -22,9 +22,11 @@ import { formatPrice } from '@/lib/utils';
 import {
   channelPerformance,
   categoryPerformance,
+  financeMonths,
   groupRevenue,
   hourlyHeatmap,
   satisfaction,
+  seedInvoices,
   seedRevenueGoal,
   topProducts,
 } from '@/data/adminSeed';
@@ -74,6 +76,15 @@ export function OverviewTab({ onNavigate }: { onNavigate: (tab: string) => void 
     .filter((order) => order.status !== 'refunded' && order.status !== 'pending')
     .reduce((sum, order) => sum + order.total, 0);
   const goal = Math.max(settings.monthlyGoal, seedRevenueGoal);
+
+  const currentMonth = financeMonths[financeMonths.length - 1];
+  const financeProfit =
+    currentMonth.revenue / 1.19 - currentMonth.cogs - currentMonth.opex - currentMonth.marketing;
+  const financeVat = currentMonth.revenue - currentMonth.revenue / 1.19;
+  const financeReceivables = seedInvoices
+    .filter((invoice) => invoice.status === 'open' || invoice.status === 'overdue')
+    .reduce((sum, invoice) => sum + invoice.amount, 0);
+  const financeExpenses = currentMonth.cogs + currentMonth.opex + currentMonth.marketing;
 
   const heatmapDays =
     locale === 'de'
@@ -446,6 +457,39 @@ export function OverviewTab({ onNavigate }: { onNavigate: (tab: string) => void 
           </Panel>
         </div>
       </div>
+
+      <Panel
+        title={t('overview.finance.title')}
+        subtitle={t('overview.finance.subtitle')}
+        action={
+          <button
+            type="button"
+            onClick={() => onNavigate('accounting')}
+            className="inline-flex items-center gap-1 rounded-full border border-ink-900/10 px-3 py-1.5 text-[10px] font-medium text-ink-900/55 transition hover:border-ink-900/25 hover:text-ink-900"
+          >
+            {t('overview.finance.open')} <ArrowUpRight size={11} />
+          </button>
+        }
+      >
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+          {[
+            { icon: BadgeEuro, label: t('overview.finance.netProfit'), value: formatPrice(financeProfit, locale), tone: 'text-electric-600 bg-electric-500/10' },
+            { icon: CreditCard, label: t('overview.finance.vat'), value: formatPrice(financeVat, locale), tone: 'text-violet-600 bg-violet-500/10' },
+            { icon: ShoppingCart, label: t('overview.finance.receivables'), value: formatPrice(financeReceivables, locale), tone: 'text-[#3B7F81] bg-[#4FA3A5]/10' },
+            { icon: Target, label: t('overview.finance.expenses'), value: formatPrice(financeExpenses, locale), tone: 'text-[#9A6A25] bg-[#C28A3D]/10' },
+          ].map(({ icon: Icon, label, value, tone }) => (
+            <div key={label} className="rounded-xl border border-ink-900/6 bg-ink-900/[0.015] p-3">
+              <span className={`flex h-7 w-7 items-center justify-center rounded-lg ${tone}`}>
+                <Icon size={13} />
+              </span>
+              <p className="mt-2 text-[9px] font-medium uppercase tracking-[0.1em] text-ink-900/38">
+                {label}
+              </p>
+              <p className="mt-0.5 text-[14px] font-semibold tabular-nums text-ink-900">{value}</p>
+            </div>
+          ))}
+        </div>
+      </Panel>
 
       <div className="grid gap-3 sm:grid-cols-3">
         {[

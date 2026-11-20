@@ -122,55 +122,55 @@ export default function ComparePage() {
               }
             />
           ) : (
-            <div className="overflow-x-auto rounded-3xl border border-ink-900/8 bg-white">
-              <table className="w-full min-w-[720px] border-collapse text-left">
-                <thead>
-                  <tr>
-                    <th className="sticky left-0 z-10 w-36 border-b border-ink-900/8 bg-white p-4 align-bottom">
-                      <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-ink-900/35">
-                        {t('compare.feature')}
-                      </span>
-                    </th>
-                    {products.map((product) => (
-                      <th
-                        key={product.id}
-                        className="min-w-[200px] border-b border-l border-ink-900/8 p-4 align-top"
+            <>
+              <div className="mb-3 flex flex-wrap items-center justify-between gap-2 lg:hidden">
+                <p className="text-[10px] text-ink-900/40">{t('store:comparePage.mobileHint')}</p>
+                <span className="rounded-full bg-ink-900/5 px-2 py-0.5 text-[9px] font-semibold tabular-nums text-ink-900/45">
+                  {t('compare.count', { count: products.length, max: 4 })}
+                </span>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2 lg:hidden">
+                {products.map((product, index) => (
+                  <article
+                    key={product.id}
+                    className="flex flex-col overflow-hidden rounded-2xl border border-ink-900/8 bg-white shadow-[0_1px_2px_rgba(8,13,24,0.03)]"
+                  >
+                    <div className="relative">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          remove(product.id);
+                          push(t('toast.compareRemoved'), 'info');
+                        }}
+                        className="absolute right-2.5 top-2.5 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-white/85 text-ink-900/40 shadow-soft backdrop-blur transition hover:bg-white hover:text-rose-500"
+                        aria-label={t('store:comparePage.removeProduct', { name: product.name })}
                       >
-                        <div className="relative">
-                          <button
-                            type="button"
-                            onClick={() => {
-                              remove(product.id);
-                              push(t('toast.compareRemoved'), 'info');
-                            }}
-                            className="absolute -right-1 -top-1 flex h-7 w-7 items-center justify-center rounded-full bg-ink-900/5 text-ink-900/40 transition hover:bg-rose-50 hover:text-rose-500"
-                            aria-label={t('store:comparePage.removeProduct', { name: product.name })}
-                          >
-                            <X size={13} />
-                          </button>
-                          <Link to={`/product/${product.slug}`} className="block overflow-hidden rounded-xl bg-[#EDF0F6]">
-                            <img
-                              src={product.images[0]}
-                              alt={product.name}
-                              className="aspect-[4/3] w-full object-cover transition duration-500 hover:scale-105"
-                            />
-                          </Link>
-                          <p className="mt-2 text-[9px] uppercase tracking-[0.12em] text-ink-900/35">
-                            {product.brand}
-                          </p>
-                          <Link
-                            to={`/product/${product.slug}`}
-                            className="mt-0.5 block text-[13px] font-medium leading-snug hover:text-electric-600"
-                          >
-                            {product.name}
-                          </Link>
-                          <div className="mt-1.5">
-                            <Price price={product.price} originalPrice={product.originalPrice} size="sm" />
-                          </div>
-                          <div className="mt-1.5 flex flex-wrap gap-2">
-                            <Rating value={product.rating} showValue={false} />
-                            <AvailabilityBadge availability={product.availability} />
-                          </div>
+                        <X size={13} />
+                      </button>
+                      <Link to={`/product/${product.slug}`} className="block bg-[#EDF0F6]">
+                        <img
+                          src={product.images[0]}
+                          alt={product.name}
+                          className="aspect-[16/10] w-full object-cover"
+                        />
+                      </Link>
+                      <div className="p-4 pb-3.5">
+                        <p className="text-[9px] uppercase tracking-[0.12em] text-ink-900/35">
+                          {product.brand}
+                        </p>
+                        <Link
+                          to={`/product/${product.slug}`}
+                          className="mt-0.5 block text-[14px] font-medium leading-snug hover:text-electric-600"
+                        >
+                          {product.name}
+                        </Link>
+                        <div className="mt-1.5 flex flex-wrap items-center justify-between gap-2">
+                          <Price price={product.price} originalPrice={product.originalPrice} size="sm" />
+                          <AvailabilityBadge availability={product.availability} />
+                        </div>
+                        <div className="mt-2 flex items-center justify-between gap-2">
+                          <Rating value={product.rating} showValue={false} />
                           <button
                             type="button"
                             disabled={product.availability === 'out_of_stock'}
@@ -178,59 +178,175 @@ export default function ComparePage() {
                               addToCart(product.id, 1);
                               push(t('toast.addedToCart', { name: product.name }), 'success');
                             }}
-                            className="mt-2.5 flex h-9 w-full items-center justify-center gap-1.5 rounded-full bg-ink-900 text-[11px] font-medium text-white transition hover:bg-ink-800 disabled:pointer-events-none disabled:opacity-40"
+                            className="inline-flex h-8 items-center justify-center gap-1.5 rounded-full bg-ink-900 px-3 text-[10.5px] font-medium text-white transition hover:bg-ink-800 disabled:pointer-events-none disabled:opacity-40"
                           >
-                            <ShoppingBag size={12} /> {t('actions.addToCart')}
+                            <ShoppingBag size={11} /> {t('actions.addToCart')}
                           </button>
                         </div>
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {rows.map((row) => (
-                    <tr
-                      key={row.key}
-                      className={row.isDifference ? 'bg-amber-50/40' : undefined}
-                    >
-                      <th
-                        scope="row"
-                        className={cn(
-                          'sticky left-0 z-10 border-b border-ink-900/6 p-4 text-[11px] font-medium',
-                          row.isDifference ? 'bg-amber-50/80 text-ink-900/70' : 'bg-white text-ink-900/45',
-                        )}
-                      >
-                        {row.label}
-                        {row.isDifference && (
-                          <span className="ml-1.5 inline-block h-1.5 w-1.5 rounded-full bg-amber-500" />
-                        )}
-                      </th>
-                      {row.values.map((value, index) => (
-                        <td
-                          key={`${row.key}-${index}`}
+                      </div>
+                    </div>
+
+                    <dl className="mt-auto divide-y divide-ink-900/6 border-t border-ink-900/6">
+                      {rows.map((row) => {
+                        const value = row.values[index];
+                        return (
+                          <div
+                            key={row.key}
+                            className={cn(
+                              'flex items-start justify-between gap-3 px-4 py-2.5',
+                              row.isDifference && 'bg-amber-50/45',
+                            )}
+                          >
+                            <dt className="flex min-w-0 items-center gap-1.5 text-[10px] text-ink-900/45">
+                              {row.isDifference && (
+                                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+                              )}
+                              <span className="truncate">{row.label}</span>
+                            </dt>
+                            <dd
+                              className={cn(
+                                'shrink-0 text-right text-[11px]',
+                                value === '—' ? 'text-ink-900/25' : 'font-medium text-ink-900/75',
+                              )}
+                            >
+                              {value === '—' ? t('store:comparePage.specMissing') : value}
+                            </dd>
+                          </div>
+                        );
+                      })}
+                      {rows.length === 0 && (
+                        <p className="px-4 py-6 text-center text-[11px] text-ink-900/40">
+                          {t('compare.same')}
+                        </p>
+                      )}
+                    </dl>
+                  </article>
+                ))}
+              </div>
+
+              <div className="hidden overflow-hidden rounded-3xl border border-ink-900/8 bg-white lg:block">
+                <div className="overflow-x-auto">
+                  <table className="w-full min-w-[640px] border-collapse text-left">
+                    <thead>
+                      <tr>
+                        <th className="sticky left-0 z-10 w-36 border-b border-ink-900/8 bg-white p-3 align-bottom xl:w-44 xl:p-4">
+                          <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-ink-900/35">
+                            {t('compare.feature')}
+                          </span>
+                        </th>
+                        {products.map((product) => (
+                          <th
+                            key={product.id}
+                            className="min-w-[190px] border-b border-l border-ink-900/8 p-3 align-top xl:min-w-[210px] xl:p-4"
+                          >
+                            <div className="relative">
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  remove(product.id);
+                                  push(t('toast.compareRemoved'), 'info');
+                                }}
+                                className="absolute -right-1 -top-1 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-ink-900/5 text-ink-900/40 transition hover:bg-rose-50 hover:text-rose-500"
+                                aria-label={t('store:comparePage.removeProduct', { name: product.name })}
+                              >
+                                <X size={13} />
+                              </button>
+                              <Link to={`/product/${product.slug}`} className="block overflow-hidden rounded-xl bg-[#EDF0F6]">
+                                <img
+                                  src={product.images[0]}
+                                  alt={product.name}
+                                  className="aspect-[4/3] w-full object-cover transition duration-500 hover:scale-105"
+                                />
+                              </Link>
+                              <p className="mt-2 text-[9px] uppercase tracking-[0.12em] text-ink-900/35">
+                                {product.brand}
+                              </p>
+                              <Link
+                                to={`/product/${product.slug}`}
+                                className="mt-0.5 block text-[13px] font-medium leading-snug hover:text-electric-600"
+                              >
+                                {product.name}
+                              </Link>
+                              <div className="mt-1.5">
+                                <Price price={product.price} originalPrice={product.originalPrice} size="sm" />
+                              </div>
+                              <div className="mt-1.5 flex flex-wrap gap-2">
+                                <Rating value={product.rating} showValue={false} />
+                                <AvailabilityBadge availability={product.availability} />
+                              </div>
+                              <button
+                                type="button"
+                                disabled={product.availability === 'out_of_stock'}
+                                onClick={() => {
+                                  addToCart(product.id, 1);
+                                  push(t('toast.addedToCart', { name: product.name }), 'success');
+                                }}
+                                className="mt-2.5 flex h-9 w-full items-center justify-center gap-1.5 rounded-full bg-ink-900 text-[11px] font-medium text-white transition hover:bg-ink-800 disabled:pointer-events-none disabled:opacity-40"
+                              >
+                                <ShoppingBag size={12} /> {t('actions.addToCart')}
+                              </button>
+                            </div>
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {rows.map((row) => (
+                        <tr
+                          key={row.key}
                           className={cn(
-                            'border-b border-l border-ink-900/6 p-4 text-[12px]',
-                            value === '—' ? 'text-ink-900/25' : 'text-ink-900/70',
+                            'transition hover:bg-ink-900/[0.015]',
+                            row.isDifference && 'bg-amber-50/40',
                           )}
                         >
-                          {value === '—' ? t('store:comparePage.specMissing') : value}
-                        </td>
+                          <th
+                            scope="row"
+                            className={cn(
+                              'sticky left-0 z-10 border-b border-ink-900/6 p-3 text-[10.5px] font-medium xl:p-4',
+                              row.isDifference
+                                ? 'bg-amber-50/90 text-ink-900/70'
+                                : 'bg-white text-ink-900/45',
+                            )}
+                          >
+                            <span className="flex items-center gap-1.5">
+                              {row.isDifference && (
+                                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+                              )}
+                              {row.label}
+                            </span>
+                          </th>
+                          {row.values.map((value, index) => (
+                            <td
+                              key={`${row.key}-${index}`}
+                              className={cn(
+                                'border-b border-l border-ink-900/6 p-3 text-[11.5px] xl:p-4',
+                                value === '—'
+                                  ? 'text-ink-900/25'
+                                  : row.isDifference
+                                    ? 'font-medium text-ink-900/80'
+                                    : 'text-ink-900/65',
+                              )}
+                            >
+                              {value === '—' ? t('store:comparePage.specMissing') : value}
+                            </td>
+                          ))}
+                        </tr>
                       ))}
-                    </tr>
-                  ))}
-                  {rows.length === 0 && (
-                    <tr>
-                      <td
-                        colSpan={products.length + 1}
-                        className="p-10 text-center text-[12px] text-ink-900/40"
-                      >
-                        {t('compare.same')}
-                      </td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
-            </div>
+                      {rows.length === 0 && (
+                        <tr>
+                          <td
+                            colSpan={products.length + 1}
+                            className="p-10 text-center text-[12px] text-ink-900/40"
+                          >
+                            {t('compare.same')}
+                          </td>
+                        </tr>
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </>
           )}
         </div>
 

@@ -87,7 +87,7 @@ export function InboxTab({ query }: { query: string }) {
         }
       />
 
-      <div className="flex items-center gap-1 rounded-full border border-ink-900/8 bg-white p-1">
+      <div className="flex max-w-full items-center gap-1 overflow-x-auto rounded-full border border-ink-900/8 bg-white p-1">
         {[
           { id: 'messages', label: t('inbox.tabs.messages'), icon: MessageSquare, count: messages.length },
           { id: 'requests', label: t('inbox.tabs.requests'), icon: Ticket, count: requests.length },
@@ -97,7 +97,7 @@ export function InboxTab({ query }: { query: string }) {
             type="button"
             onClick={() => setView(id as 'messages' | 'requests')}
             className={cn(
-              'flex h-8 items-center gap-1.5 rounded-full px-3.5 text-[11px] font-medium transition',
+              'flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3.5 text-[11px] font-medium transition',
               view === id ? 'bg-ink-900 text-white' : 'text-ink-900/50 hover:text-ink-900',
             )}
           >
@@ -190,7 +190,7 @@ export function InboxTab({ query }: { query: string }) {
                       {selected.name} · {selected.email}
                     </p>
                   </div>
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex flex-wrap items-center gap-1.5">
                     {(['open', 'pending', 'resolved'] as const).map((status) => (
                       <button
                         key={status}
@@ -267,7 +267,7 @@ export function InboxTab({ query }: { query: string }) {
           ) : null}
         </div>
       ) : (
-        <div className="grid gap-3 grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
           {requests.map((request) => {
             const Icon = requestIcons[request.type] ?? Ticket;
             return (

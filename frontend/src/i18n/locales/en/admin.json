@@ -7,6 +7,7 @@
     "customers": "Customers",
     "inbox": "Inbox",
     "analytics": "Analytics",
+    "accounting": "Accounting",
     "settings": "Settings"
   },
   "shell": {
@@ -151,6 +152,15 @@
       "session": "Avg. session",
       "customers": "CRM customers",
       "reviews": "New reviews"
+    },
+    "finance": {
+      "title": "Finance at a glance",
+      "subtitle": "Current period · synced from accounting",
+      "netProfit": "Net profit",
+      "vat": "VAT payable",
+      "receivables": "Open receivables",
+      "expenses": "Operating costs",
+      "open": "Open accounting"
     }
   },
   "orders": {
@@ -416,6 +426,117 @@
       "twoText": "Returning customers order 2.4× more often. An early-access newsletter for account holders could raise retention by 6%.",
       "threeTitle": "Accessories carry higher margin",
       "threeText": "Accessories achieve 46% margin with shorter delivery times. Stronger placement in checkout can raise profit per order."
+    }
+  },
+  "accounting": {
+    "eyebrow": "Finance",
+    "title": "Accounting",
+    "subtitle": "Revenue, costs and liquidity – the numbers behind the shop.",
+    "rangeLabel": "Period",
+    "range": {
+      "m3": "3 months",
+      "m6": "6 months",
+      "m12": "12 months"
+    },
+    "export": "Export CSV",
+    "kpi": {
+      "netRevenue": "Net revenue",
+      "netRevenueHint": "excl. VAT and refunds",
+      "grossProfit": "Gross profit",
+      "grossProfitHint": "after cost of goods",
+      "expenses": "Operating costs",
+      "expensesHint": "people, tools, marketing",
+      "netProfit": "Net profit",
+      "netProfitHint": "after tax"
+    },
+    "cashflow": {
+      "title": "Revenue & result",
+      "subtitle": "Monthly movement in the period",
+      "revenue": "Revenue",
+      "profit": "Result"
+    },
+    "vat": {
+      "title": "VAT",
+      "subtitle": "Current period",
+      "payable": "VAT payable",
+      "output": "Output VAT",
+      "input": "Input VAT",
+      "note": "Advance payment due on the 10th of the following month. All amounts include 19% VAT."
+    },
+    "payouts": {
+      "title": "Payouts",
+      "subtitle": "Upcoming settlements",
+      "pending": "Pending",
+      "settled": "Settled"
+    },
+    "pnl": {
+      "title": "Profit & loss",
+      "subtitle": "Consolidated for the selected period",
+      "revenue": "Revenue",
+      "refunds": "Refunds & discounts",
+      "netRevenue": "Net revenue",
+      "cogs": "Cost of goods",
+      "grossProfit": "Gross profit",
+      "opex": "Operating costs",
+      "marketing": "Marketing",
+      "ebit": "Operating result",
+      "tax": "Tax (30%)",
+      "netProfit": "Net income",
+      "margin": "Net margin"
+    },
+    "expenses": {
+      "title": "Cost structure",
+      "subtitle": "Share of total costs",
+      "center": "Costs",
+      "cogs": "Cost of goods",
+      "personnel": "People",
+      "marketing": "Marketing",
+      "tools": "Tools & software",
+      "logistics": "Logistics",
+      "refunds": "Refunds"
+    },
+    "invoices": {
+      "title": "Invoices",
+      "subtitle": "Open items and incoming payments",
+      "count": "{{count}} invoices",
+      "all": "All",
+      "table": {
+        "invoice": "Invoice",
+        "customer": "Customer",
+        "issued": "Issued",
+        "due": "Due",
+        "amount": "Amount",
+        "status": "Status"
+      },
+      "status": {
+        "paid": "Paid",
+        "open": "Open",
+        "overdue": "Overdue",
+        "draft": "Draft"
+      },
+      "empty": "No invoices for this selection."
+    },
+    "aging": {
+      "title": "Receivables aging",
+      "subtitle": "Due date by days",
+      "receivables": "Receivables",
+      "overdue": "overdue",
+      "current": "Not due",
+      "d14": "1–14 days",
+      "d30": "15–30 days",
+      "d60": "31–60 days",
+      "d90": "60+ days"
+    },
+    "summary": {
+      "title": "Key figures",
+      "subtitle": "Liquidity & receivables management",
+      "orders": "Orders total",
+      "orderRevenue": "Order revenue",
+      "dso": "Avg. payment term",
+      "runway": "Liquidity runway",
+      "days": "days",
+      "months": "months",
+      "note": "Calculated automatically from orders and invoices."
     }
   },
   "settings": {

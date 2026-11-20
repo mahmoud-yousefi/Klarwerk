@@ -197,6 +197,7 @@
     "subtitle": "The most important features, side by side.",
     "emptyTitle": "No products in the comparison yet",
     "emptyText": "Pick up to four products from the catalog to see them side by side.",
+    "mobileHint": "Each product lists its key specs below – highlighted specs differ between products.",
     "addProducts": "Choose products",
     "filterDifferences": "Show differences only",
     "removeProduct": "Remove {{name}} from comparison",

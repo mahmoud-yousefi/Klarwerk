@@ -165,15 +165,68 @@ export function ProductsTab({ query }: { query: string }) {
           </div>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="divide-y divide-ink-900/[0.045] md:hidden">
+          {filtered.slice(0, 30).map((product) => {
+            const isCustom = customIds.has(product.id);
+            return (
+              <div key={product.id} className="flex items-center gap-3 p-3.5">
+                <img
+                  src={product.images[0]}
+                  alt=""
+                  className="h-11 w-11 shrink-0 rounded-lg border border-ink-900/8 object-cover"
+                />
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-[11.5px] font-semibold text-ink-900">{product.name}</p>
+                  <p className="truncate text-[9.5px] text-ink-900/35">
+                    {product.brand} · {product.sku}
+                  </p>
+                  <div className="mt-1 flex flex-wrap items-center gap-1.5">
+                    <span className="text-[11px] font-semibold tabular-nums">
+                      {formatPrice(product.price, locale)}
+                    </span>
+                    <span
+                      className={
+                        product.stock <= 8
+                          ? 'rounded-full bg-amber-500/10 px-1.5 py-0.5 text-[9px] font-semibold tabular-nums text-amber-700'
+                          : 'text-[9px] tabular-nums text-ink-900/45'
+                      }
+                    >
+                      {product.stock} {t('products.table.stock')}
+                    </span>
+                    {isCustom && (
+                      <span className="rounded-full bg-violet-500/10 px-1.5 py-0.5 text-[8.5px] font-semibold text-violet-600">
+                        {t('products.source.custom')}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                {isCustom && (
+                  <button
+                    type="button"
+                    onClick={() => deleteProduct(product.id)}
+                    className="shrink-0 rounded-full p-2 text-ink-900/25 transition hover:bg-rose-50 hover:text-rose-500"
+                    aria-label={t('common.delete')}
+                  >
+                    <Trash2 size={14} />
+                  </button>
+                )}
+              </div>
+            );
+          })}
+          {filtered.length === 0 && (
+            <p className="px-4 py-10 text-center text-[12px] text-ink-900/40">{t('products.empty')}</p>
+          )}
+        </div>
+
+        <div className="hidden overflow-x-auto md:block">
           <table className="w-full min-w-0 text-left">
             <thead>
               <tr className="border-b border-ink-900/6 text-[8.5px] uppercase tracking-[0.12em] text-ink-900/35">
                 <th className="px-4 py-2.5 font-medium">{t('products.table.product')}</th>
-                <th className="px-3 py-2.5 font-medium">{t('products.table.category')}</th>
+                <th className="hidden px-3 py-2.5 font-medium lg:table-cell">{t('products.table.category')}</th>
                 <th className="px-3 py-2.5 text-right font-medium">{t('products.table.price')}</th>
                 <th className="px-3 py-2.5 text-right font-medium">{t('products.table.stock')}</th>
-                <th className="px-3 py-2.5 font-medium">{t('products.table.source')}</th>
+                <th className="hidden px-3 py-2.5 font-medium xl:table-cell">{t('products.table.source')}</th>
                 <th className="w-10 px-3 py-2.5" />
               </tr>
             </thead>
@@ -193,14 +246,14 @@ export function ProductsTab({ query }: { query: string }) {
                           className="h-9 w-9 shrink-0 rounded-lg border border-ink-900/8 object-cover"
                         />
                         <div className="min-w-0">
-                          <p className="truncate font-medium text-ink-900">{product.name}</p>
+                          <p className="max-w-[190px] truncate font-medium text-ink-900">{product.name}</p>
                           <p className="text-[9.5px] text-ink-900/35">
                             {product.brand} · {product.sku}
                           </p>
                         </div>
                       </div>
                     </td>
-                    <td className="px-3 py-2.5 text-ink-900/55">{categoryName}</td>
+                    <td className="hidden px-3 py-2.5 text-ink-900/55 lg:table-cell">{categoryName}</td>
                     <td className="px-3 py-2.5 text-right font-semibold tabular-nums">
                       {formatPrice(product.price, locale)}
                     </td>
@@ -215,7 +268,7 @@ export function ProductsTab({ query }: { query: string }) {
                         {product.stock}
                       </span>
                     </td>
-                    <td className="px-3 py-2.5">
+                    <td className="hidden px-3 py-2.5 xl:table-cell">
                       <span
                         className={
                           isCustom
@@ -246,7 +299,7 @@ export function ProductsTab({ query }: { query: string }) {
         </div>
 
         {filtered.length === 0 && (
-          <p className="px-4 py-10 text-center text-[12px] text-ink-900/40">{t('products.empty')}</p>
+          <p className="hidden px-4 py-10 text-center text-[12px] text-ink-900/40 md:block">{t('products.empty')}</p>
         )}
       </Panel>
 
