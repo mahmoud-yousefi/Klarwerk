@@ -1,6 +1,8 @@
 {
   "nav": {
     "overview": "Overview",
+    "operations": "Operations",
+    "inventory": "Inventory",
     "orders": "Orders",
     "products": "Products",
     "categories": "Categories",
@@ -9,6 +11,14 @@
     "analytics": "Analytics",
     "accounting": "Accounting",
     "settings": "Settings"
+  },
+  "navGroups": {
+    "control": "Control",
+    "operations": "Operations",
+    "commerce": "Commerce",
+    "service": "Service",
+    "analytics": "Analytics",
+    "system": "System"
   },
   "shell": {
     "workspace": "Workspace",
@@ -147,6 +157,23 @@
       "title": "Stock alert",
       "subtitle": "{{count}} products below threshold",
       "empty": "All stock levels healthy"
+    },
+    "operations": {
+      "title": "Operations in motion",
+      "subtitle": "Fulfilment pipeline and warehouse load today",
+      "open": "Open operations",
+      "units": "units",
+      "exceptions": "{{count}} exceptions need attention"
+    },
+    "inventory": {
+      "title": "Inventory at a glance",
+      "subtitle": "All sites, zones and replenishment",
+      "cta": "Open inventory",
+      "units": "Units in stock",
+      "value": "Stock value",
+      "reorder": "To reorder",
+      "incoming": "Incoming",
+      "note": "Average cover {{days}} days. Stock updates instantly with every warehouse booking."
     },
     "foot": {
       "session": "Avg. session",
@@ -537,6 +564,204 @@
       "days": "days",
       "months": "months",
       "note": "Calculated automatically from orders and invoices."
+    }
+  },
+  "operations": {
+    "eyebrow": "Operations Control",
+    "title": "Operations",
+    "subtitle": "Orders, intake and dispatch in one continuous process.",
+    "live": "Live",
+    "shiftLabel": "Shift 2 · 08:00–16:00",
+    "kpi": {
+      "open": "Open orders",
+      "openHint": "in the fulfilment pipeline",
+      "sla": "SLA rate",
+      "slaHint": "deliveries within 24 h",
+      "cycle": "Avg. cycle time",
+      "cycleHint": "intake to dispatch",
+      "exceptions": "Exceptions",
+      "exceptionsHint": "need attention"
+    },
+    "pipeline": {
+      "title": "Fulfilment pipeline",
+      "subtitle": "From paid order to carrier handover",
+      "deliveredToday": "{{count}} delivered today",
+      "overdue": "SLA breached",
+      "dueIn": "{{time}} left",
+      "express": "Express",
+      "standard": "Standard",
+      "advance": "Advance",
+      "empty": "No orders",
+      "stage": {
+        "received": "Received",
+        "picking": "Picking",
+        "packing": "Packing",
+        "labeling": "Labelling",
+        "dispatch": "Dispatch",
+        "delivered": "Delivered",
+        "exception": "Exception"
+      }
+    },
+    "network": {
+      "title": "Fulfilment network",
+      "subtitle": "Hubs, delivery regions and active shipments",
+      "active": "active",
+      "mapLabel": "Map of Germany with hubs and delivery regions",
+      "onTime": "Delivered on time"
+    },
+    "warehouse": {
+      "openMap": "Warehouse map",
+      "jobs": "orders"
+    },
+    "carrier": {
+      "title": "Carrier performance",
+      "subtitle": "On-time rate and transit time over the last 7 days",
+      "transit": "Avg. transit",
+      "volume": "shipments",
+      "target": "Target: 97 % on-time delivery across all carriers."
+    },
+    "shift": {
+      "title": "Shift plan",
+      "subtitle": "In the warehouse today",
+      "staff": "staff",
+      "pickRateUnit": "picks / hr",
+      "active": "Running",
+      "next": "Later"
+    },
+    "exceptions": {
+      "title": "Exceptions & returns",
+      "subtitle": "What needs attention today",
+      "empty": "No open exceptions",
+      "resolve": "Resolve",
+      "reason": {
+        "address": "Check address",
+        "stock": "Stock missing",
+        "damage": "Damaged",
+        "customs": "Customs paperwork"
+      }
+    },
+    "delivered": {
+      "title": "Completed today",
+      "subtitle": "{{count}} shipments handed over successfully",
+      "empty": "No handovers yet today."
+    }
+  },
+  "inventory": {
+    "eyebrow": "Warehouse & stock",
+    "title": "Inventory",
+    "subtitle": "Stock, zones and goods intake across all sites.",
+    "sync": "Stock synced",
+    "actions": {
+      "receive": "Book goods receipt"
+    },
+    "kpi": {
+      "skus": "Active SKUs",
+      "skusHint": "across three sites",
+      "units": "Units in stock",
+      "unitsHint": "across {{count}} sites",
+      "value": "Stock value",
+      "valueHint": "Avg. cover {{days}} days",
+      "reorder": "To reorder",
+      "reorderHint": "{{count}} critical or unavailable"
+    },
+    "map": {
+      "title": "Warehouse map",
+      "subtitle": "Zones, occupancy and goods intake",
+      "mapLabel": "Floor plan {{name}}",
+      "units": "Units",
+      "zones": "Zones",
+      "temperature": "Climate",
+      "occupied": "Occupancy",
+      "zoneKinds": {
+        "receiving": "Receiving",
+        "storage": "Storage",
+        "picking": "Picking",
+        "packing": "Packing",
+        "dispatch": "Dispatch",
+        "returns": "Returns"
+      }
+    },
+    "stock": {
+      "title": "Stock list",
+      "subtitle": "{{count}} SKUs across {{warehouses}} sites",
+      "showing": "{{shown}} of {{total}}",
+      "search": "Product, SKU or bin …",
+      "warehouse": "Site",
+      "allWarehouses": "All sites",
+      "status": "Status",
+      "allStatuses": "All statuses",
+      "product": "Product",
+      "location": "Location",
+      "onHand": "On hand",
+      "reserved": "Reserved",
+      "available": "Available",
+      "cover": "Cover",
+      "incoming": "Incoming",
+      "statusLabel": "Status",
+      "actions": "Action",
+      "restock": "Restock",
+      "showMore": "Show more",
+      "empty": "No stock for this selection.",
+      "statuses": {
+        "healthy": "Healthy",
+        "low": "Low",
+        "critical": "Critical",
+        "out": "Unavailable",
+        "overstock": "Overstock"
+      }
+    },
+    "restock": {
+      "eyebrow": "Replenish stock",
+      "title": "Restock {{name}}",
+      "subtitle": "Book a goods receipt directly – stock and movement update instantly.",
+      "current": "Current",
+      "reorder": "Reorder point",
+      "suggested": "Suggested",
+      "quantity": "Quantity",
+      "warehouse": "Target site",
+      "cancel": "Cancel",
+      "submit": "Book {{count}} units",
+      "success": "Booked {{count}} units for “{{name}}”.",
+      "invalid": "Please enter a quantity greater than 0."
+    },
+    "suppliers": {
+      "title": "Suppliers",
+      "subtitle": "Lead time, quality and purchasing volume",
+      "lead": "Lead time",
+      "onTime": "On time",
+      "quality": "Quality"
+    },
+    "orders": {
+      "title": "Purchase orders & intake",
+      "subtitle": "Open purchase orders and deliveries",
+      "openCount": "{{count}} open",
+      "units": "Units",
+      "value": "Value",
+      "eta": "ETA",
+      "receive": "Book",
+      "received": "Booked",
+      "status": {
+        "draft": "Draft",
+        "ordered": "Ordered",
+        "in_transit": "In transit",
+        "received": "Received",
+        "delayed": "Delayed"
+      }
+    },
+    "movements": {
+      "title": "Stock movements",
+      "subtitle": "Latest warehouse bookings",
+      "empty": "No movements yet.",
+      "types": {
+        "inbound": "Goods receipt",
+        "outbound": "Goods issue",
+        "transfer": "Transfer",
+        "adjustment": "Adjustment",
+        "return": "Return"
+      }
+    },
+    "toast": {
+      "received": "Goods receipt {{id}} booked – {{count}} units put away."
     }
   },
   "settings": {

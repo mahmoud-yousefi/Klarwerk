@@ -2,6 +2,7 @@ import { Hero } from '@/components/home/Hero';
 import { BrandMarquee } from '@/components/home/BrandMarquee';
 import { Collections } from '@/components/home/Collections';
 import { TrendingSection } from '@/components/home/TrendingSection';
+import { NewArrivalsSection } from '@/components/home/NewArrivalsSection';
 import { Spotlight } from '@/components/home/Spotlight';
 import { CategoryGrid } from '@/components/home/CategoryGrid';
 import { AdvisorTeaser } from '@/components/home/AdvisorTeaser';
@@ -16,6 +17,7 @@ export function HomePage() {
       <BrandMarquee />
       <Collections />
       <TrendingSection />
+      <NewArrivalsSection />
       <Spotlight />
       <CategoryGrid />
       <AdvisorTeaser />

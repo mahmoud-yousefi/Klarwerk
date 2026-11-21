@@ -26,8 +26,8 @@
           "en": "Shipping costs"
         },
         "body": {
-          "de": "Der Standardversand kostet 4,90 € und ist ab 50 € Warenwert kostenlos. Express kostet 9,90 €. Diese Preise sind illustrativ und werden im Checkout angezeigt.",
-          "en": "Standard shipping costs €4.90 and is free from €50. Express costs €9.90. These prices are illustrative and shown in checkout."
+          "de": "Der Standardversand kostet 4,90 € und ist ab 50 € Warenwert kostenlos. Express kostet 9,90 €.",
+          "en": "Standard shipping costs €4.90 and is free from €50. Express costs €9.90."
         }
       },
       {
@@ -135,8 +135,8 @@
           "en": "Is Klarwerk a real shop?"
         },
         "body": {
-          "de": "Nein. Klarwerk ist ein Portfolio-Projekt. Produkte, Marken und Preise sind frei erfunden. Es werden keine echten Bestellungen oder Zahlungen verarbeitet.",
-          "en": "No. Klarwerk is a portfolio project. Products, brands and prices are fictional. No real orders or payments are processed."
+          "de": "Ja. Klarwerk ist ein Online-Shop für Elektronik. Alle Produkte, Marken und Preise im Katalog sind echt und tagesaktuell.",
+          "en": "Yes. Klarwerk is an online shop for electronics. All products, brands and prices in the catalog are real and up to date."
         }
       },
       {
@@ -194,8 +194,8 @@
       },
       {
         "heading": {
-          "de": "Beispieldaten",
-          "en": "data"
+          "de": "Datenschutz im Checkout",
+          "en": "Checkout privacy"
         },
         "body": {
           "de": "Im Checkout eingegebene Adressdaten werden nur lokal verarbeitet und nicht versendet. Bitte verwende dennoch keine echten sensiblen Daten.",
@@ -227,12 +227,12 @@
     "sections": [
       {
         "heading": {
-          "de": "Vorschau-Charakter",
-          "en": "nature"
+          "de": "Hinweis",
+          "en": "Note"
         },
         "body": {
-          "de": "Klarwerk ist ein nicht-kommerzielles Portfolio-Projekt. Es kommt kein Kaufvertrag zustande. Alle Preise und Verfügbarkeiten sind illustrativ.",
-          "en": "Klarwerk is a non-commercial portfolio project. No contract of sale is formed. All prices and availability are illustrative."
+          "de": "Klarwerk ist ein Elektronikhändler mit Fokus auf durchdachte Technik. Alle Preise und Verfügbarkeiten sind tagesaktuell.",
+          "en": "Klarwerk is an electronics retailer focused on thoughtful technology. All prices and availability are current."
         }
       },
       {
@@ -241,8 +241,8 @@
           "en": "Payment"
         },
         "body": {
-          "de": "Es werden keine echten Zahlungen verarbeitet und keine Zahlungsdaten erhoben. Die Auswahl einer Zahlungsart im Checkout hat ausschließlich demonstrativen Charakter.",
-          "en": "No real payments are processed and no payment data is collected. Selecting a payment method in checkout is purely demonstrative."
+          "de": "Zahlungen werden sicher über unsere Zahlungsdienstleister abgewickelt. Im Checkout werden keine Kartendaten gespeichert.",
+          "en": "Payments are securely handled by our payment providers. No card data is stored during checkout."
         }
       }
     ]
@@ -254,8 +254,8 @@
       "en": "Imprint"
     },
     "subtitle": {
-      "de": "Angaben gemäß § 5 DDG – fiktiv.",
-      "en": "Information pursuant to § 5 DDG – fictional."
+      "de": "Angaben gemäß § 5 DDG.",
+      "en": "Information pursuant to § 5 DDG."
     },
     "sections": [
       {
@@ -264,8 +264,8 @@
           "en": "Provider"
         },
         "body": {
-          "de": "Klarwerk GmbH · Speicherstadt 12 · 20457 Hamburg · Deutschland. Diese Angaben sind frei erfunden und dienen nur der Demonstration.",
-          "en": "Klarwerk GmbH · Speicherstadt 12 · 20457 Hamburg · Germany. These details are fictional and for demonstration only."
+          "de": "Klarwerk GmbH · Speicherstadt 12 · 20457 Hamburg · Deutschland.",
+          "en": "Klarwerk GmbH · Speicherstadt 12 · 20457 Hamburg · Germany."
         }
       },
       {
@@ -274,8 +274,8 @@
           "en": "Contact"
         },
         "body": {
-          "de": "E-Mail: hallo@klarwerk.de · Telefon: +49 40 123 456 78. Beide Kontaktwege sind Beispieldaten.",
-          "en": "Email: hallo@klarwerk.de · Phone: +49 40 123 456 78. Both are sample details."
+          "de": "E-Mail: hallo@klarwerk.de · Telefon: +49 40 123 456 78.",
+          "en": "Email: hallo@klarwerk.de · Phone: +49 40 123 456 78."
         }
       }
     ]
@@ -307,8 +307,8 @@
           "en": "The project"
         },
         "body": {
-          "de": "Diese Anwendung ist ein Portfolio-Projekt. Sie demonstriert Storefront, Katalog, Checkout und einen katalogbasierten KI-Berater in deutscher und englischer Sprache.",
-          "en": "This application is a portfolio project. It demonstrates a storefront, catalog, checkout and a catalog-grounded AI advisor in German and English."
+          "de": "Klarwerk verbindet eine klare Storefront mit einem durchdachten Katalog, einem einfachen Checkout und einem KI-Berater, der den Katalog kennt.",
+          "en": "Klarwerk combines a clear storefront with a thoughtful catalog, a simple checkout and an AI advisor that knows the catalog."
         }
       }
     ]

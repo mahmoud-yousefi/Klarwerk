@@ -208,9 +208,6 @@ export default function CheckoutPage() {
           </span>
         </div>
 
-        <div className="mt-5 rounded-xl border border-amber-500/20 bg-amber-50 px-4 py-2.5 text-[11px] text-amber-800">
-          {t('meta.demoNotice')}
-        </div>
 
         <div className="mt-6 flex flex-wrap items-center gap-1.5 border-b border-ink-900/8 pb-4">
           {steps.map((entry, index) => {
@@ -355,7 +352,6 @@ export default function CheckoutPage() {
                     {t('address.continue')} <ArrowRight size={14} />
                   </button>
                 </div>
-                <p className="mt-2 text-[10px] text-ink-900/30">{t('address.demoData')}</p>
               </form>
             )}
 
@@ -701,7 +697,6 @@ export default function CheckoutPage() {
                   {t('summary.promoApply')}
                 </button>
               </div>
-              <p className="mt-1.5 text-[9px] text-ink-900/30">{t('summary.promoDemo')}</p>
 
               <p className="mt-4 flex items-center justify-center gap-1.5 rounded-lg bg-emerald-50 py-2 text-[10px] font-medium text-emerald-700">
                 <Lock size={10} /> {t('summary.secureNote')}

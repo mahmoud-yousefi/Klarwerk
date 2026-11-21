@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import {
   ArrowUpRight,
   BadgeEuro,
+  Boxes,
   CreditCard,
   Gauge,
   Inbox,
@@ -14,10 +15,13 @@ import {
   Target,
   TrendingUp,
   Users,
+  Workflow,
 } from 'lucide-react';
 import { useAdminStore } from '@/stores/admin.store';
 import { useAuthStore } from '@/stores/auth.store';
 import { products as catalogProducts } from '@/lib/catalog';
+import { buildStockRows, stockSummary, warehouseUsage } from '@/lib/operations';
+import { warehouses } from '@/data/operationsSeed';
 import { formatPrice } from '@/lib/utils';
 import {
   channelPerformance,
@@ -42,6 +46,7 @@ import {
 } from '@/components/admin/Charts';
 import { Panel, StatCard, StatusBadge } from '@/components/admin/AdminUi';
 import { MessageBadge } from '@/components/admin/AdminUi';
+import { Meter } from '@/components/admin/OperationsUi';
 
 const sparkSets = [
   [18, 22, 20, 26, 24, 30, 28, 35, 33, 39, 42, 47],
@@ -63,7 +68,19 @@ export function OverviewTab({ onNavigate }: { onNavigate: (tab: string) => void 
   const settings = useAdminStore((state) => state.settings);
   const reviews = useAdminStore((state) => state.reviews);
   const updateMessageStatus = useAdminStore((state) => state.updateMessageStatus);
+  const fulfillmentJobs = useAdminStore((state) => state.fulfillmentJobs);
+  const purchaseOrders = useAdminStore((state) => state.purchaseOrders);
+  const stockOverrides = useAdminStore((state) => state.stockOverrides);
   const user = useAuthStore((state) => state.user);
+
+  const stockRows = useMemo(
+    () => buildStockRows(stockOverrides, purchaseOrders),
+    [stockOverrides, purchaseOrders],
+  );
+  const stock = useMemo(() => stockSummary(stockRows), [stockRows]);
+  const warehouseLoads = useMemo(() => warehouseUsage(stockRows, warehouses), [stockRows]);
+  const openJobs = fulfillmentJobs.filter((job) => job.stage !== 'delivered');
+  const openExceptions = fulfillmentJobs.filter((job) => job.stage === 'exception');
 
   const points = useMemo(() => groupRevenue(orders, 14), [orders]);
   const revenue = points.reduce((sum, point) => sum + point.revenue, 0);
@@ -325,6 +342,157 @@ export function OverviewTab({ onNavigate }: { onNavigate: (tab: string) => void 
 
       <div className="grid gap-4 xl:grid-cols-[1.35fr_1fr]">
         <Panel
+          title={t('overview.operations.title')}
+          subtitle={t('overview.operations.subtitle')}
+          action={
+            <button
+              type="button"
+              onClick={() => onNavigate('operations')}
+              className="inline-flex items-center gap-1 rounded-full border border-ink-900/10 px-3 py-1.5 text-[10px] font-medium text-ink-900/55 transition hover:border-ink-900/25 hover:text-ink-900"
+            >
+              <Workflow size={11} /> {t('overview.operations.open')}
+            </button>
+          }
+        >
+          <div className="grid grid-cols-5 gap-1.5">
+            {[
+              { key: 'received', stage: 'received' as const, className: 'bg-electric-500' },
+              { key: 'picking', stage: 'picking' as const, className: 'bg-violet-500' },
+              { key: 'packing', stage: 'packing' as const, className: 'bg-[#4FA3A5]' },
+              { key: 'labeling', stage: 'labeling' as const, className: 'bg-[#C28A3D]' },
+              { key: 'dispatch', stage: 'dispatch' as const, className: 'bg-ink-900' },
+            ].map((entry) => {
+              const count = fulfillmentJobs.filter((job) => job.stage === entry.stage).length;
+              return (
+                <div
+                  key={entry.key}
+                  className="rounded-lg border border-ink-900/6 bg-ink-900/[0.015] px-1 py-1.5 text-center"
+                >
+                  <span className={`mx-auto block h-1.5 w-1.5 rounded-full ${entry.className}`} />
+                  <p className="mt-1 text-[13px] font-semibold tabular-nums text-ink-900">
+                    {count}
+                  </p>
+                  <p className="truncate text-[7px] uppercase tracking-[0.05em] text-ink-900/35">
+                    {t(`operations.pipeline.stage.${entry.stage}`)}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+          <div className="mt-3 flex h-1.5 overflow-hidden rounded-full bg-ink-900/6">
+            {[
+              { count: fulfillmentJobs.filter((job) => job.stage === 'picking').length, className: 'bg-violet-500' },
+              { count: fulfillmentJobs.filter((job) => job.stage === 'packing').length, className: 'bg-[#4FA3A5]' },
+              { count: fulfillmentJobs.filter((job) => job.stage === 'labeling').length, className: 'bg-[#C28A3D]' },
+              { count: fulfillmentJobs.filter((job) => job.stage === 'dispatch').length, className: 'bg-ink-900' },
+              { count: openExceptions.length, className: 'bg-[#D9587A]' },
+            ].map((entry, index) => (
+              <span
+                key={index}
+                className={entry.className}
+                style={{ width: `${(entry.count / Math.max(openJobs.length, 1)) * 100}%` }}
+              />
+            ))}
+          </div>
+          <div className="mt-3 grid gap-2 sm:grid-cols-3">
+            {warehouseLoads.map(({ warehouse, percent, units }) => (
+              <div key={warehouse.id} className="rounded-lg border border-ink-900/6 px-2 py-1.5">
+                <div className="flex items-center justify-between gap-1">
+                  <span className="truncate text-[9px] font-medium text-ink-900/60">
+                    {warehouse.id} · {warehouse.city}
+                  </span>
+                  <span className="text-[9px] font-semibold tabular-nums text-ink-900/65">
+                    {percent}%
+                  </span>
+                </div>
+                <Meter
+                  percent={percent}
+                  tone={percent >= 88 ? 'rose' : percent >= 70 ? 'amber' : 'teal'}
+                  className="mt-1 h-1"
+                />
+                <p className="mt-0.5 text-[8px] tabular-nums text-ink-900/30">
+                  {units.toLocaleString(locale === 'de' ? 'de-DE' : 'en-GB')} {t('overview.operations.units')}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-2 flex items-center gap-1.5 rounded-lg bg-rose-500/[0.06] px-2 py-1.5 text-[9px] font-medium text-rose-600">
+            <Package size={10} /> {t('overview.operations.exceptions', { count: openExceptions.length })}
+          </p>
+        </Panel>
+
+        <Panel
+          title={t('overview.inventory.title')}
+          subtitle={t('overview.inventory.subtitle')}
+          action={
+            <button
+              type="button"
+              onClick={() => onNavigate('inventory')}
+              className="inline-flex items-center gap-1 rounded-full border border-ink-900/10 px-3 py-1.5 text-[10px] font-medium text-ink-900/55 transition hover:border-ink-900/25 hover:text-ink-900"
+            >
+              <Boxes size={11} /> {t('overview.inventory.cta')}
+            </button>
+          }
+        >
+          <div className="grid grid-cols-2 gap-2">
+            {[
+              {
+                label: t('overview.inventory.units'),
+                value: stock.units.toLocaleString(locale === 'de' ? 'de-DE' : 'en-GB'),
+              },
+              { label: t('overview.inventory.value'), value: formatPrice(stock.value, locale) },
+              {
+                label: t('overview.inventory.reorder'),
+                value: stock.reorder.toLocaleString(locale === 'de' ? 'de-DE' : 'en-GB'),
+              },
+              {
+                label: t('overview.inventory.incoming'),
+                value: stock.incoming.toLocaleString(locale === 'de' ? 'de-DE' : 'en-GB'),
+              },
+            ].map((entry) => (
+              <div key={entry.label} className="rounded-xl border border-ink-900/6 p-2.5">
+                <p className="text-[15px] font-semibold tabular-nums text-ink-900">{entry.value}</p>
+                <p className="text-[8px] uppercase tracking-[0.08em] text-ink-900/35">
+                  {entry.label}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-3 flex h-2 overflow-hidden rounded-full bg-ink-900/6">
+            {[
+              { count: stock.healthy, className: 'bg-emerald-500' },
+              { count: stock.low, className: 'bg-amber-500' },
+              { count: stock.critical, className: 'bg-rose-500' },
+              { count: stock.overstock, className: 'bg-violet-500' },
+            ].map((entry, index) => (
+              <span
+                key={index}
+                className={entry.className}
+                style={{ width: `${(entry.count / Math.max(stock.skus, 1)) * 100}%` }}
+              />
+            ))}
+          </div>
+          <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[8.5px] text-ink-900/40">
+            {[
+              { label: t('inventory.stock.statuses.healthy'), className: 'bg-emerald-500' },
+              { label: t('inventory.stock.statuses.low'), className: 'bg-amber-500' },
+              { label: t('inventory.stock.statuses.critical'), className: 'bg-rose-500' },
+              { label: t('inventory.stock.statuses.overstock'), className: 'bg-violet-500' },
+            ].map((entry) => (
+              <span key={entry.label} className="flex items-center gap-1">
+                <span className={`h-1.5 w-1.5 rounded-[2px] ${entry.className}`} />
+                {entry.label}
+              </span>
+            ))}
+          </div>
+          <p className="mt-3 border-t border-ink-900/6 pt-2 text-[9px] leading-relaxed text-ink-900/35">
+            {t('overview.inventory.note', { days: stock.avgCover })}
+          </p>
+        </Panel>
+      </div>
+
+      <div className="grid gap-4 xl:grid-cols-[1.35fr_1fr]">
+        <Panel
           title={t('overview.topProducts.title')}
           subtitle={t('overview.topProducts.subtitle')}
           action={
@@ -434,7 +602,7 @@ export function OverviewTab({ onNavigate }: { onNavigate: (tab: string) => void 
             action={
               <button
                 type="button"
-                onClick={() => onNavigate('products')}
+                onClick={() => onNavigate('inventory')}
                 className="text-[10px] font-medium text-electric-600 hover:text-electric-500"
               >
                 {t('common.manage')}

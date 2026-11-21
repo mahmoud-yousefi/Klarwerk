@@ -1,6 +1,8 @@
 {
   "nav": {
     "overview": "Übersicht",
+    "operations": "Betrieb",
+    "inventory": "Lager",
     "orders": "Bestellungen",
     "products": "Produkte",
     "categories": "Kategorien",
@@ -9,6 +11,14 @@
     "analytics": "Analytics",
     "accounting": "Buchhaltung",
     "settings": "Einstellungen"
+  },
+  "navGroups": {
+    "control": "Steuerung",
+    "operations": "Betrieb",
+    "commerce": "Handel",
+    "service": "Service",
+    "analytics": "Analyse",
+    "system": "System"
   },
   "shell": {
     "workspace": "Arbeitsbereich",
@@ -147,6 +157,23 @@
       "title": "Bestandswarnung",
       "subtitle": "{{count}} Produkte unter Mindestbestand",
       "empty": "Alle Bestände gesund"
+    },
+    "operations": {
+      "title": "Betrieb im Fluss",
+      "subtitle": "Fulfillment-Pipeline und Lagerauslastung heute",
+      "open": "Operations öffnen",
+      "units": "Einheiten",
+      "exceptions": "{{count}} Ausnahmen warten auf Bearbeitung"
+    },
+    "inventory": {
+      "title": "Bestand im Blick",
+      "subtitle": "Alle Standorte, Zonen und Nachbestellungen",
+      "cta": "Lager öffnen",
+      "units": "Einheiten im Lager",
+      "value": "Bestandswert",
+      "reorder": "Nachbestellen",
+      "incoming": "Im Zulauf",
+      "note": "Ø Reichweite {{days}} Tage. Bestände werden mit jeder Buchung im Lager aktualisiert."
     },
     "foot": {
       "session": "Ø Sitzungsdauer",
@@ -537,6 +564,204 @@
       "days": "Tage",
       "months": "Monate",
       "note": "Automatisch aus Bestellungen und Rechnungen berechnet."
+    }
+  },
+  "operations": {
+    "eyebrow": "Operations Control",
+    "title": "Betrieb",
+    "subtitle": "Aufträge, Wareneingang und Versand – in einem durchgehenden Prozess.",
+    "live": "Live",
+    "shiftLabel": "Schicht 2 · 08:00–16:00",
+    "kpi": {
+      "open": "Offene Aufträge",
+      "openHint": "in der Fulfillment-Pipeline",
+      "sla": "SLA-Quote",
+      "slaHint": "Zustellungen innerhalb von 24 h",
+      "cycle": "Ø Durchlaufzeit",
+      "cycleHint": "Wareneingang bis Versand",
+      "exceptions": "Ausnahmen",
+      "exceptionsHint": "brauchen Aufmerksamkeit"
+    },
+    "pipeline": {
+      "title": "Fulfillment-Pipeline",
+      "subtitle": "Vom bezahlten Auftrag bis zur Übergabe an den Carrier",
+      "deliveredToday": "{{count}} heute zugestellt",
+      "overdue": "SLA überzogen",
+      "dueIn": "noch {{time}}",
+      "express": "Express",
+      "standard": "Standard",
+      "advance": "Weiter",
+      "empty": "Keine Aufträge",
+      "stage": {
+        "received": "Eingang",
+        "picking": "Kommissionierung",
+        "packing": "Verpackung",
+        "labeling": "Etikettierung",
+        "dispatch": "Versand",
+        "delivered": "Zugestellt",
+        "exception": "Ausnahme"
+      }
+    },
+    "network": {
+      "title": "Fulfillment-Netz",
+      "subtitle": "Hubs, Zustellregionen und aktive Sendungen",
+      "active": "aktiv",
+      "mapLabel": "Deutschlandkarte mit Hubs und Zustellregionen",
+      "onTime": "Pünktlich zugestellt"
+    },
+    "warehouse": {
+      "openMap": "Lagerkarte",
+      "jobs": "Aufträge"
+    },
+    "carrier": {
+      "title": "Carrier-Performance",
+      "subtitle": "Pünktlichkeit und Laufzeit der letzten 7 Tage",
+      "transit": "Ø Laufzeit",
+      "volume": "Sendungen",
+      "target": "Ziel: 97 % pünktliche Zustellung über alle Carrier."
+    },
+    "shift": {
+      "title": "Schichtplan",
+      "subtitle": "Heute im Lager",
+      "staff": "Mitarbeitende",
+      "pickRateUnit": "Picks / Std.",
+      "active": "Läuft",
+      "next": "Später"
+    },
+    "exceptions": {
+      "title": "Ausnahmen & Retouren",
+      "subtitle": "Was heute Aufmerksamkeit braucht",
+      "empty": "Keine offenen Ausnahmen",
+      "resolve": "Lösen",
+      "reason": {
+        "address": "Adresse prüfen",
+        "stock": "Bestand fehlt",
+        "damage": "Beschädigung",
+        "customs": "Zollunterlagen"
+      }
+    },
+    "delivered": {
+      "title": "Heute abgeschlossen",
+      "subtitle": "{{count}} Sendungen erfolgreich übergeben",
+      "empty": "Noch keine Übergaben heute."
+    }
+  },
+  "inventory": {
+    "eyebrow": "Lager & Bestand",
+    "title": "Inventory",
+    "subtitle": "Bestände, Zonen und Wareneingang über alle Standorte.",
+    "sync": "Bestände synchron",
+    "actions": {
+      "receive": "Wareneingang buchen"
+    },
+    "kpi": {
+      "skus": "Aktive SKUs",
+      "skusHint": "über drei Standorte",
+      "units": "Einheiten im Lager",
+      "unitsHint": "verteilt auf {{count}} Standorte",
+      "value": "Bestandswert",
+      "valueHint": "Ø Reichweite {{days}} Tage",
+      "reorder": "Nachbestellen",
+      "reorderHint": "{{count}} kritisch oder nicht verfügbar"
+    },
+    "map": {
+      "title": "Lagerkarte",
+      "subtitle": "Zonen, Auslastung und Wareneingang",
+      "mapLabel": "Lagerplan {{name}}",
+      "units": "Einheiten",
+      "zones": "Zonen",
+      "temperature": "Klima",
+      "occupied": "Belegung",
+      "zoneKinds": {
+        "receiving": "Wareneingang",
+        "storage": "Lager",
+        "picking": "Kommissionierung",
+        "packing": "Verpackung",
+        "dispatch": "Versand",
+        "returns": "Retouren"
+      }
+    },
+    "stock": {
+      "title": "Bestandsliste",
+      "subtitle": "{{count}} SKUs über {{warehouses}} Standorte",
+      "showing": "{{shown}} von {{total}}",
+      "search": "Produkt, SKU oder Lagerplatz …",
+      "warehouse": "Standort",
+      "allWarehouses": "Alle Standorte",
+      "status": "Status",
+      "allStatuses": "Alle Status",
+      "product": "Produkt",
+      "location": "Lagerplatz",
+      "onHand": "Bestand",
+      "reserved": "Reserviert",
+      "available": "Verfügbar",
+      "cover": "Reichweite",
+      "incoming": "Im Zulauf",
+      "statusLabel": "Status",
+      "actions": "Aktion",
+      "restock": "Nachfüllen",
+      "showMore": "Mehr anzeigen",
+      "empty": "Keine Bestände für diese Auswahl.",
+      "statuses": {
+        "healthy": "Gesund",
+        "low": "Niedrig",
+        "critical": "Kritisch",
+        "out": "Nicht verfügbar",
+        "overstock": "Überbestand"
+      }
+    },
+    "restock": {
+      "eyebrow": "Bestand auffüllen",
+      "title": "{{name}} nachfüllen",
+      "subtitle": "Wareneingang direkt buchen – Bestand und Bewegung werden sofort aktualisiert.",
+      "current": "Aktuell",
+      "reorder": "Meldebestand",
+      "suggested": "Vorschlag",
+      "quantity": "Menge",
+      "warehouse": "Zielstandort",
+      "cancel": "Abbrechen",
+      "submit": "{{count}} Einheiten buchen",
+      "success": "{{count}} Einheiten für „{{name}}“ gebucht.",
+      "invalid": "Bitte eine Menge größer als 0 angeben."
+    },
+    "suppliers": {
+      "title": "Lieferanten",
+      "subtitle": "Lead Time, Qualität und Einkaufsvolumen",
+      "lead": "Lead Time",
+      "onTime": "Pünktlich",
+      "quality": "Qualität"
+    },
+    "orders": {
+      "title": "Bestellungen & Wareneingang",
+      "subtitle": "Offene Purchase Orders und Anlieferungen",
+      "openCount": "{{count}} offen",
+      "units": "Einheiten",
+      "value": "Wert",
+      "eta": "ETA",
+      "receive": "Buchen",
+      "received": "Gebucht",
+      "status": {
+        "draft": "Entwurf",
+        "ordered": "Bestellt",
+        "in_transit": "Unterwegs",
+        "received": "Eingegangen",
+        "delayed": "Verzögert"
+      }
+    },
+    "movements": {
+      "title": "Bestandsbewegungen",
+      "subtitle": "Letzte Buchungen im Lager",
+      "empty": "Noch keine Bewegungen.",
+      "types": {
+        "inbound": "Wareneingang",
+        "outbound": "Warenausgang",
+        "transfer": "Umlagerung",
+        "adjustment": "Korrektur",
+        "return": "Retoure"
+      }
+    },
+    "toast": {
+      "received": "Wareneingang {{id}} gebucht – {{count}} Einheiten eingelagert."
     }
   },
   "settings": {

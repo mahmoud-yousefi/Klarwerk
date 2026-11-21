@@ -336,6 +336,26 @@
   animation: admin-cell 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+@keyframes kw-route-flow {
+  to { stroke-dashoffset: -24; }
+}
+
+@keyframes kw-hub-pulse {
+  0% { transform: scale(0.72); opacity: 0.5; }
+  70% { opacity: 0.08; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+
+.kw-route-flow {
+  animation: kw-route-flow 2.8s linear infinite;
+}
+
+.kw-hub-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: kw-hub-pulse 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
 .kw-cat-scan { animation: kw-cat-scan 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
 .kw-cat-orbit { animation: kw-cat-orbit 5s linear infinite; }
 .kw-cat-orbit-reverse { animation: kw-cat-orbit 7s linear infinite reverse; }

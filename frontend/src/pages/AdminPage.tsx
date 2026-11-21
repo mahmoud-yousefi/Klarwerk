@@ -1,10 +1,11 @@
-import { useMemo, useState } from 'react';
+import { Fragment, useMemo, useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   ArrowLeft,
   BarChart3,
   Bell,
+  Boxes,
   Calculator,
   FolderTree,
   LayoutDashboard,
@@ -17,6 +18,7 @@ import {
   Sparkles,
   Store,
   Users,
+  Workflow,
 } from 'lucide-react';
 import { cn, getInitials } from '@/lib/utils';
 import { useAuthStore } from '@/stores/auth.store';
@@ -32,19 +34,55 @@ import { InboxTab } from '@/components/admin/InboxTab';
 import { AnalyticsTab } from '@/components/admin/AnalyticsTab';
 import { AccountingTab } from '@/components/admin/AccountingTab';
 import { SettingsTab } from '@/components/admin/SettingsTab';
+import { OperationsTab } from '@/components/admin/OperationsTab';
+import { InventoryTab } from '@/components/admin/InventoryTab';
+import { buildStockRows, stockSummary } from '@/lib/operations';
 
-type Tab = 'overview' | 'orders' | 'products' | 'categories' | 'customers' | 'inbox' | 'analytics' | 'accounting' | 'settings';
+type Tab =
+  | 'overview'
+  | 'operations'
+  | 'inventory'
+  | 'orders'
+  | 'products'
+  | 'categories'
+  | 'customers'
+  | 'inbox'
+  | 'analytics'
+  | 'accounting'
+  | 'settings';
 
-const navItems: Array<{ id: Tab; icon: typeof LayoutDashboard }> = [
-  { id: 'overview', icon: LayoutDashboard },
-  { id: 'orders', icon: ShoppingCart },
-  { id: 'products', icon: Package },
-  { id: 'categories', icon: FolderTree },
-  { id: 'customers', icon: Users },
-  { id: 'inbox', icon: Mail },
-  { id: 'analytics', icon: BarChart3 },
-  { id: 'accounting', icon: Calculator },
-  { id: 'settings', icon: Settings },
+type NavGroup = 'control' | 'operations' | 'commerce' | 'service' | 'analytics' | 'system';
+
+const navGroups: Array<{
+  id: NavGroup;
+  items: Array<{ id: Tab; icon: typeof LayoutDashboard }>;
+}> = [
+  { id: 'control', items: [{ id: 'overview', icon: LayoutDashboard }] },
+  {
+    id: 'operations',
+    items: [
+      { id: 'operations', icon: Workflow },
+      { id: 'inventory', icon: Boxes },
+    ],
+  },
+  {
+    id: 'commerce',
+    items: [
+      { id: 'orders', icon: ShoppingCart },
+      { id: 'products', icon: Package },
+      { id: 'categories', icon: FolderTree },
+      { id: 'customers', icon: Users },
+    ],
+  },
+  { id: 'service', items: [{ id: 'inbox', icon: Mail }] },
+  {
+    id: 'analytics',
+    items: [
+      { id: 'analytics', icon: BarChart3 },
+      { id: 'accounting', icon: Calculator },
+    ],
+  },
+  { id: 'system', items: [{ id: 'settings', icon: Settings }] },
 ];
 
 export function AdminPage() {
@@ -58,6 +96,14 @@ export function AdminPage() {
   const messages = useAdminStore((state) => state.messages);
   const requests = useAdminStore((state) => state.requests);
   const customProducts = useAdminStore((state) => state.customProducts);
+  const fulfillmentJobs = useAdminStore((state) => state.fulfillmentJobs);
+  const purchaseOrders = useAdminStore((state) => state.purchaseOrders);
+  const stockOverrides = useAdminStore((state) => state.stockOverrides);
+
+  const stock = useMemo(() => {
+    const rows = buildStockRows(stockOverrides, purchaseOrders);
+    return stockSummary(rows);
+  }, [stockOverrides, purchaseOrders]);
 
   const counts = useMemo(
     () => ({
@@ -65,8 +111,10 @@ export function AdminPage() {
       inbox: messages.filter((message) => message.status !== 'resolved').length,
       products: customProducts.length,
       requests: requests.filter((request) => request.status === 'pending').length,
+      operations: fulfillmentJobs.filter((job) => job.stage !== 'delivered').length,
+      inventory: stock.reorder,
     }),
-    [orders, messages, requests, customProducts],
+    [orders, messages, requests, customProducts, fulfillmentJobs, stock.reorder],
   );
 
   if (!user || user.role !== 'admin') {
@@ -77,6 +125,8 @@ export function AdminPage() {
     if (id === 'orders') return counts.orders;
     if (id === 'inbox') return counts.inbox;
     if (id === 'products') return counts.products;
+    if (id === 'operations') return counts.operations;
+    if (id === 'inventory') return counts.inventory;
     return 0;
   };
 
@@ -84,6 +134,10 @@ export function AdminPage() {
 
   const renderTab = () => {
     switch (tab) {
+      case 'operations':
+        return <OperationsTab onNavigate={(next) => setTab(next as Tab)} />;
+      case 'inventory':
+        return <InventoryTab />;
       case 'orders':
         return <OrdersTab query={query} />;
       case 'products':
@@ -145,45 +199,52 @@ export function AdminPage() {
           </div>
         </div>
 
-        <nav className="relative mt-5 flex-1 space-y-0.5 overflow-y-auto px-3">
-          <p className="px-2 pb-1.5 text-[8.5px] font-semibold uppercase tracking-[0.18em] text-white/25">
-            {t('shell.menu')}
-          </p>
-          {navItems.map(({ id, icon: Icon }) => {
-            const badge = badgeFor(id);
-            return (
-              <button
-                key={id}
-                type="button"
-                onClick={() => {
-                  setTab(id);
-                  setQuery('');
-                }}
-                className={cn(
-                  'group relative flex w-full items-center gap-2.5 rounded-xl px-2.5 py-2 text-left text-[12px] transition',
-                  tab === id
-                    ? 'bg-white/10 font-medium text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]'
-                    : 'text-white/50 hover:bg-white/[0.05] hover:text-white/85',
-                )}
-              >
-                {tab === id && (
-                  <span className="absolute left-0 top-1/2 h-4 w-[2px] -translate-y-1/2 rounded-r-full bg-electric-400" />
-                )}
-                <Icon size={15} className={tab === id ? 'text-electric-300' : 'text-white/35'} />
-                <span className="flex-1 truncate">{navLabel(id)}</span>
-                {badge > 0 && (
-                  <span
+        <nav className="relative mt-5 flex-1 space-y-0.5 overflow-y-auto px-3 pb-2">
+          {navGroups.map((group) => (
+            <div key={group.id} className="pb-1.5">
+              <p className="px-2 pb-1 pt-2 text-[8px] font-semibold uppercase tracking-[0.2em] text-white/22">
+                {t(`navGroups.${group.id}`)}
+              </p>
+              {group.items.map(({ id, icon: Icon }) => {
+                const badge = badgeFor(id);
+                return (
+                  <button
+                    key={id}
+                    type="button"
+                    onClick={() => {
+                      setTab(id);
+                      setQuery('');
+                    }}
                     className={cn(
-                      'rounded-full px-1.5 py-0.5 text-[8.5px] font-bold tabular-nums',
-                      tab === id ? 'bg-electric-500 text-white' : 'bg-white/10 text-white/60',
+                      'group relative flex w-full items-center gap-2.5 rounded-xl px-2.5 py-2 text-left text-[12px] transition',
+                      tab === id
+                        ? 'bg-white/10 font-medium text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]'
+                        : 'text-white/50 hover:bg-white/[0.05] hover:text-white/85',
                     )}
                   >
-                    {badge}
-                  </span>
-                )}
-              </button>
-            );
-          })}
+                    {tab === id && (
+                      <span className="absolute left-0 top-1/2 h-4 w-[2px] -translate-y-1/2 rounded-r-full bg-electric-400" />
+                    )}
+                    <Icon
+                      size={15}
+                      className={tab === id ? 'text-electric-300' : 'text-white/35'}
+                    />
+                    <span className="flex-1 truncate">{navLabel(id)}</span>
+                    {badge > 0 && (
+                      <span
+                        className={cn(
+                          'rounded-full px-1.5 py-0.5 text-[8.5px] font-bold tabular-nums',
+                          tab === id ? 'bg-electric-500 text-white' : 'bg-white/10 text-white/60',
+                        )}
+                      >
+                        {badge}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          ))}
         </nav>
 
         <div className="relative border-t border-white/8 p-3">
@@ -262,22 +323,32 @@ export function AdminPage() {
             </div>
           </div>
 
-          <div className="flex gap-1 overflow-x-auto border-t border-ink-900/[0.05] px-3 py-1.5 lg:hidden">
-            {navItems.map(({ id, icon: Icon }) => (
-              <button
-                key={id}
-                type="button"
-                onClick={() => {
-                  setTab(id);
-                  setQuery('');
-                }}
-                className={cn(
-                  'flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1.5 text-[10.5px] font-medium transition',
-                  tab === id ? 'bg-ink-900 text-white' : 'text-ink-900/50 hover:bg-ink-900/5',
+          <div className="hide-scrollbar flex gap-1 overflow-x-auto border-t border-ink-900/[0.05] px-3 py-1.5 lg:hidden">
+            {navGroups.map((group, groupIndex) => (
+              <Fragment key={group.id}>
+                {groupIndex > 0 && (
+                  <span
+                    aria-hidden
+                    className="mx-0.5 h-4 w-px shrink-0 self-center rounded bg-ink-900/10"
+                  />
                 )}
-              >
-                <Icon size={12} /> {navLabel(id)}
-              </button>
+                {group.items.map(({ id, icon: Icon }) => (
+                  <button
+                    key={id}
+                    type="button"
+                    onClick={() => {
+                      setTab(id);
+                      setQuery('');
+                    }}
+                    className={cn(
+                      'flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1.5 text-[10.5px] font-medium transition',
+                      tab === id ? 'bg-ink-900 text-white' : 'text-ink-900/50 hover:bg-ink-900/5',
+                    )}
+                  >
+                    <Icon size={12} /> {navLabel(id)}
+                  </button>
+                ))}
+              </Fragment>
             ))}
           </div>
         </header>

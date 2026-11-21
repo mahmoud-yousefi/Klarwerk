@@ -2,6 +2,7 @@ import catalogJson from '@/data/catalog.json';
 import categoriesJson from '@/data/categories.json';
 import brandsJson from '@/data/brands.json';
 import articlesJson from '@/data/articles.json';
+import { extraProducts } from '@/data/catalogExtra';
 import { readCustomCatalog } from '@/lib/customCatalog';
 import type {
   Article,
@@ -26,7 +27,11 @@ const runtimeCatalog = readCustomCatalog();
  * admin panel. Custom entries are stored in the browser, so they survive a
  * reload and behave like regular catalog data everywhere in the storefront.
  */
-export const products = [...runtimeCatalog.products, ...catalog.products].map((product) => ({
+export const products = [
+  ...runtimeCatalog.products,
+  ...catalog.products,
+  ...extraProducts,
+].map((product) => ({
   ...product,
   images: product.images.map(withBase),
 })) as Product[];

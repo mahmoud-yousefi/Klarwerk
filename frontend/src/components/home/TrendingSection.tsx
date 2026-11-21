@@ -5,7 +5,7 @@ import { Reveal } from '@/components/ui/Reveal';
 
 export function TrendingSection() {
   const { t } = useTranslation('store');
-  const products = getTrendingProducts(4);
+  const products = getTrendingProducts(8);
 
   return (
     <section className="bg-white py-20 sm:py-24">

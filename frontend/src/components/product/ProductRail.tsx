@@ -50,11 +50,11 @@ export function ProductRail({
         </div>
       )}
 
-      <div className="hide-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-5 lg:overflow-visible lg:px-0">
+      <div className="hide-scrollbar -mx-5 flex touch-pan-x gap-4 overflow-x-auto overscroll-x-contain px-5 pb-3 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-5 lg:overflow-visible lg:px-0 lg:pb-0">
         {products.map((product) => (
           <div
             key={product.id}
-            className="w-[66vw] max-w-[270px] shrink-0 snap-start sm:w-[42vw] lg:w-auto lg:max-w-none"
+            className="w-[68vw] max-w-[270px] shrink-0 sm:w-[42vw] lg:w-auto lg:max-w-none"
           >
             <ProductCard product={product} />
           </div>
