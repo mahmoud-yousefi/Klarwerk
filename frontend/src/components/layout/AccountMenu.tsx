@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   ChevronDown,
+  Globe2,
   Heart,
   LayoutDashboard,
   LogOut,
@@ -12,9 +13,10 @@ import {
 import { cn, getInitials } from '@/lib/utils';
 import { useAuthStore } from '@/stores/auth.store';
 import { useToastStore } from '@/stores/toast.store';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function AccountMenu() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('auth');
   const navigate = useNavigate();
   const user = useAuthStore((state) => state.user);
   const logout = useAuthStore((state) => state.logout);
@@ -75,7 +77,7 @@ export function AccountMenu() {
       {open && (
         <div
           role="menu"
-          className="absolute right-0 top-full z-50 mt-2.5 w-[min(268px,calc(100vw-1.5rem))] animate-scale-in overflow-hidden rounded-2xl border border-white/10 bg-ink-800/95 p-2 shadow-[0_30px_70px_-24px_rgba(0,0,0,0.9)] backdrop-blur-2xl"
+          className="absolute -right-3 top-full z-50 mt-2.5 w-[min(268px,calc(100vw-1.5rem))] sm:right-0 animate-scale-in overflow-hidden rounded-2xl border border-white/10 bg-ink-800/95 p-2 shadow-[0_30px_70px_-24px_rgba(0,0,0,0.9)] backdrop-blur-2xl"
         >
           {user ? (
             <>
@@ -173,6 +175,15 @@ export function AccountMenu() {
               </Link>
             </div>
           )}
+
+          <div className="mt-1.5 border-t border-white/8 px-2.5 pb-1 pt-2 sm:hidden">
+            <div className="flex items-center justify-between gap-2">
+              <span className="flex items-center gap-1.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-white/35">
+                <Globe2 size={11} /> {t('common:misc.language')}
+              </span>
+              <LanguageSwitcher showIcon={false} />
+            </div>
+          </div>
         </div>
       )}
     </div>

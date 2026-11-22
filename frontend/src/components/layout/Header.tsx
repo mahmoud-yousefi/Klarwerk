@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   ChevronDown,
+  Globe2,
   Heart,
   Search,
   ShoppingBag,
@@ -243,11 +244,13 @@ export function Header() {
 
           <button
             type="button"
-            onClick={openSearch}
-            className="flex h-9 w-9 items-center justify-center rounded-full text-white/65 transition hover:bg-white/8 hover:text-white sm:hidden"
-            aria-label={t('search.open')}
+            onClick={() => void i18n.changeLanguage(locale === 'de' ? 'en' : 'de')}
+            className="flex h-9 w-9 items-center justify-center gap-1 rounded-full border border-white/12 text-[9px] font-semibold uppercase tracking-[0.06em] text-white/60 transition hover:border-white/25 hover:text-white sm:hidden"
+            aria-label={t('misc.languageSwitch')}
+            title={t('misc.languageSwitch')}
           >
-            <Search size={18} />
+            <Globe2 size={11} className="shrink-0" />
+            {locale === 'de' ? 'DE' : 'EN'}
           </button>
 
           <LanguageSwitcher className="hidden sm:flex" />
