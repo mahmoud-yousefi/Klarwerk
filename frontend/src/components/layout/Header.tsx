@@ -82,8 +82,8 @@ export function Header() {
           : 'border-white/10 bg-ink-900/75 shadow-[0_8px_30px_-24px_rgba(0,0,0,0.5)] backdrop-blur-lg',
       )}
     >
-      <div className="container-x flex h-[72px] items-center justify-between gap-4">
-        <div className="flex items-center gap-10">
+      <div className="mx-auto flex h-[64px] w-full max-w-[1440px] items-center justify-between gap-2 px-4 sm:h-[72px] sm:gap-4 sm:px-8 lg:px-12">
+        <div className="flex min-w-0 items-center gap-10">
           <Logo variant="light" />
           <nav className="hidden items-center gap-6 lg:flex" aria-label={t('nav.menu')}>
             <div
@@ -227,7 +227,7 @@ export function Header() {
           </nav>
         </div>
 
-        <div className="flex items-center gap-1.5 sm:gap-2">
+        <div className="flex shrink-0 items-center gap-1 sm:gap-2">
           <button
             type="button"
             onClick={openSearch}
@@ -250,7 +250,6 @@ export function Header() {
             <Search size={18} />
           </button>
 
-          <LanguageSwitcher showIcon={false} className="flex max-[359px]:hidden sm:hidden" />
           <LanguageSwitcher className="hidden sm:flex" />
 
           <AccountMenu />
@@ -271,7 +270,7 @@ export function Header() {
           <button
             type="button"
             onClick={openCart}
-            className="relative flex h-9 items-center gap-2 rounded-full bg-white/[0.07] px-3 text-white/80 transition hover:bg-white/[0.12] hover:text-white"
+            className="relative flex h-9 items-center gap-2 rounded-full bg-white/[0.07] px-2.5 text-white/80 transition hover:bg-white/[0.12] hover:text-white sm:px-3"
             aria-label={t('misc.cartOpen')}
           >
             <ShoppingBag size={16} />

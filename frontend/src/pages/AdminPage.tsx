@@ -1,4 +1,4 @@
-import { Fragment, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
@@ -7,6 +7,7 @@ import {
   Bell,
   Boxes,
   Calculator,
+  ChevronDown,
   FolderTree,
   LayoutDashboard,
   LogOut,
@@ -85,6 +86,8 @@ const navGroups: Array<{
   { id: 'system', items: [{ id: 'settings', icon: Settings }] },
 ];
 
+const navItems = navGroups.flatMap((group) => group.items);
+
 export function AdminPage() {
   const { t } = useTranslation('admin');
   const user = useAuthStore((state) => state.user);
@@ -92,6 +95,7 @@ export function AdminPage() {
   const navigate = useNavigate();
   const [tab, setTab] = useState<Tab>('overview');
   const [query, setQuery] = useState('');
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const orders = useAdminStore((state) => state.orders);
   const messages = useAdminStore((state) => state.messages);
   const requests = useAdminStore((state) => state.requests);
@@ -131,6 +135,13 @@ export function AdminPage() {
   };
 
   const navLabel = (id: Tab) => t(`nav.${id}`);
+  const activeGroup = navGroups.find((group) => group.items.some((item) => item.id === tab));
+  const ActiveIcon = navItems.find((item) => item.id === tab)?.icon ?? LayoutDashboard;
+  const selectTab = (next: Tab) => {
+    setTab(next);
+    setQuery('');
+    setMobileNavOpen(false);
+  };
 
   const renderTab = () => {
     switch (tab) {
@@ -323,33 +334,92 @@ export function AdminPage() {
             </div>
           </div>
 
-          <div className="hide-scrollbar flex gap-1 overflow-x-auto border-t border-ink-900/[0.05] px-3 py-1.5 lg:hidden">
-            {navGroups.map((group, groupIndex) => (
-              <Fragment key={group.id}>
-                {groupIndex > 0 && (
-                  <span
-                    aria-hidden
-                    className="mx-0.5 h-4 w-px shrink-0 self-center rounded bg-ink-900/10"
-                  />
-                )}
-                {group.items.map(({ id, icon: Icon }) => (
-                  <button
-                    key={id}
-                    type="button"
-                    onClick={() => {
-                      setTab(id);
-                      setQuery('');
-                    }}
-                    className={cn(
-                      'flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1.5 text-[10.5px] font-medium transition',
-                      tab === id ? 'bg-ink-900 text-white' : 'text-ink-900/50 hover:bg-ink-900/5',
-                    )}
-                  >
-                    <Icon size={12} /> {navLabel(id)}
-                  </button>
-                ))}
-              </Fragment>
-            ))}
+          <div className="relative border-t border-ink-900/[0.05] px-3 py-1.5 lg:hidden">
+            <button
+              type="button"
+              onClick={() => setMobileNavOpen((open) => !open)}
+              aria-expanded={mobileNavOpen}
+              aria-haspopup="menu"
+              className="flex h-9 w-full items-center justify-between gap-2 rounded-full border border-ink-900/10 bg-white px-3 text-left transition hover:border-ink-900/20"
+            >
+              <span className="flex min-w-0 items-center gap-2">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ink-900 text-white">
+                  <ActiveIcon size={12} />
+                </span>
+                <span className="min-w-0">
+                  <span className="block text-[7.5px] font-semibold uppercase tracking-[0.16em] text-ink-900/30">
+                    {t('shell.menu')}
+                  </span>
+                  <span className="block truncate text-[11px] font-semibold text-ink-900">
+                    {navLabel(tab)}
+                  </span>
+                </span>
+              </span>
+              <span className="flex shrink-0 items-center gap-1.5 text-[9px] font-medium uppercase tracking-[0.1em] text-ink-900/35">
+                {activeGroup ? t(`navGroups.${activeGroup.id}`) : ''}
+                <ChevronDown
+                  size={14}
+                  className={cn('transition-transform duration-200', mobileNavOpen && 'rotate-180')}
+                />
+              </span>
+            </button>
+
+            {mobileNavOpen && (
+              <>
+                <button
+                  type="button"
+                  aria-label={t('common.close')}
+                  onClick={() => setMobileNavOpen(false)}
+                  className="fixed inset-0 z-30 cursor-default bg-ink-900/[0.08] backdrop-blur-[1px]"
+                />
+                <div
+                  role="menu"
+                  className="absolute inset-x-3 top-[calc(100%+2px)] z-40 max-h-[68vh] overflow-y-auto rounded-2xl border border-ink-900/10 bg-white p-2.5 shadow-[0_28px_70px_-24px_rgba(8,13,24,0.4)]"
+                >
+                  {navGroups.map((group) => (
+                    <div key={group.id} className="pb-1.5 last:pb-0">
+                      <p className="px-1 pb-1 pt-1.5 text-[7.5px] font-semibold uppercase tracking-[0.18em] text-ink-900/30">
+                        {t(`navGroups.${group.id}`)}
+                      </p>
+                      <div className="grid grid-cols-2 gap-1 min-[380px]:grid-cols-3">
+                        {group.items.map(({ id, icon: Icon }) => {
+                          const badge = badgeFor(id);
+                          return (
+                            <button
+                              key={id}
+                              type="button"
+                              role="menuitem"
+                              onClick={() => selectTab(id)}
+                              className={cn(
+                                'flex min-w-0 items-center gap-1.5 rounded-xl px-2 py-2 text-left text-[10.5px] font-medium transition',
+                                tab === id
+                                  ? 'bg-ink-900 text-white'
+                                  : 'text-ink-900/55 hover:bg-ink-900/5 hover:text-ink-900',
+                              )}
+                            >
+                              <Icon size={12} className="shrink-0" />
+                              <span className="min-w-0 flex-1 truncate">{navLabel(id)}</span>
+                              {badge > 0 && (
+                                <span
+                                  className={cn(
+                                    'shrink-0 rounded-full px-1.5 py-0.5 text-[8px] font-bold tabular-nums',
+                                    tab === id
+                                      ? 'bg-white/15 text-white'
+                                      : 'bg-ink-900/[0.06] text-ink-900/45',
+                                  )}
+                                >
+                                  {badge}
+                                </span>
+                              )}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </header>
 

@@ -31,10 +31,10 @@ export function MobileBottomNav() {
   return (
     <nav
       aria-label={t('nav.menu')}
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-white/40 bg-white/70 px-2 pt-2 backdrop-blur-xl backdrop-saturate-150 shadow-[0_-12px_40px_-18px_rgba(8,13,24,0.25)] lg:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-white/40 bg-white/70 px-1.5 pt-2 sm:px-2 backdrop-blur-xl backdrop-saturate-150 shadow-[0_-12px_40px_-18px_rgba(8,13,24,0.25)] lg:hidden"
       style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.5rem)' }}
     >
-      <ul className="flex items-stretch justify-around gap-1">
+      <ul className="grid grid-cols-5 items-stretch gap-0.5">
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const active = 'to' in tab ? isActive(tab.to) : false;
@@ -55,7 +55,7 @@ export function MobileBottomNav() {
               </span>
               <span
                 className={cn(
-                  'text-[10px] font-medium tracking-tight',
+                  'w-full max-w-full truncate text-center text-[10px] font-medium tracking-tight',
                   active ? 'text-electric-600' : 'text-ink-900/45',
                 )}
               >
@@ -64,11 +64,11 @@ export function MobileBottomNav() {
             </>
           );
 
-          const className = 'flex flex-1 flex-col items-center gap-0.5 py-1';
+          const className = 'flex min-w-0 flex-col items-center gap-0.5 py-1';
 
           if ('action' in tab && tab.action === 'search') {
             return (
-              <li key={tab.key} className="flex-1">
+              <li key={tab.key} className="min-w-0">
                 <button type="button" onClick={openSearch} className={className} aria-label={tab.label}>
                   {content}
                 </button>
@@ -77,7 +77,7 @@ export function MobileBottomNav() {
           }
           if ('action' in tab && tab.action === 'cart') {
             return (
-              <li key={tab.key} className="flex-1">
+              <li key={tab.key} className="min-w-0">
                 <button type="button" onClick={openCart} className={className} aria-label={tab.label}>
                   {content}
                 </button>
@@ -85,7 +85,7 @@ export function MobileBottomNav() {
             );
           }
           return (
-            <li key={tab.key} className="flex-1">
+            <li key={tab.key} className="min-w-0">
               <Link to={'to' in tab ? tab.to : '/'} className={className} aria-current={active ? 'page' : undefined}>
                 {content}
               </Link>
