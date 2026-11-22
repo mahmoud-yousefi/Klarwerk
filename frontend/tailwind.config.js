@@ -124,6 +124,14 @@ export default {
           '0%': { transform: 'rotateY(0deg)' },
           '100%': { transform: 'rotateY(360deg)' },
         },
+        'toast-in': {
+          '0%': { opacity: '0', transform: 'translateY(18px) scale(0.96)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+        },
+        'toast-progress': {
+          '0%': { transform: 'scaleX(1)' },
+          '100%': { transform: 'scaleX(0)' },
+        },
       },
       animation: {
         'fade-up': 'fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both',
@@ -144,6 +152,8 @@ export default {
         'flip-y': 'flip-y 3.2s ease-in-out infinite',
         'letter-in': 'letter-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both',
         'float-y': 'float-y 4s ease-in-out infinite',
+        'toast-in': 'toast-in 0.38s cubic-bezier(0.16, 1, 0.3, 1) both',
+        'toast-progress': 'toast-progress 3.6s linear forwards',
       },
       typography: {},
     },

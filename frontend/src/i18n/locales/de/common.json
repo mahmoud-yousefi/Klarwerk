@@ -298,7 +298,12 @@
     "compareLimit": "Maximal {{count}} Produkte im Vergleich.",
     "maxStock": "Maximale verfügbare Menge erreicht.",
     "linkCopied": "Link kopiert.",
-    "predorderNote": "Vorbestellung – Lieferung nach Erscheinen."
+    "predorderNote": "Vorbestellung – Lieferung nach Erscheinen.",
+    "types": {
+      "success": "Erfolgreich",
+      "error": "Fehler",
+      "info": "Hinweis"
+    }
   },
   "errors": {
     "generic": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",

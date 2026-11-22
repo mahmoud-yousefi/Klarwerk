@@ -41,6 +41,45 @@ export function useScrolled(threshold = 12) {
   return scrolled;
 }
 
+export function useHideOnScroll({ hideAfter = 80, threshold = 10 } = {}) {
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let lastY = Math.max(0, window.scrollY);
+    let raf = 0;
+
+    const evaluate = () => {
+      raf = 0;
+      const y = Math.max(0, window.scrollY);
+      const delta = y - lastY;
+      const nearBottom =
+        y + window.innerHeight >= document.documentElement.scrollHeight - 140;
+
+      if (y <= hideAfter || nearBottom) {
+        lastY = y;
+        setHidden(false);
+        return;
+      }
+      if (Math.abs(delta) < threshold) return;
+
+      lastY = y;
+      setHidden(delta > 0);
+    };
+
+    const onScroll = () => {
+      if (!raf) raf = window.requestAnimationFrame(evaluate);
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (raf) window.cancelAnimationFrame(raf);
+    };
+  }, [hideAfter, threshold]);
+
+  return hidden;
+}
+
 export function useMediaQuery(query: string) {
   const [matches, setMatches] = useState(() =>
     typeof window !== 'undefined' ? window.matchMedia(query).matches : false,

@@ -75,15 +75,15 @@ export function Header() {
   const featuredCategory = categories.find((category) => category.id === 'headphones') ?? categories[0];
 
   return (
-    <header
-      className={cn(
-        'sticky top-0 z-50 border-b transition-all duration-300',
-        scrolled
-          ? 'border-white/8 bg-ink-900/95 shadow-[0_12px_30px_-20px_rgba(0,0,0,0.7)] backdrop-blur-xl'
-          : 'border-white/10 bg-ink-900/75 shadow-[0_8px_30px_-24px_rgba(0,0,0,0.5)] backdrop-blur-lg',
-      )}
-    >
-      <div className="mx-auto flex h-[64px] w-full max-w-[1440px] items-center justify-between gap-2 px-4 sm:h-[72px] sm:gap-4 sm:px-8 lg:px-12">
+    <header className="sticky top-0 z-50 px-2 pt-2 sm:px-0 sm:pt-0">
+      <div
+        className={cn(
+          'mx-auto flex h-[60px] w-full max-w-[1440px] items-center justify-between gap-2 rounded-2xl border px-3 transition-all duration-300 sm:h-[72px] sm:gap-4 sm:rounded-none sm:border-x-0 sm:border-t-0 sm:border-b sm:px-8 sm:shadow-none lg:px-12',
+          scrolled
+            ? 'border-white/10 bg-ink-900/95 shadow-[0_14px_34px_-20px_rgba(0,0,0,0.65)] backdrop-blur-xl'
+            : 'border-white/10 bg-ink-900/85 shadow-[0_10px_28px_-24px_rgba(0,0,0,0.55)] backdrop-blur-lg',
+        )}
+      >
         <div className="flex min-w-0 items-center gap-10">
           <Logo variant="light" />
           <nav className="hidden items-center gap-6 lg:flex" aria-label={t('nav.menu')}>

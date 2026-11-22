@@ -298,7 +298,12 @@
     "compareLimit": "Maximum {{count}} products in the comparison.",
     "maxStock": "Maximum available quantity reached.",
     "linkCopied": "Link copied.",
-    "predorderNote": "Pre-order – ships on release."
+    "predorderNote": "Pre-order – ships on release.",
+    "types": {
+      "success": "Success",
+      "error": "Error",
+      "info": "Info"
+    }
   },
   "errors": {
     "generic": "Something went wrong. Please try again.",

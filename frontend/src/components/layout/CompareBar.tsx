@@ -15,7 +15,7 @@ export function CompareBar() {
   if (pathname === '/compare' || products.length === 0) return null;
 
   return (
-    <div className="fixed bottom-4 left-1/2 z-[70] w-[calc(100%-2rem)] max-w-xl -translate-x-1/2 sm:bottom-6">
+    <div className="fixed bottom-[calc(env(safe-area-inset-bottom)+5.5rem)] left-1/2 z-[70] w-[calc(100%-2rem)] max-w-xl -translate-x-1/2 lg:bottom-6">
       <div className="flex items-center gap-3 rounded-2xl border border-white/12 bg-ink-800/95 p-2.5 pl-3 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] backdrop-blur-xl animate-fade-up">
         <div className="flex -space-x-2">
           {products.slice(0, 4).map((product) => (
