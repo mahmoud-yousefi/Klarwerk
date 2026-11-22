@@ -1,1 +1,0 @@
-import{m as a,ad as m,o as e}from"./index-DVaeidj2.js";function n({products:i,className:r}){return a.jsx("div",{className:e("grid grid-cols-2 gap-x-4 gap-y-9 sm:gap-x-5 lg:grid-cols-3 xl:grid-cols-4",r),children:i.map((s,d)=>a.jsx("div",{className:"animate-fade-up",style:{animationDelay:`${Math.min(d,8)*45}ms`},children:a.jsx(m,{product:s})},s.id))})}export{n as P};
